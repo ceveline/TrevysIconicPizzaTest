@@ -57,7 +57,7 @@
             // 
             this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.addButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.Black;
+            this.addButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.addButton.Location = new System.Drawing.Point(355, 171);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(145, 50);
@@ -92,7 +92,7 @@
             // 
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.editButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.Black;
+            this.editButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.editButton.Location = new System.Drawing.Point(355, 227);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(145, 50);
@@ -104,7 +104,7 @@
             // 
             this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.removeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.removeButton.ForeColor = System.Drawing.Color.Black;
+            this.removeButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.removeButton.Location = new System.Drawing.Point(355, 283);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(145, 50);

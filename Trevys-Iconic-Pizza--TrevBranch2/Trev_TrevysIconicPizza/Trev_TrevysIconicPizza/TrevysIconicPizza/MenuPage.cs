@@ -16,5 +16,20 @@ namespace TrevysIconicPizza
         {
             InitializeComponent();
         }
+
+        private void cartLogo_Click(object sender, EventArgs e)
+        {
+            CartPage cartPage = new CartPage();
+
+            // Handle the FormClosed event
+            cartPage.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                cartLogo.Enabled = true;
+            };
+
+            cartPage.Show();
+            cartLogo.Enabled = false;
+        }
     }
 }
