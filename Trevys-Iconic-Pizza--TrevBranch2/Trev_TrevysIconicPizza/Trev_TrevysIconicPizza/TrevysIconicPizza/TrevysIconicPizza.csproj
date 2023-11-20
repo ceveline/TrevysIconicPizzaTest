@@ -71,11 +71,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="PizzaPage.cs">
+    <Compile Include="MenuPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PizzaPage.Designer.cs">
-      <DependentUpon>PizzaPage.cs</DependentUpon>
+    <Compile Include="MenuPage.Designer.cs">
+      <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +91,8 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PizzaPage.resx">
-      <DependentUpon>PizzaPage.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPage.resx">
+      <DependentUpon>MenuPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
