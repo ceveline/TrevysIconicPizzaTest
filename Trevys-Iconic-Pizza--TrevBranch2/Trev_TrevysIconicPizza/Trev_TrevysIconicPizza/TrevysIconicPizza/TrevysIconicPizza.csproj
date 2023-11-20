@@ -84,7 +84,6 @@
     <Compile Include="MenuPage.Designer.cs">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Milkshake.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaPage.cs">
       <SubType>Form</SubType>
@@ -94,7 +93,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SoftDrink.cs" />
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
     </EmbeddedResource>
