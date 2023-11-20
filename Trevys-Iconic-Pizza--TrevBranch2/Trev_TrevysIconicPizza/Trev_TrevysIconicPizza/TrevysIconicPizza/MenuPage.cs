@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TrevysIconicPizza
 {
-    public partial class PizzaPage : Form
+    public partial class MenuPage : Form
     {
-        public PizzaPage()
+        public MenuPage()
         {
             InitializeComponent();
         }
