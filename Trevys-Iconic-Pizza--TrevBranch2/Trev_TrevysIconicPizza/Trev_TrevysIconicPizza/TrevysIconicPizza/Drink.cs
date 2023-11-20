@@ -95,8 +95,5 @@ Sprite
 
         //    return Price;
         //}
-
-
-
     }
 }
