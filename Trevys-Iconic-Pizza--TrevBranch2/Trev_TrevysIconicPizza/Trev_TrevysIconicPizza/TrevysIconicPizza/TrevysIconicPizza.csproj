@@ -59,6 +59,12 @@
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="DrinkPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrinkPage.Designer.cs">
+      <DependentUpon>DrinkPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DrinkPage.resx">
+      <DependentUpon>DrinkPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPage.resx">
       <DependentUpon>MenuPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PizzaPage.resx">
+      <DependentUpon>PizzaPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

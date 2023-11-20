@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPage));
             this.pizzaButton = new System.Windows.Forms.Button();
-            this.drinksButton = new System.Windows.Forms.Button();
+            this.drinkButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accountLogo = new System.Windows.Forms.PictureBox();
             this.questionLogo = new System.Windows.Forms.PictureBox();
@@ -52,18 +52,20 @@
             this.pizzaButton.TabIndex = 0;
             this.pizzaButton.Text = "PIZZA";
             this.pizzaButton.UseVisualStyleBackColor = false;
+            this.pizzaButton.Click += new System.EventHandler(this.pizzaButton_Click);
             // 
-            // drinksButton
+            // drinkButton
             // 
-            this.drinksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.drinksButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinksButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.drinksButton.Location = new System.Drawing.Point(330, 261);
-            this.drinksButton.Name = "drinksButton";
-            this.drinksButton.Size = new System.Drawing.Size(203, 77);
-            this.drinksButton.TabIndex = 1;
-            this.drinksButton.Text = "DRINKS";
-            this.drinksButton.UseVisualStyleBackColor = false;
+            this.drinkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.drinkButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinkButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.drinkButton.Location = new System.Drawing.Point(330, 261);
+            this.drinkButton.Name = "drinkButton";
+            this.drinkButton.Size = new System.Drawing.Size(203, 77);
+            this.drinkButton.TabIndex = 1;
+            this.drinkButton.Text = "DRINKS";
+            this.drinkButton.UseVisualStyleBackColor = false;
+            this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
             // 
             // pictureBox1
             // 
@@ -114,7 +116,7 @@
             this.Controls.Add(this.questionLogo);
             this.Controls.Add(this.accountLogo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.drinksButton);
+            this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.pizzaButton);
             this.Name = "MenuPage";
             this.Text = "Menu";
@@ -129,7 +131,7 @@
         #endregion
 
         private System.Windows.Forms.Button pizzaButton;
-        private System.Windows.Forms.Button drinksButton;
+        private System.Windows.Forms.Button drinkButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox accountLogo;
         private System.Windows.Forms.PictureBox questionLogo;
