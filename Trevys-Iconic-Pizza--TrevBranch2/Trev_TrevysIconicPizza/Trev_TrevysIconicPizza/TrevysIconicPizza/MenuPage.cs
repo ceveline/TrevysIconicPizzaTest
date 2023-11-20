@@ -17,19 +17,38 @@ namespace TrevysIconicPizza
             InitializeComponent();
         }
 
-        private void cartLogo_Click(object sender, EventArgs e)
+        private void pizzaButton_Click(object sender, EventArgs e)
         {
-            CartPage cartPage = new CartPage();
+
+            PizzaPage pizzaPage = new PizzaPage();
 
             // Handle the FormClosed event
-            cartPage.FormClosed += (s, args) =>
+            pizzaPage.FormClosed += (s, args) =>
             {
                 // Re-enable the loginButton when the LoginPage is closed
-                cartLogo.Enabled = true;
+                pizzaButton.Enabled = true;
             };
 
-            cartPage.Show();
-            cartLogo.Enabled = false;
+            pizzaPage.Show();
+            pizzaButton.Enabled = false;
         }
+
+        private void drinkButton_Click(object sender, EventArgs e)
+        {
+ 
+            DrinkPage drinkPage = new DrinkPage();
+
+            // Handle the FormClosed event
+            drinkPage.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                drinkButton.Enabled = true;
+            };
+
+            drinkPage.Show();
+            drinkButton.Enabled = false;
+        }
+
     }
 }
+
