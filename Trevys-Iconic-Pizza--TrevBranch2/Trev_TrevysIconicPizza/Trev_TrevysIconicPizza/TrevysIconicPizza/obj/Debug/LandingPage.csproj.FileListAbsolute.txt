@@ -1,0 +1,11 @@
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe.config
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.pdb
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\LandingPage.csproj.AssemblyReference.cache
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\LandingPage.csproj.SuggestedBindingRedirects.cache
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.Form1.resources
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.Properties.Resources.resources
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\LandingPage.csproj.GenerateResource.cache
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\LandingPage.csproj.CoreCompileInputs.cache
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
+C:\Users\2027495\source\repos\TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
