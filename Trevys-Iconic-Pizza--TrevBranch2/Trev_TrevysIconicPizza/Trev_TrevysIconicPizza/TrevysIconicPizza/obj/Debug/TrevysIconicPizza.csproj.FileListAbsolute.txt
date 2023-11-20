@@ -41,3 +41,4 @@ C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--Tre
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.GenerateResource.cache
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.CoreCompileInputs.cache
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.PizzaPage.resources
+C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.DrinkPage.resources

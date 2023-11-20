@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    internal class Milkshake
+    internal class Milkshake : Drink
     {
+
     }
 }
