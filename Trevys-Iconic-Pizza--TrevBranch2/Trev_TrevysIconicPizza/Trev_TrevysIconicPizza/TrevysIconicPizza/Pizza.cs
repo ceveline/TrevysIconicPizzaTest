@@ -61,13 +61,13 @@ namespace TrevysIconicPizza
             {
                 switch (Size)
                 {
-                    case "s":
+                    case "small":
                         price = 13.99m;
                         break;
-                    case "m":
+                    case "medium":
                         price = 16.99m;
                         break;
-                    case "l":
+                    case "large":
                         price = 19.99m;
                         break;
                 }
@@ -160,7 +160,7 @@ namespace TrevysIconicPizza
         //needs to be edited
         public override string ToString()
         {
-            return String.Format("Type: {0}, Size: {1}, Price: {2:C}", Type, Size, Price);
+            return String.Format("{0, -20}{1,-30}{2,0:C}", Type, Size, Price);
         }
 
         public String Type

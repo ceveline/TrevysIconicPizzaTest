@@ -62,11 +62,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.VegetarianGroupBox = new System.Windows.Forms.GroupBox();
-            this.vegListBox = new System.Windows.Forms.ListBox();
             this.vegAddToCartButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vegComboBox = new System.Windows.Forms.ComboBox();
             this.pizzaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.byoPanel.SuspendLayout();
@@ -305,13 +305,13 @@
             this.margListBox.FormattingEnabled = true;
             this.margListBox.ItemHeight = 21;
             this.margListBox.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L"});
+            "Small",
+            "Medium",
+            "Large"});
             this.margListBox.Location = new System.Drawing.Point(265, 127);
             this.margListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.margListBox.Name = "margListBox";
-            this.margListBox.Size = new System.Drawing.Size(53, 25);
+            this.margListBox.Size = new System.Drawing.Size(129, 25);
             this.margListBox.TabIndex = 14;
             // 
             // margAddToCartButton
@@ -378,13 +378,13 @@
             this.oriListBox.FormattingEnabled = true;
             this.oriListBox.ItemHeight = 21;
             this.oriListBox.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L"});
+            "Small",
+            "Medium",
+            "Large"});
             this.oriListBox.Location = new System.Drawing.Point(265, 138);
             this.oriListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oriListBox.Name = "oriListBox";
-            this.oriListBox.Size = new System.Drawing.Size(53, 25);
+            this.oriListBox.Size = new System.Drawing.Size(129, 25);
             this.oriListBox.TabIndex = 15;
             // 
             // oriAddToCartButton
@@ -451,13 +451,13 @@
             this.pepListBox.FormattingEnabled = true;
             this.pepListBox.ItemHeight = 21;
             this.pepListBox.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L"});
+            "Small",
+            "Medium",
+            "Large"});
             this.pepListBox.Location = new System.Drawing.Point(261, 121);
             this.pepListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pepListBox.Name = "pepListBox";
-            this.pepListBox.Size = new System.Drawing.Size(53, 25);
+            this.pepListBox.Size = new System.Drawing.Size(129, 25);
             this.pepListBox.TabIndex = 13;
             // 
             // pepperoniAddToCartButton
@@ -504,7 +504,7 @@
             // VegetarianGroupBox
             // 
             this.VegetarianGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.VegetarianGroupBox.Controls.Add(this.vegListBox);
+            this.VegetarianGroupBox.Controls.Add(this.vegComboBox);
             this.VegetarianGroupBox.Controls.Add(this.vegAddToCartButton);
             this.VegetarianGroupBox.Controls.Add(this.label2);
             this.VegetarianGroupBox.Controls.Add(this.label1);
@@ -516,22 +516,6 @@
             this.VegetarianGroupBox.Size = new System.Drawing.Size(531, 233);
             this.VegetarianGroupBox.TabIndex = 0;
             this.VegetarianGroupBox.TabStop = false;
-            // 
-            // vegListBox
-            // 
-            this.vegListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.vegListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vegListBox.FormattingEnabled = true;
-            this.vegListBox.ItemHeight = 21;
-            this.vegListBox.Items.AddRange(new object[] {
-            "S",
-            "M",
-            "L"});
-            this.vegListBox.Location = new System.Drawing.Point(261, 142);
-            this.vegListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.vegListBox.Name = "vegListBox";
-            this.vegListBox.Size = new System.Drawing.Size(53, 25);
-            this.vegListBox.TabIndex = 14;
             // 
             // vegAddToCartButton
             // 
@@ -575,6 +559,21 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // vegComboBox
+            // 
+            this.vegComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.vegComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vegComboBox.FormattingEnabled = true;
+            this.vegComboBox.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.vegComboBox.Location = new System.Drawing.Point(261, 143);
+            this.vegComboBox.Name = "vegComboBox";
+            this.vegComboBox.Size = new System.Drawing.Size(129, 29);
+            this.vegComboBox.TabIndex = 15;
+            this.vegComboBox.Text = "Select Size";
             // 
             // PizzaPage
             // 
@@ -642,11 +641,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox VegetarianGroupBox;
-        private System.Windows.Forms.ListBox vegListBox;
         private System.Windows.Forms.Button vegAddToCartButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox cartLogo;
+        private System.Windows.Forms.ComboBox vegComboBox;
     }
 }

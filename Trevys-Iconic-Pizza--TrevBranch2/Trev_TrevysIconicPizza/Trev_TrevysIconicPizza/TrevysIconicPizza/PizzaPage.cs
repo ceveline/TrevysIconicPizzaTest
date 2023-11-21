@@ -81,10 +81,10 @@ namespace TrevysIconicPizza
         //vege vegetarian
         private void vegAddToCartButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("pizza");
+            MessageBox.Show("Vegetarian pizza has been added to your cart successfully!");
 
-            string size = vegListBox.Text;
-            Pizza vegetarian = new Pizza("vegetarian", "s", null);
+            string selectedSize = vegComboBox.Text;
+            Pizza vegetarian = new Pizza("Vegetarian", selectedSize, null);
 
             // Now, use the cartPage instance to add the pizza to the cart
             cartPage.AddPizzaToCart(vegetarian);
@@ -95,34 +95,40 @@ namespace TrevysIconicPizza
         private void addToCartButton2_Click(object sender, EventArgs e)
         {
             string size = oriListBox.Text;
-            Pizza original = new Pizza("original", size, null);
+            Pizza original = new Pizza("Original", size, null);
+            cartPage.AddPizzaToCart(original);
         }
 
         private void addToCartButton3_Click(object sender, EventArgs e)
         {
             string size = pepListBox.Text;
-            Pizza pepperoni = new Pizza("pepperoni", size, null);
+            Pizza pepperoni = new Pizza("Pepperoni", size, null);
+            cartPage.AddPizzaToCart(pepperoni);
         }
 
         private void addToCartButton4_Click(object sender, EventArgs e)
         {
             string size = margListBox.Text;
-            Pizza margherita = new Pizza("margherita", size, null);
+            Pizza margherita = new Pizza("Margherita", size, null);
+            cartPage.AddPizzaToCart(margherita);
         }
 
         
         private void cartLogo_Click(object sender, EventArgs e)
         {
             // Handle the FormClosed event
-            cartPage.FormClosed += (s, args) =>
+            cartPage.Hide(); // Hide the cartPage instead of closing it
+            cartLogo.Enabled = false;
+
+            cartPage.VisibleChanged += (s, args) =>
             {
-                // Re-enable the loginButton when the LoginPage is closed
-                cartLogo.Enabled = true;
+                cartLogo.Enabled = true; // Re-enable the cartLogo when the cartPage is closed
             };
 
             cartPage.Show();
-            cartLogo.Enabled = false;
         }
+
+        
     }
 
 }

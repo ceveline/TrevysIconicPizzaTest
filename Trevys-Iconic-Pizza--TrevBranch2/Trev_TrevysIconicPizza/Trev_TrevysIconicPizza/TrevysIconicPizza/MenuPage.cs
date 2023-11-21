@@ -53,14 +53,16 @@ namespace TrevysIconicPizza
 
         private void cartLogo_Click(object sender, EventArgs e)
         {
-            cartPageInstance.Show();
+            // Handle the FormClosed event
+            cartPageInstance.Hide(); // Hide the cartPage instead of closing it
             cartLogo.Enabled = false;
 
-            // Additional handling if needed when CartPage is shown
-            cartPageInstance.FormClosed += (s, args) =>
+            cartPageInstance.VisibleChanged += (s, args) =>
             {
-                cartLogo.Enabled = true; // Re-enable the logo button when CartPage is closed
+                cartLogo.Enabled = true; // Re-enable the cartLogo when the cartPage is closed
             };
+
+            cartPageInstance.Show();
 
         }
     }
