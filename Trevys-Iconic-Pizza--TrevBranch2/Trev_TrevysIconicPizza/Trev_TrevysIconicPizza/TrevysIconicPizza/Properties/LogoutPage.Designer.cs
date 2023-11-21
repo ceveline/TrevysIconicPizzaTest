@@ -38,9 +38,9 @@
             this.logoutLabel.AutoSize = true;
             this.logoutLabel.BackColor = System.Drawing.Color.Yellow;
             this.logoutLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.logoutLabel.Location = new System.Drawing.Point(33, 48);
+            this.logoutLabel.Location = new System.Drawing.Point(26, 66);
             this.logoutLabel.Name = "logoutLabel";
             this.logoutLabel.Size = new System.Drawing.Size(477, 31);
             this.logoutLabel.TabIndex = 3;
@@ -49,7 +49,7 @@
             // returnButton
             // 
             this.returnButton.BackColor = System.Drawing.Color.Yellow;
-            this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.returnButton.Location = new System.Drawing.Point(167, 145);
             this.returnButton.Name = "returnButton";
