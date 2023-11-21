@@ -59,6 +59,12 @@
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="CheckoutPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckoutPage.Designer.cs">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutPage.resx">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,14 +109,24 @@
     <EmbeddedResource Include="MenuPage.resx">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LogoutPage.resx">
+      <DependentUpon>LogoutPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\LogoutPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\LogoutPage.Designer.cs">
+      <DependentUpon>LogoutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -121,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
