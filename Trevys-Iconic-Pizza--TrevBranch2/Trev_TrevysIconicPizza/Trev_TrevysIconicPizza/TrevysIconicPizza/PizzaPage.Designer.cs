@@ -62,11 +62,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.VegetarianGroupBox = new System.Windows.Forms.GroupBox();
+            this.vegComboBox = new System.Windows.Forms.ComboBox();
             this.vegAddToCartButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.vegComboBox = new System.Windows.Forms.ComboBox();
             this.pizzaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.byoPanel.SuspendLayout();
@@ -517,6 +517,21 @@
             this.VegetarianGroupBox.TabIndex = 0;
             this.VegetarianGroupBox.TabStop = false;
             // 
+            // vegComboBox
+            // 
+            this.vegComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.vegComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vegComboBox.FormattingEnabled = true;
+            this.vegComboBox.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.vegComboBox.Location = new System.Drawing.Point(261, 143);
+            this.vegComboBox.Name = "vegComboBox";
+            this.vegComboBox.Size = new System.Drawing.Size(129, 29);
+            this.vegComboBox.TabIndex = 15;
+            this.vegComboBox.Text = "Select Size";
+            // 
             // vegAddToCartButton
             // 
             this.vegAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
@@ -560,21 +575,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // vegComboBox
-            // 
-            this.vegComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.vegComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vegComboBox.FormattingEnabled = true;
-            this.vegComboBox.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large"});
-            this.vegComboBox.Location = new System.Drawing.Point(261, 143);
-            this.vegComboBox.Name = "vegComboBox";
-            this.vegComboBox.Size = new System.Drawing.Size(129, 29);
-            this.vegComboBox.TabIndex = 15;
-            this.vegComboBox.Text = "Select Size";
-            // 
             // PizzaPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -584,6 +584,7 @@
             this.ClientSize = new System.Drawing.Size(1259, 1055);
             this.Controls.Add(this.pizzaPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1277, 1102);
             this.Name = "PizzaPage";
             this.Text = "Pizza Menu";
             this.pizzaPanel.ResumeLayout(false);

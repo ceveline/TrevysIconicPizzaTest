@@ -19,8 +19,8 @@ namespace TrevysIconicPizza
             InitializeComponent();
             this.cartPage = cartPageInstance;
 
-            pizzaPanel.AutoScrollMinSize = new Size(0, 880);
-            this.Size = new Size(Width, Height + 10);
+            pizzaPanel.AutoScrollMinSize = new Size(0, 900);
+            this.Size = new Size(Width, Height + 100);
 
         }
 
