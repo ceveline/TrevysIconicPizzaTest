@@ -77,7 +77,7 @@ namespace TrevysIconicPizza
         //vege vegetarian
         private void addToCartButton_Click(object sender, EventArgs e)
         {
-            char size = VegListBox.Text.ToCharArray()[0];
+            char size = vegListBox.Text.ToCharArray()[0];
             Pizza vegetarian = new Pizza("vegetarian", size, null);
 
         }
