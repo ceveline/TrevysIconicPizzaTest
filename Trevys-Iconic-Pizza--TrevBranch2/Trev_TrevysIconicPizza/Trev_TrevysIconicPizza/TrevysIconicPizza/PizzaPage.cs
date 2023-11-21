@@ -12,12 +12,16 @@ namespace TrevysIconicPizza
 {
     public partial class PizzaPage : Form
     {
-        public PizzaPage()
+        //CartPage cartPage = new CartPage();
+        private CartPage cartPage;
+        public PizzaPage(CartPage cartPageInstance)
         {
             InitializeComponent();
+            this.cartPage = cartPageInstance;
 
             pizzaPanel.AutoScrollMinSize = new Size(0, 880);
             this.Size = new Size(Width, Height + 10);
+
         }
 
         private void crustListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,30 +79,49 @@ namespace TrevysIconicPizza
 
         }
         //vege vegetarian
-        private void addToCartButton_Click(object sender, EventArgs e)
+        private void vegAddToCartButton_Click(object sender, EventArgs e)
         {
-            char size = vegListBox.Text.ToCharArray()[0];
-            Pizza vegetarian = new Pizza("vegetarian", size, null);
+            MessageBox.Show("pizza");
+
+            string size = vegListBox.Text;
+            Pizza vegetarian = new Pizza("vegetarian", "s", null);
+
+            // Now, use the cartPage instance to add the pizza to the cart
+            cartPage.AddPizzaToCart(vegetarian);
 
         }
 
         //ori
         private void addToCartButton2_Click(object sender, EventArgs e)
         {
-            char size = oriListBox.Text.ToCharArray()[0];
+            string size = oriListBox.Text;
             Pizza original = new Pizza("original", size, null);
         }
 
         private void addToCartButton3_Click(object sender, EventArgs e)
         {
-            char size = pepListBox.Text.ToCharArray()[0];
+            string size = pepListBox.Text;
             Pizza pepperoni = new Pizza("pepperoni", size, null);
         }
 
         private void addToCartButton4_Click(object sender, EventArgs e)
         {
-            char size = margListBox.Text.ToCharArray()[0];
+            string size = margListBox.Text;
             Pizza margherita = new Pizza("margherita", size, null);
+        }
+
+        
+        private void cartLogo_Click(object sender, EventArgs e)
+        {
+            // Handle the FormClosed event
+            cartPage.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                cartLogo.Enabled = true;
+            };
+
+            cartPage.Show();
+            cartLogo.Enabled = false;
         }
     }
 

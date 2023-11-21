@@ -12,15 +12,17 @@ namespace TrevysIconicPizza
 {
     public partial class MenuPage : Form
     {
+        private CartPage cartPageInstance;
         public MenuPage()
         {
             InitializeComponent();
+            cartPageInstance = CartPage.GetInstance();
         }
 
         private void pizzaButton_Click(object sender, EventArgs e)
         {
 
-            PizzaPage pizzaPage = new PizzaPage();
+            PizzaPage pizzaPage = new PizzaPage(cartPageInstance);
 
             // Handle the FormClosed event
             pizzaPage.FormClosed += (s, args) =>
@@ -51,16 +53,14 @@ namespace TrevysIconicPizza
 
         private void cartLogo_Click(object sender, EventArgs e)
         {
-            CartPage cartPage = new CartPage();
-            // Handle the FormClosed event
-            cartPage.FormClosed += (s, args) =>
-            {
-                // Re-enable the loginButton when the LoginPage is closed
-                cartLogo.Enabled = true;
-            };
-
-            cartPage.Show();
+            cartPageInstance.Show();
             cartLogo.Enabled = false;
+
+            // Additional handling if needed when CartPage is shown
+            cartPageInstance.FormClosed += (s, args) =>
+            {
+                cartLogo.Enabled = true; // Re-enable the logo button when CartPage is closed
+            };
 
         }
     }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PizzaPage));
             this.pizzaPanel = new System.Windows.Forms.Panel();
+            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.byoPanel = new System.Windows.Forms.GroupBox();
             this.sizeListBox = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pizzaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.byoPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,14 +83,27 @@
             // 
             // pizzaPanel
             // 
+            this.pizzaPanel.Controls.Add(this.cartLogo);
             this.pizzaPanel.Controls.Add(this.byoPanel);
             this.pizzaPanel.Controls.Add(this.groupBox1);
-            this.pizzaPanel.Location = new System.Drawing.Point(15, 18);
-            this.pizzaPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.pizzaPanel.MaximumSize = new System.Drawing.Size(915, 837);
+            this.pizzaPanel.Location = new System.Drawing.Point(20, 22);
+            this.pizzaPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pizzaPanel.MaximumSize = new System.Drawing.Size(1220, 1030);
             this.pizzaPanel.Name = "pizzaPanel";
-            this.pizzaPanel.Size = new System.Drawing.Size(915, 821);
+            this.pizzaPanel.Size = new System.Drawing.Size(1220, 1010);
             this.pizzaPanel.TabIndex = 2;
+            // 
+            // cartLogo
+            // 
+            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
+            this.cartLogo.Location = new System.Drawing.Point(1136, 9);
+            this.cartLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.cartLogo.Name = "cartLogo";
+            this.cartLogo.Size = new System.Drawing.Size(32, 30);
+            this.cartLogo.TabIndex = 6;
+            this.cartLogo.TabStop = false;
+            this.cartLogo.Click += new System.EventHandler(this.cartLogo_Click);
             // 
             // byoPanel
             // 
@@ -104,11 +119,11 @@
             this.byoPanel.Controls.Add(this.toppingsCheckedListBox);
             this.byoPanel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.byoPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.byoPanel.Location = new System.Drawing.Point(40, 484);
-            this.byoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.byoPanel.Location = new System.Drawing.Point(53, 596);
+            this.byoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.byoPanel.Name = "byoPanel";
-            this.byoPanel.Padding = new System.Windows.Forms.Padding(2);
-            this.byoPanel.Size = new System.Drawing.Size(836, 331);
+            this.byoPanel.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.byoPanel.Size = new System.Drawing.Size(1115, 407);
             this.byoPanel.TabIndex = 5;
             this.byoPanel.TabStop = false;
             this.byoPanel.Text = "Build Your Own";
@@ -118,15 +133,15 @@
             this.sizeListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.sizeListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sizeListBox.FormattingEnabled = true;
-            this.sizeListBox.ItemHeight = 16;
+            this.sizeListBox.ItemHeight = 21;
             this.sizeListBox.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.sizeListBox.Location = new System.Drawing.Point(16, 67);
-            this.sizeListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sizeListBox.Location = new System.Drawing.Point(21, 82);
+            this.sizeListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sizeListBox.Name = "sizeListBox";
-            this.sizeListBox.Size = new System.Drawing.Size(150, 52);
+            this.sizeListBox.Size = new System.Drawing.Size(199, 46);
             this.sizeListBox.TabIndex = 12;
             // 
             // label12
@@ -134,10 +149,9 @@
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label12.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 38);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(21, 47);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 22);
+            this.label12.Size = new System.Drawing.Size(59, 27);
             this.label12.TabIndex = 11;
             this.label12.Text = "Size";
             // 
@@ -146,20 +160,20 @@
             this.selectedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.selectedListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectedListBox.FormattingEnabled = true;
-            this.selectedListBox.ItemHeight = 16;
-            this.selectedListBox.Location = new System.Drawing.Point(428, 67);
-            this.selectedListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.selectedListBox.ItemHeight = 21;
+            this.selectedListBox.Location = new System.Drawing.Point(571, 82);
+            this.selectedListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.selectedListBox.Name = "selectedListBox";
-            this.selectedListBox.Size = new System.Drawing.Size(212, 196);
+            this.selectedListBox.Size = new System.Drawing.Size(281, 235);
             this.selectedListBox.TabIndex = 10;
             // 
             // addToCartButton5
             // 
             this.addToCartButton5.Font = new System.Drawing.Font("Arial", 11F);
-            this.addToCartButton5.Location = new System.Drawing.Point(658, 235);
-            this.addToCartButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.addToCartButton5.Location = new System.Drawing.Point(877, 289);
+            this.addToCartButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addToCartButton5.Name = "addToCartButton5";
-            this.addToCartButton5.Size = new System.Drawing.Size(97, 28);
+            this.addToCartButton5.Size = new System.Drawing.Size(129, 34);
             this.addToCartButton5.TabIndex = 5;
             this.addToCartButton5.Text = "Add to Cart";
             this.addToCartButton5.UseVisualStyleBackColor = true;
@@ -169,14 +183,14 @@
             this.sauceListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.sauceListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sauceListBox.FormattingEnabled = true;
-            this.sauceListBox.ItemHeight = 16;
+            this.sauceListBox.ItemHeight = 21;
             this.sauceListBox.Items.AddRange(new object[] {
             "Tomato",
             "Pesto"});
-            this.sauceListBox.Location = new System.Drawing.Point(16, 162);
-            this.sauceListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sauceListBox.Location = new System.Drawing.Point(21, 199);
+            this.sauceListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sauceListBox.Name = "sauceListBox";
-            this.sauceListBox.Size = new System.Drawing.Size(150, 52);
+            this.sauceListBox.Size = new System.Drawing.Size(199, 46);
             this.sauceListBox.TabIndex = 7;
             // 
             // crustListBox
@@ -184,14 +198,14 @@
             this.crustListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.crustListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crustListBox.FormattingEnabled = true;
-            this.crustListBox.ItemHeight = 16;
+            this.crustListBox.ItemHeight = 21;
             this.crustListBox.Items.AddRange(new object[] {
             "Thick",
             "Thin"});
-            this.crustListBox.Location = new System.Drawing.Point(16, 258);
-            this.crustListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.crustListBox.Location = new System.Drawing.Point(21, 318);
+            this.crustListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crustListBox.Name = "crustListBox";
-            this.crustListBox.Size = new System.Drawing.Size(150, 52);
+            this.crustListBox.Size = new System.Drawing.Size(199, 46);
             this.crustListBox.TabIndex = 6;
             // 
             // label11
@@ -199,10 +213,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label11.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(16, 133);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(21, 164);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 22);
+            this.label11.Size = new System.Drawing.Size(81, 27);
             this.label11.TabIndex = 5;
             this.label11.Text = "Sauce";
             // 
@@ -211,10 +224,9 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label10.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 228);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(21, 281);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 22);
+            this.label10.Size = new System.Drawing.Size(74, 27);
             this.label10.TabIndex = 3;
             this.label10.Text = "Crust";
             // 
@@ -223,10 +235,9 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(194, 38);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(259, 47);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 22);
+            this.label9.Size = new System.Drawing.Size(116, 27);
             this.label9.TabIndex = 1;
             this.label9.Text = "Toppings";
             // 
@@ -246,10 +257,10 @@
             "Pepperoni",
             "Red Peppers",
             "Tomatoes"});
-            this.toppingsCheckedListBox.Location = new System.Drawing.Point(190, 70);
-            this.toppingsCheckedListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.toppingsCheckedListBox.Location = new System.Drawing.Point(253, 86);
+            this.toppingsCheckedListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toppingsCheckedListBox.Name = "toppingsCheckedListBox";
-            this.toppingsCheckedListBox.Size = new System.Drawing.Size(150, 175);
+            this.toppingsCheckedListBox.Size = new System.Drawing.Size(199, 211);
             this.toppingsCheckedListBox.Sorted = true;
             this.toppingsCheckedListBox.TabIndex = 0;
             this.toppingsCheckedListBox.ThreeDCheckBoxes = true;
@@ -262,11 +273,11 @@
             this.groupBox1.Controls.Add(this.VegetarianGroupBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.groupBox1.Location = new System.Drawing.Point(40, 28);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(53, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(836, 451);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1115, 555);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pre-made Pizza";
@@ -279,11 +290,11 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.pictureBox4);
-            this.groupBox3.Location = new System.Drawing.Point(425, 245);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(567, 302);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(398, 189);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(531, 233);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
@@ -292,24 +303,24 @@
             this.margListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.margListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.margListBox.FormattingEnabled = true;
-            this.margListBox.ItemHeight = 16;
+            this.margListBox.ItemHeight = 21;
             this.margListBox.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.margListBox.Location = new System.Drawing.Point(199, 103);
-            this.margListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.margListBox.Location = new System.Drawing.Point(265, 127);
+            this.margListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.margListBox.Name = "margListBox";
-            this.margListBox.Size = new System.Drawing.Size(41, 20);
+            this.margListBox.Size = new System.Drawing.Size(53, 25);
             this.margListBox.TabIndex = 14;
             // 
             // margAddToCartButton
             // 
             this.margAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.margAddToCartButton.Location = new System.Drawing.Point(199, 149);
-            this.margAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.margAddToCartButton.Location = new System.Drawing.Point(265, 183);
+            this.margAddToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.margAddToCartButton.Name = "margAddToCartButton";
-            this.margAddToCartButton.Size = new System.Drawing.Size(97, 28);
+            this.margAddToCartButton.Size = new System.Drawing.Size(129, 34);
             this.margAddToCartButton.TabIndex = 4;
             this.margAddToCartButton.Text = "Add to Cart";
             this.margAddToCartButton.UseVisualStyleBackColor = true;
@@ -317,10 +328,9 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Arial", 11F);
-            this.label8.Location = new System.Drawing.Point(196, 51);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(261, 63);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(188, 58);
+            this.label8.Size = new System.Drawing.Size(251, 71);
             this.label8.TabIndex = 3;
             this.label8.Text = "Basil, tomatoes, mozzarella, tomato sauce, and olive oil";
             // 
@@ -328,20 +338,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(194, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(259, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 26);
+            this.label5.Size = new System.Drawing.Size(161, 33);
             this.label5.TabIndex = 2;
             this.label5.Text = "Margherita";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(11, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox4.Size = new System.Drawing.Size(229, 202);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
@@ -354,11 +363,11 @@
             this.originalGroupBox.Controls.Add(this.label7);
             this.originalGroupBox.Controls.Add(this.label4);
             this.originalGroupBox.Controls.Add(this.pictureBox2);
-            this.originalGroupBox.Location = new System.Drawing.Point(425, 35);
-            this.originalGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.originalGroupBox.Location = new System.Drawing.Point(567, 43);
+            this.originalGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.originalGroupBox.Name = "originalGroupBox";
-            this.originalGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.originalGroupBox.Size = new System.Drawing.Size(398, 189);
+            this.originalGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.originalGroupBox.Size = new System.Drawing.Size(531, 233);
             this.originalGroupBox.TabIndex = 1;
             this.originalGroupBox.TabStop = false;
             // 
@@ -367,24 +376,24 @@
             this.oriListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.oriListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.oriListBox.FormattingEnabled = true;
-            this.oriListBox.ItemHeight = 16;
+            this.oriListBox.ItemHeight = 21;
             this.oriListBox.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.oriListBox.Location = new System.Drawing.Point(199, 112);
-            this.oriListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.oriListBox.Location = new System.Drawing.Point(265, 138);
+            this.oriListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oriListBox.Name = "oriListBox";
-            this.oriListBox.Size = new System.Drawing.Size(41, 20);
+            this.oriListBox.Size = new System.Drawing.Size(53, 25);
             this.oriListBox.TabIndex = 15;
             // 
             // oriAddToCartButton
             // 
             this.oriAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.oriAddToCartButton.Location = new System.Drawing.Point(199, 150);
-            this.oriAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.oriAddToCartButton.Location = new System.Drawing.Point(265, 185);
+            this.oriAddToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oriAddToCartButton.Name = "oriAddToCartButton";
-            this.oriAddToCartButton.Size = new System.Drawing.Size(97, 28);
+            this.oriAddToCartButton.Size = new System.Drawing.Size(129, 34);
             this.oriAddToCartButton.TabIndex = 3;
             this.oriAddToCartButton.Text = "Add to Cart";
             this.oriAddToCartButton.UseVisualStyleBackColor = true;
@@ -392,10 +401,9 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Arial", 11F);
-            this.label7.Location = new System.Drawing.Point(196, 53);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(261, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 58);
+            this.label7.Size = new System.Drawing.Size(251, 71);
             this.label7.TabIndex = 2;
             this.label7.Text = "Mozzarella and tomato sauce";
             // 
@@ -403,20 +411,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(192, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(256, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 26);
+            this.label4.Size = new System.Drawing.Size(121, 33);
             this.label4.TabIndex = 1;
             this.label4.Text = "Original";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox2.Size = new System.Drawing.Size(229, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -429,11 +436,11 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Location = new System.Drawing.Point(13, 245);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(17, 302);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(398, 189);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(531, 233);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -442,24 +449,24 @@
             this.pepListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.pepListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pepListBox.FormattingEnabled = true;
-            this.pepListBox.ItemHeight = 16;
+            this.pepListBox.ItemHeight = 21;
             this.pepListBox.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.pepListBox.Location = new System.Drawing.Point(196, 98);
-            this.pepListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pepListBox.Location = new System.Drawing.Point(261, 121);
+            this.pepListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pepListBox.Name = "pepListBox";
-            this.pepListBox.Size = new System.Drawing.Size(41, 20);
+            this.pepListBox.Size = new System.Drawing.Size(53, 25);
             this.pepListBox.TabIndex = 13;
             // 
             // pepperoniAddToCartButton
             // 
             this.pepperoniAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.pepperoniAddToCartButton.Location = new System.Drawing.Point(196, 149);
-            this.pepperoniAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.pepperoniAddToCartButton.Location = new System.Drawing.Point(261, 183);
+            this.pepperoniAddToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pepperoniAddToCartButton.Name = "pepperoniAddToCartButton";
-            this.pepperoniAddToCartButton.Size = new System.Drawing.Size(97, 28);
+            this.pepperoniAddToCartButton.Size = new System.Drawing.Size(129, 34);
             this.pepperoniAddToCartButton.TabIndex = 3;
             this.pepperoniAddToCartButton.Text = "Add to Cart";
             this.pepperoniAddToCartButton.UseVisualStyleBackColor = true;
@@ -467,10 +474,9 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 11F);
-            this.label6.Location = new System.Drawing.Point(193, 51);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(257, 63);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 58);
+            this.label6.Size = new System.Drawing.Size(273, 71);
             this.label6.TabIndex = 2;
             this.label6.Text = "Pepperoni, mozzarella, and tomato sauce";
             // 
@@ -478,20 +484,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(191, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(255, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 26);
+            this.label3.Size = new System.Drawing.Size(152, 33);
             this.label3.TabIndex = 1;
             this.label3.Text = "Pepperoni";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox3.Size = new System.Drawing.Size(229, 202);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -504,9 +509,11 @@
             this.VegetarianGroupBox.Controls.Add(this.label2);
             this.VegetarianGroupBox.Controls.Add(this.label1);
             this.VegetarianGroupBox.Controls.Add(this.pictureBox1);
-            this.VegetarianGroupBox.Location = new System.Drawing.Point(13, 35);
+            this.VegetarianGroupBox.Location = new System.Drawing.Point(17, 43);
+            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.VegetarianGroupBox.Name = "VegetarianGroupBox";
-            this.VegetarianGroupBox.Size = new System.Drawing.Size(398, 189);
+            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.VegetarianGroupBox.Size = new System.Drawing.Size(531, 233);
             this.VegetarianGroupBox.TabIndex = 0;
             this.VegetarianGroupBox.TabStop = false;
             // 
@@ -515,35 +522,35 @@
             this.vegListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.vegListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vegListBox.FormattingEnabled = true;
-            this.vegListBox.ItemHeight = 16;
+            this.vegListBox.ItemHeight = 21;
             this.vegListBox.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.vegListBox.Location = new System.Drawing.Point(196, 115);
-            this.vegListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.vegListBox.Location = new System.Drawing.Point(261, 142);
+            this.vegListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vegListBox.Name = "vegListBox";
-            this.vegListBox.Size = new System.Drawing.Size(41, 20);
+            this.vegListBox.Size = new System.Drawing.Size(53, 25);
             this.vegListBox.TabIndex = 14;
             // 
             // vegAddToCartButton
             // 
             this.vegAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.vegAddToCartButton.Location = new System.Drawing.Point(196, 150);
-            this.vegAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.vegAddToCartButton.Location = new System.Drawing.Point(261, 185);
+            this.vegAddToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vegAddToCartButton.Name = "vegAddToCartButton";
-            this.vegAddToCartButton.Size = new System.Drawing.Size(97, 28);
+            this.vegAddToCartButton.Size = new System.Drawing.Size(129, 34);
             this.vegAddToCartButton.TabIndex = 3;
             this.vegAddToCartButton.Text = "Add to Cart";
             this.vegAddToCartButton.UseVisualStyleBackColor = true;
+            this.vegAddToCartButton.Click += new System.EventHandler(this.vegAddToCartButton_Click);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 11F);
-            this.label2.Location = new System.Drawing.Point(193, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(257, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 63);
+            this.label2.Size = new System.Drawing.Size(273, 78);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tomatoes, broccolis, red peppers, olives, mushrooms, mozzarella, and tomato sauce" +
     "";
@@ -552,34 +559,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(255, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 26);
+            this.label1.Size = new System.Drawing.Size(158, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Vegetarian";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // PizzaPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(944, 857);
+            this.ClientSize = new System.Drawing.Size(1259, 1055);
             this.Controls.Add(this.pizzaPanel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PizzaPage";
             this.Text = "Pizza Menu";
             this.pizzaPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.byoPanel.ResumeLayout(false);
             this.byoPanel.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -638,5 +647,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox cartLogo;
     }
 }

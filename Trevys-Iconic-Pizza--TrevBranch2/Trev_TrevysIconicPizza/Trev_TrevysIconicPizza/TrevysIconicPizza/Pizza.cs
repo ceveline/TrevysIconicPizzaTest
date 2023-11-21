@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    internal class Pizza
+    public class Pizza
     {
         //String name;
         String type;
         decimal price;
-        char size;
+        String size;
         List<String> ingredients;
 
-        public Pizza(string type, char size, List<string> ingredients)
+        public Pizza(string type, String size, List<string> ingredients)
         {
             //this.name = Name;
             this.type = type;
@@ -40,64 +40,64 @@ namespace TrevysIconicPizza
         public decimal calculatePriceForReadyPizza()
         {
             decimal price = 0;
-            size = Char.ToLower(size);
+            Size = Size.ToLower();
 
             if (type.Equals("Original", StringComparison.OrdinalIgnoreCase))
             {
-                switch (size)
+                switch (Size)
                 {
-                    case 's':
+                    case "s":
                         price = 10.99m;
                         break;
-                    case 'm':
+                    case "m":
                         price = 13.99m;
                         break;
-                    case 'l':
+                    case "l":
                         price = 16.99m;
                         break;
                 }
             }
             else if (type.Equals("Vegetarian", StringComparison.OrdinalIgnoreCase))
             {
-                switch (size)
+                switch (Size)
                 {
-                    case 's':
+                    case "s":
                         price = 13.99m;
                         break;
-                    case 'm':
+                    case "m":
                         price = 16.99m;
                         break;
-                    case 'l':
+                    case "l":
                         price = 19.99m;
                         break;
                 }
             }
             else if (type.Equals("Pepperoni", StringComparison.OrdinalIgnoreCase))
             {
-                switch (size)
+                switch (Size)
                 {
-                    case 's':
+                    case "s":
                         price = 14.99m;
                         break;
-                    case 'm':
+                    case "m":
                         price = 17.99m;
                         break;
-                    case 'l':
+                    case "l":
                         price = 19.99m;
                         break;
                 }
             }
             else if (type.Equals("Margherita", StringComparison.OrdinalIgnoreCase))
             {
-                switch (size)
+                switch (Size)
                 {
-                    case 's':
+                    case "s":
                         price = 13.99m;
                         break;
-                    case 'm':
+                    case "m":
                         price = 16.99m;
                         break;
-                    case 'l':
+                    case "l":
                         price = 18.99m;
                         break;
                 }
@@ -111,17 +111,17 @@ namespace TrevysIconicPizza
         public decimal calculatePriceForCustomPizza()
         {
             decimal price = 0;
-            size = Char.ToLower(size);
+            Size = Size.ToLower();
 
-            if (size == 's')
+            if (size == "s")
             {
                 price += 7.99m;
             }
-            else if (size == 'm')
+            else if (size == "m")
             {
                 price += 8.99m;
             }
-            else if (size == 'l')
+            else if (size == "l")
             {
                 price += 9.99m;
             }
@@ -157,7 +157,11 @@ namespace TrevysIconicPizza
             return Price;
         }
 
-        //public String Name { get { return name; } set { name = value; } }
+        //needs to be edited
+        public override string ToString()
+        {
+            return String.Format("Type: {0}, Size: {1}, Price: {2:C}", Type, Size, Price);
+        }
 
         public String Type
         {
@@ -166,9 +170,11 @@ namespace TrevysIconicPizza
         }
 
         public decimal Price { get { return price; } set { price = value; } }
-        public char Size { get { return size; } set { size = value; } }
+        public String Size { get { return size; } set { size = value; } }
 
         public List<String> Ingredients { get { return ingredients; } set { ingredients = value; } }
+
+
 
     }
 }
