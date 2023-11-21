@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPage));
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
             this.cardNumberLabel = new System.Windows.Forms.Label();
             this.cardNumberTextBox = new System.Windows.Forms.TextBox();
@@ -46,13 +47,19 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.trademarkLabel = new System.Windows.Forms.Label();
+            this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.delivTimeLabel = new System.Windows.Forms.Label();
+            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // paymentGroupBox
             // 
             this.paymentGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.paymentGroupBox.Controls.Add(this.delivTimeLabel);
+            this.paymentGroupBox.Controls.Add(this.deliveryDateTimePicker);
             this.paymentGroupBox.Controls.Add(this.cardNumberLabel);
             this.paymentGroupBox.Controls.Add(this.cardNumberTextBox);
             this.paymentGroupBox.Controls.Add(this.phoneTextBox);
@@ -193,6 +200,7 @@
             // orderGroupBox
             // 
             this.orderGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.orderGroupBox.Controls.Add(this.cartLogo);
             this.orderGroupBox.Controls.Add(this.checkoutButton);
             this.orderGroupBox.Controls.Add(this.totalLabel);
             this.orderGroupBox.Controls.Add(this.totalTextBox);
@@ -262,6 +270,38 @@
             this.trademarkLabel.TabIndex = 6;
             this.trademarkLabel.Text = "©2023 Trevy\'s Iconic Pizza";
             // 
+            // deliveryDateTimePicker
+            // 
+            this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.deliveryDateTimePicker.Location = new System.Drawing.Point(164, 343);
+            this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
+            this.deliveryDateTimePicker.ShowUpDown = true;
+            this.deliveryDateTimePicker.Size = new System.Drawing.Size(125, 22);
+            this.deliveryDateTimePicker.TabIndex = 7;
+            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
+            // 
+            // delivTimeLabel
+            // 
+            this.delivTimeLabel.AutoSize = true;
+            this.delivTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delivTimeLabel.Location = new System.Drawing.Point(150, 316);
+            this.delivTimeLabel.Name = "delivTimeLabel";
+            this.delivTimeLabel.Size = new System.Drawing.Size(158, 15);
+            this.delivTimeLabel.TabIndex = 13;
+            this.delivTimeLabel.Text = "Preferred Delivery Time";
+            // 
+            // cartLogo
+            // 
+            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
+            this.cartLogo.Location = new System.Drawing.Point(302, 26);
+            this.cartLogo.Name = "cartLogo";
+            this.cartLogo.Size = new System.Drawing.Size(24, 24);
+            this.cartLogo.TabIndex = 7;
+            this.cartLogo.TabStop = false;
+            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +318,7 @@
             this.paymentGroupBox.PerformLayout();
             this.orderGroupBox.ResumeLayout(false);
             this.orderGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,5 +344,8 @@
         private System.Windows.Forms.Label trademarkLabel;
         private System.Windows.Forms.Label cardNumberLabel;
         private System.Windows.Forms.TextBox cardNumberTextBox;
+        private System.Windows.Forms.DateTimePicker deliveryDateTimePicker;
+        private System.Windows.Forms.Label delivTimeLabel;
+        private System.Windows.Forms.PictureBox cartLogo;
     }
 }
