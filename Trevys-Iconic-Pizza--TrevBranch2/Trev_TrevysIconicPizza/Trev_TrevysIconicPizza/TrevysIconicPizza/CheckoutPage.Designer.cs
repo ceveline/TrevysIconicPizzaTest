@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
+            this.cardNumberLabel = new System.Windows.Forms.Label();
+            this.cardNumberTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.phoneLabel = new System.Windows.Forms.Label();
             this.serviceLabel = new System.Windows.Forms.Label();
@@ -44,8 +46,6 @@
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.trademarkLabel = new System.Windows.Forms.Label();
-            this.cardNumberTextBox = new System.Windows.Forms.TextBox();
-            this.cardNumberLabel = new System.Windows.Forms.Label();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,24 @@
             this.paymentGroupBox.TabIndex = 4;
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment";
+            // 
+            // cardNumberLabel
+            // 
+            this.cardNumberLabel.AutoSize = true;
+            this.cardNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardNumberLabel.Location = new System.Drawing.Point(11, 56);
+            this.cardNumberLabel.Name = "cardNumberLabel";
+            this.cardNumberLabel.Size = new System.Drawing.Size(98, 16);
+            this.cardNumberLabel.TabIndex = 12;
+            this.cardNumberLabel.Text = "Card Number";
+            // 
+            // cardNumberTextBox
+            // 
+            this.cardNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardNumberTextBox.Location = new System.Drawing.Point(14, 75);
+            this.cardNumberTextBox.Name = "cardNumberTextBox";
+            this.cardNumberTextBox.Size = new System.Drawing.Size(238, 20);
+            this.cardNumberTextBox.TabIndex = 11;
             // 
             // phoneTextBox
             // 
@@ -244,31 +262,13 @@
             this.trademarkLabel.TabIndex = 6;
             this.trademarkLabel.Text = "©2023 Trevy\'s Iconic Pizza";
             // 
-            // cardNumberTextBox
-            // 
-            this.cardNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cardNumberTextBox.Location = new System.Drawing.Point(14, 75);
-            this.cardNumberTextBox.Name = "cardNumberTextBox";
-            this.cardNumberTextBox.Size = new System.Drawing.Size(238, 20);
-            this.cardNumberTextBox.TabIndex = 11;
-            // 
-            // cardNumberLabel
-            // 
-            this.cardNumberLabel.AutoSize = true;
-            this.cardNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cardNumberLabel.Location = new System.Drawing.Point(11, 56);
-            this.cardNumberLabel.Name = "cardNumberLabel";
-            this.cardNumberLabel.Size = new System.Drawing.Size(98, 16);
-            this.cardNumberLabel.TabIndex = 12;
-            this.cardNumberLabel.Text = "Card Number";
-            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.BackgroundImage = global::TrevysIconicPizza.Properties.Resources.Pizza;
-            this.ClientSize = new System.Drawing.Size(906, 507);
+            this.ClientSize = new System.Drawing.Size(855, 507);
             this.Controls.Add(this.trademarkLabel);
             this.Controls.Add(this.orderGroupBox);
             this.Controls.Add(this.paymentGroupBox);
