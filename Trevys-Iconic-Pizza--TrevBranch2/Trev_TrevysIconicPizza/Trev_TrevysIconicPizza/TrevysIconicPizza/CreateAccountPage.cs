@@ -142,7 +142,7 @@ namespace TrevysIconicPizza
                 if (result == DialogResult.OK)
                 {
                     Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text);
-                    MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account " + person.User_ID, "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
