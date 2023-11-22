@@ -37,18 +37,19 @@ namespace TrevysIconicPizza
 
         private void toppingsCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            string item = toppingsCheckedListBox.SelectedItem.ToString();
+            //string item = toppingsCheckedListBox.SelectedItem.ToString();
 
 
-            if (e.NewValue == CheckState.Checked)
-            {
-                selectedListBox.Items.Add(item);
-            }
-            else
-            {
-                selectedListBox.Items.Remove(item);
-            }
+            //if (e.NewValue == CheckState.Checked)
+            //{
+            //    selectedItemsRichTextBox.AppendText(item);
+            //}
+            //else
+            //{
+            //    //condition
+            //}
 
+            UpdateDisplayListBox();
 
         }
 
@@ -56,29 +57,36 @@ namespace TrevysIconicPizza
 
         private void UpdateDisplayListBox()
         {
-            // Clear existing items in displayListBox
-            selectedListBox.Items.Clear();
+
+            selectedItemsRichTextBox.Clear();
 
             // Check if any item is selected in crustListBox
             if (crustListBox.SelectedIndex != -1)
             {
-                // Get the selected crust from crustListBox
                 string selectedCrust = crustListBox.SelectedItem.ToString();
-                // Add the selected crust to the displayListBox
-                selectedListBox.Items.Add(selectedCrust);
+                // Append the selected crust to the RichTextBox
+                selectedItemsRichTextBox.AppendText(selectedCrust + "\n");
             }
 
             // Check if any item is selected in sauceListBox
             if (sauceListBox.SelectedIndex != -1)
             {
-                // Get the selected sauce from sauceListBox
                 string selectedSauce = sauceListBox.SelectedItem.ToString();
-                // Add the selected sauce to the displayListBox
-                selectedListBox.Items.Add(selectedSauce);
+                // Append the selected sauce to the RichTextBox
+                selectedItemsRichTextBox.AppendText(selectedSauce + "\n");
             }
 
+            // Handle checked toppings
+            foreach (var item in toppingsCheckedListBox.CheckedItems)
+            {
+                string checkedItem = item.ToString();
+                // Append the checked toppings to the RichTextBox
+                selectedItemsRichTextBox.AppendText(checkedItem + "\n");
+            }
+
+
         }
-        //vege vegetarian
+
         private void vegAddToCartButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vegetarian pizza has been added to your cart successfully!");
@@ -92,28 +100,44 @@ namespace TrevysIconicPizza
         }
 
         //ori
-        private void addToCartButton2_Click(object sender, EventArgs e)
+        private void oriAddToCartButton_Click(object sender, EventArgs e)
         {
-            string size = oriListBox.Text;
+            MessageBox.Show("Original pizza has been added to your cart successfully!");
+            string size = oriComboBox.Text;
             Pizza original = new OriginalPizza(size);
             cartPage.AddPizzaToCart(original);
         }
 
-        private void addToCartButton3_Click(object sender, EventArgs e)
+        private void pepperoniAddToCartButton_Click(object sender, EventArgs e)
         {
-            string size = pepListBox.Text;
-            Pizza pepperoni = new OriginalPizza(size);
+            MessageBox.Show("Pepperoni pizza has been added to your cart successfully!");
+            string size = pepComboBox.Text;
+            Pizza pepperoni = new PepperoniPizza(size);
             cartPage.AddPizzaToCart(pepperoni);
         }
 
-        private void addToCartButton4_Click(object sender, EventArgs e)
+        private void margAddToCartButton_Click(object sender, EventArgs e)
         {
-            string size = margListBox.Text;
+            MessageBox.Show("Margherita pizza has been added to your cart successfully!");
+            string size = margComboBox.Text;
             Pizza margherita = new MargheritaPizza(size);
             cartPage.AddPizzaToCart(margherita);
         }
 
-        
+        private void customAddToCartButton_Click(object sender, EventArgs e)
+        {
+            String size = customSizeComboBox.Text;
+            List<String> ingredients = new List<String>();
+
+            // Retrieve ingredients from the RichTextBox
+            string[] lines = selectedItemsRichTextBox.Text.Split('\n');
+            ingredients.AddRange(lines);
+
+            // Create and add the custom pizza
+            Pizza customPizza = new CustomPizza(size, ingredients);
+            cartPage.AddPizzaToCart(customPizza);
+        }
+
         private void cartLogo_Click(object sender, EventArgs e)
         {
             // Handle the FormClosed event
@@ -128,7 +152,7 @@ namespace TrevysIconicPizza
             cartPage.Show();
         }
 
-        
+       
     }
 
 }
