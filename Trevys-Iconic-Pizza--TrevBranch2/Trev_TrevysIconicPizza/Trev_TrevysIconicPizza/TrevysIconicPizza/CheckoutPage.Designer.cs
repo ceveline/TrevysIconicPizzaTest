@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPage));
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
+            this.delivTimeLabel = new System.Windows.Forms.Label();
+            this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cardNumberLabel = new System.Windows.Forms.Label();
             this.cardNumberTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
@@ -42,14 +44,12 @@
             this.CVVLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
+            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.trademarkLabel = new System.Windows.Forms.Label();
-            this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.delivTimeLabel = new System.Windows.Forms.Label();
-            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -81,6 +81,28 @@
             this.paymentGroupBox.TabIndex = 4;
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment";
+            // 
+            // delivTimeLabel
+            // 
+            this.delivTimeLabel.AutoSize = true;
+            this.delivTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delivTimeLabel.Location = new System.Drawing.Point(11, 343);
+            this.delivTimeLabel.Name = "delivTimeLabel";
+            this.delivTimeLabel.Size = new System.Drawing.Size(158, 15);
+            this.delivTimeLabel.TabIndex = 13;
+            this.delivTimeLabel.Text = "Preferred Delivery Time";
+            // 
+            // deliveryDateTimePicker
+            // 
+            this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
+            this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
+            this.deliveryDateTimePicker.ShowUpDown = true;
+            this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 22);
+            this.deliveryDateTimePicker.TabIndex = 7;
+            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
             // 
             // cardNumberLabel
             // 
@@ -123,7 +145,7 @@
             this.serviceLabel.AutoSize = true;
             this.serviceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.serviceLabel.Location = new System.Drawing.Point(11, 316);
+            this.serviceLabel.Location = new System.Drawing.Point(11, 291);
             this.serviceLabel.Name = "serviceLabel";
             this.serviceLabel.Size = new System.Drawing.Size(100, 15);
             this.serviceLabel.TabIndex = 8;
@@ -142,7 +164,7 @@
             this.pickupRadioButton.AutoSize = true;
             this.pickupRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickupRadioButton.ForeColor = System.Drawing.Color.Black;
-            this.pickupRadioButton.Location = new System.Drawing.Point(15, 373);
+            this.pickupRadioButton.Location = new System.Drawing.Point(103, 316);
             this.pickupRadioButton.Name = "pickupRadioButton";
             this.pickupRadioButton.Size = new System.Drawing.Size(74, 24);
             this.pickupRadioButton.TabIndex = 6;
@@ -165,7 +187,7 @@
             this.deliveryRadioButton.AutoSize = true;
             this.deliveryRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryRadioButton.ForeColor = System.Drawing.Color.Black;
-            this.deliveryRadioButton.Location = new System.Drawing.Point(15, 343);
+            this.deliveryRadioButton.Location = new System.Drawing.Point(15, 316);
             this.deliveryRadioButton.Name = "deliveryRadioButton";
             this.deliveryRadioButton.Size = new System.Drawing.Size(82, 24);
             this.deliveryRadioButton.TabIndex = 4;
@@ -216,6 +238,16 @@
             this.orderGroupBox.TabIndex = 5;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Your Order";
+            // 
+            // cartLogo
+            // 
+            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
+            this.cartLogo.Location = new System.Drawing.Point(302, 26);
+            this.cartLogo.Name = "cartLogo";
+            this.cartLogo.Size = new System.Drawing.Size(24, 24);
+            this.cartLogo.TabIndex = 7;
+            this.cartLogo.TabStop = false;
             // 
             // checkoutButton
             // 
@@ -270,38 +302,6 @@
             this.trademarkLabel.TabIndex = 6;
             this.trademarkLabel.Text = "©2023 Trevy\'s Iconic Pizza";
             // 
-            // deliveryDateTimePicker
-            // 
-            this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.deliveryDateTimePicker.Location = new System.Drawing.Point(164, 343);
-            this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
-            this.deliveryDateTimePicker.ShowUpDown = true;
-            this.deliveryDateTimePicker.Size = new System.Drawing.Size(125, 22);
-            this.deliveryDateTimePicker.TabIndex = 7;
-            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
-            // 
-            // delivTimeLabel
-            // 
-            this.delivTimeLabel.AutoSize = true;
-            this.delivTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delivTimeLabel.Location = new System.Drawing.Point(150, 316);
-            this.delivTimeLabel.Name = "delivTimeLabel";
-            this.delivTimeLabel.Size = new System.Drawing.Size(158, 15);
-            this.delivTimeLabel.TabIndex = 13;
-            this.delivTimeLabel.Text = "Preferred Delivery Time";
-            // 
-            // cartLogo
-            // 
-            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
-            this.cartLogo.Location = new System.Drawing.Point(302, 26);
-            this.cartLogo.Name = "cartLogo";
-            this.cartLogo.Size = new System.Drawing.Size(24, 24);
-            this.cartLogo.TabIndex = 7;
-            this.cartLogo.TabStop = false;
-            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +314,7 @@
             this.Controls.Add(this.paymentGroupBox);
             this.Name = "CheckoutPage";
             this.Text = "Checkout Page";
+            this.Load += new System.EventHandler(this.CheckoutPage_Load);
             this.paymentGroupBox.ResumeLayout(false);
             this.paymentGroupBox.PerformLayout();
             this.orderGroupBox.ResumeLayout(false);

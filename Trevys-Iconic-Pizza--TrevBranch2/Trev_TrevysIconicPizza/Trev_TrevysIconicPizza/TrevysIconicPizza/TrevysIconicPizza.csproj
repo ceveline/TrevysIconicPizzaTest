@@ -83,6 +83,7 @@
     <Compile Include="MenuPage.Designer.cs">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="PizzaPage.cs">
       <SubType>Form</SubType>
     </Compile>
