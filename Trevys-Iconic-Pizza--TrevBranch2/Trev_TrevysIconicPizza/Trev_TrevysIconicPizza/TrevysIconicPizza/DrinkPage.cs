@@ -12,9 +12,32 @@ namespace TrevysIconicPizza
 {
     public partial class DrinkPage : Form
     {
-        public DrinkPage()
+        private CartPage cartPage;
+       
+        public DrinkPage(CartPage cartPageInstance)
         {
             InitializeComponent();
+            this.cartPage = cartPageInstance;
+        }
+
+        private void addVanillaButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vanilla milkshake has been added to your cart successfully!");
+
+            //fix it
+            Drink vMilkshake = new Drink();
+
+            cartPage.AddDrinkToCart(vMilkshake);
+        }
+
+        private void addChocolateButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chocolate milkshake has been added to your cart successfully!");
+
+            //fix it
+            Drink cMilkshake = new Drink();
+
+            cartPage.AddDrinkToCart(cMilkshake);
         }
     }
 }

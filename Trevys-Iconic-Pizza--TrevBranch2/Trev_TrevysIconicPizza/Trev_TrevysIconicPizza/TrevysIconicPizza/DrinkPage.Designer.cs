@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DrinkPage));
             this.drinkPanel = new System.Windows.Forms.Panel();
+            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.SoftdrinkPanel = new System.Windows.Forms.GroupBox();
             this.softDrinkListBox = new System.Windows.Forms.ListBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -56,8 +57,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.drinkPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.SoftdrinkPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.VegetarianGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // drinkPanel
@@ -82,6 +82,17 @@
             this.drinkPanel.Name = "drinkPanel";
             this.drinkPanel.Size = new System.Drawing.Size(1220, 954);
             this.drinkPanel.TabIndex = 1;
+            // 
+            // cartLogo
+            // 
+            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
+            this.cartLogo.Location = new System.Drawing.Point(1136, 14);
+            this.cartLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.cartLogo.Name = "cartLogo";
+            this.cartLogo.Size = new System.Drawing.Size(32, 30);
+            this.cartLogo.TabIndex = 6;
+            this.cartLogo.TabStop = false;
             // 
             // SoftdrinkPanel
             // 
@@ -310,9 +321,9 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(567, 43);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(531, 233);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -327,6 +338,7 @@
             this.addChocolateButton.TabIndex = 3;
             this.addChocolateButton.Text = "Add to Cart";
             this.addChocolateButton.UseVisualStyleBackColor = true;
+            this.addChocolateButton.Click += new System.EventHandler(this.addChocolateButton_Click);
             // 
             // label3
             // 
@@ -351,7 +363,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(11, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(229, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,9 +378,9 @@
             this.VegetarianGroupBox.Controls.Add(this.label1);
             this.VegetarianGroupBox.Controls.Add(this.pictureBox1);
             this.VegetarianGroupBox.Location = new System.Drawing.Point(17, 43);
-            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.VegetarianGroupBox.Name = "VegetarianGroupBox";
-            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.VegetarianGroupBox.Size = new System.Drawing.Size(531, 233);
             this.VegetarianGroupBox.TabIndex = 2;
             this.VegetarianGroupBox.TabStop = false;
@@ -383,6 +395,7 @@
             this.addVanillaButton.TabIndex = 3;
             this.addVanillaButton.Text = "Add to Cart";
             this.addVanillaButton.UseVisualStyleBackColor = true;
+            this.addVanillaButton.Click += new System.EventHandler(this.addVanillaButton_Click);
             // 
             // label2
             // 
@@ -407,23 +420,12 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(11, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // cartLogo
-            // 
-            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
-            this.cartLogo.Location = new System.Drawing.Point(1136, 14);
-            this.cartLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.cartLogo.Name = "cartLogo";
-            this.cartLogo.Size = new System.Drawing.Size(32, 30);
-            this.cartLogo.TabIndex = 6;
-            this.cartLogo.TabStop = false;
             // 
             // DrinkPage
             // 
@@ -433,10 +435,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1259, 1003);
             this.Controls.Add(this.drinkPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DrinkPage";
             this.Text = "DrinkPage";
             this.drinkPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.SoftdrinkPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -451,7 +454,6 @@
             this.VegetarianGroupBox.ResumeLayout(false);
             this.VegetarianGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

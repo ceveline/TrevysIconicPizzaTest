@@ -38,7 +38,7 @@ namespace TrevysIconicPizza
         private void drinkButton_Click(object sender, EventArgs e)
         {
  
-            DrinkPage drinkPage = new DrinkPage();
+            DrinkPage drinkPage = new DrinkPage(cartPageInstance);
 
             // Handle the FormClosed event
             drinkPage.FormClosed += (s, args) =>

@@ -123,7 +123,7 @@
             this.byoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.byoPanel.Name = "byoPanel";
             this.byoPanel.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.byoPanel.Size = new System.Drawing.Size(1115, 407);
+            this.byoPanel.Size = new System.Drawing.Size(1115, 383);
             this.byoPanel.TabIndex = 5;
             this.byoPanel.TabStop = false;
             this.byoPanel.Text = "Build Your Own";

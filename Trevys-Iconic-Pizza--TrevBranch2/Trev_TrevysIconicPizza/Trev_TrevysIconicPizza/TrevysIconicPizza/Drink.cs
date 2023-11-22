@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    internal class Drink
+    public class Drink
     {
         String type;
         decimal price;
@@ -15,19 +16,15 @@ namespace TrevysIconicPizza
 
         public string Type { get; set; }
         public decimal Price { get; set; }
-        public char Size { get; set; }
-
         public Drink()
         {
             Type = "";
-            Size = ' ';
             Price = 0;
         }
 
         public Drink(string type)
         {
             Type = type;
-            Size = ' ';
             Price = 0;
         }
 
@@ -36,6 +33,11 @@ namespace TrevysIconicPizza
         {
             // Default behavior for a generic drink
             return Price;
+        }
+
+        public string ToString()
+        {
+            return String.Format("{0, -20}{1,0:C}", Type, Price);
         }
 
         /*

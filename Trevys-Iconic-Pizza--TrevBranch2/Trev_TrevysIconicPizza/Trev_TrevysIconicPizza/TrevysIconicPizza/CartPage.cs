@@ -97,6 +97,15 @@ namespace TrevysIconicPizza
 
             cartListBox.Refresh();
 
+        } 
+        public void AddDrinkToCart(Drink drink)
+        {
+            //cartListBox.Refresh();
+            cartListBox.Items.Add(drink.ToString());
+            checkEmpty();
+
+            cartListBox.Refresh();
+
         }
 
         private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
