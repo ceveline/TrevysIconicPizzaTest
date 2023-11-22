@@ -84,7 +84,7 @@ namespace TrevysIconicPizza
             MessageBox.Show("Vegetarian pizza has been added to your cart successfully!");
 
             string selectedSize = vegComboBox.Text;
-            Pizza vegetarian = new Pizza("Vegetarian", selectedSize, null);
+            Pizza vegetarian = new VegetarianPizza(selectedSize);
 
             // Now, use the cartPage instance to add the pizza to the cart
             cartPage.AddPizzaToCart(vegetarian);
@@ -95,21 +95,21 @@ namespace TrevysIconicPizza
         private void addToCartButton2_Click(object sender, EventArgs e)
         {
             string size = oriListBox.Text;
-            Pizza original = new Pizza("Original", size, null);
+            Pizza original = new OriginalPizza(size);
             cartPage.AddPizzaToCart(original);
         }
 
         private void addToCartButton3_Click(object sender, EventArgs e)
         {
             string size = pepListBox.Text;
-            Pizza pepperoni = new Pizza("Pepperoni", size, null);
+            Pizza pepperoni = new OriginalPizza(size);
             cartPage.AddPizzaToCart(pepperoni);
         }
 
         private void addToCartButton4_Click(object sender, EventArgs e)
         {
             string size = margListBox.Text;
-            Pizza margherita = new Pizza("Margherita", size, null);
+            Pizza margherita = new MargheritaPizza(size);
             cartPage.AddPizzaToCart(margherita);
         }
 
