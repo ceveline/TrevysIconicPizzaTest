@@ -92,6 +92,7 @@
     <Compile Include="MenuPage.Designer.cs">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="OriginalPizza.cs" />
     <Compile Include="PepperoniPizza.cs" />
     <Compile Include="Pizza.cs" />
