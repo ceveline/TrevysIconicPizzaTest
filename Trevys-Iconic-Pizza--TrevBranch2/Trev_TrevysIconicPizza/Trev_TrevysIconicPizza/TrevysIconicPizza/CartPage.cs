@@ -15,11 +15,25 @@ namespace TrevysIconicPizza
 {
     public partial class CartPage : Form
     {
+        private static CartPage _instance;
         public CartPage()
         {
             InitializeComponent();
             checkEmpty();
         }
+
+        public static CartPage GetInstance()
+        {
+            if (_instance == null || _instance.IsDisposed)
+            {
+                _instance = new CartPage();
+                _instance.FormClosed += (sender, args) => _instance = null; // Handle the FormClosed event to reset the instance
+            }
+            return _instance;
+        }
+
+
+
 
         private void removeButton_Click(object sender, EventArgs e)
         {
@@ -60,8 +74,51 @@ namespace TrevysIconicPizza
         private void addButton_Click(object sender, EventArgs e)
         {
             //This is for testing
-            cartListBox.Items.Add("Pizza");
+            
+            //Pizza p = new Pizza("vegetarian", "s", null);
+            //cartListBox.Items.Add(p.ToString());
+            
+
+            List<String> test = new List<string>();
+
+            foreach(String item in cartListBox.Items)
+            {
+                test.Add(item);
+            }
+
             checkEmpty();
         }
+
+        public void AddPizzaToCart(Pizza pizza)
+        {
+            //cartListBox.Refresh();
+            cartListBox.Items.Add(pizza.ToString());
+            checkEmpty();
+
+            cartListBox.Refresh();
+
+        } 
+        public void AddDrinkToCart(Drink drink)
+        {
+            //cartListBox.Refresh();
+            cartListBox.Items.Add(drink.ToString());
+            checkEmpty();
+
+            cartListBox.Refresh();
+
+        }
+
+        private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void closePictureBox_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Hide the form when the close button is clicked
+            
+        }
+
+        
     }
 }
