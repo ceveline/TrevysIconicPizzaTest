@@ -302,6 +302,7 @@
             this.Controls.Add(this.paymentGroupBox);
             this.Name = "CheckoutPage";
             this.Text = "Checkout Page";
+            this.Load += new System.EventHandler(this.CheckoutPage_Load);
             this.paymentGroupBox.ResumeLayout(false);
             this.paymentGroupBox.PerformLayout();
             this.orderGroupBox.ResumeLayout(false);
