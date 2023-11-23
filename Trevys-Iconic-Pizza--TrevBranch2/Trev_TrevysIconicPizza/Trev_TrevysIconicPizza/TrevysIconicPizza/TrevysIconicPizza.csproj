@@ -52,6 +52,12 @@
     <Compile Include="CartPage.Designer.cs">
       <DependentUpon>CartPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckoutPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckoutPage.Designer.cs">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateAccountPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="VegetarianPizza.cs" />
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutPage.resx">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>

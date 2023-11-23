@@ -49,7 +49,6 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
-            this.trademarkLabel = new System.Windows.Forms.Label();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -73,12 +72,12 @@
             this.paymentGroupBox.Controls.Add(this.addressLabel);
             this.paymentGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.paymentGroupBox.Location = new System.Drawing.Point(63, 11);
+            this.paymentGroupBox.Location = new System.Drawing.Point(46, 28);
             this.paymentGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.paymentGroupBox.Name = "paymentGroupBox";
             this.paymentGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.paymentGroupBox.Size = new System.Drawing.Size(343, 433);
-            this.paymentGroupBox.TabIndex = 4;
+            this.paymentGroupBox.TabIndex = 5;
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment";
             // 
@@ -230,12 +229,12 @@
             this.orderGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.orderGroupBox.Location = new System.Drawing.Point(448, 11);
+            this.orderGroupBox.Location = new System.Drawing.Point(446, 28);
             this.orderGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.orderGroupBox.Name = "orderGroupBox";
             this.orderGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.orderGroupBox.Size = new System.Drawing.Size(343, 433);
-            this.orderGroupBox.TabIndex = 5;
+            this.orderGroupBox.TabIndex = 6;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Your Order";
             // 
@@ -292,16 +291,6 @@
             this.orderListBox.Size = new System.Drawing.Size(310, 284);
             this.orderListBox.TabIndex = 0;
             // 
-            // trademarkLabel
-            // 
-            this.trademarkLabel.AutoSize = true;
-            this.trademarkLabel.Location = new System.Drawing.Point(362, 467);
-            this.trademarkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.trademarkLabel.Name = "trademarkLabel";
-            this.trademarkLabel.Size = new System.Drawing.Size(137, 13);
-            this.trademarkLabel.TabIndex = 6;
-            this.trademarkLabel.Text = "©2023 Trevy\'s Iconic Pizza";
-            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,25 +298,26 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.BackgroundImage = global::TrevysIconicPizza.Properties.Resources.Pizza;
             this.ClientSize = new System.Drawing.Size(855, 507);
-            this.Controls.Add(this.trademarkLabel);
             this.Controls.Add(this.orderGroupBox);
             this.Controls.Add(this.paymentGroupBox);
             this.Name = "CheckoutPage";
             this.Text = "Checkout Page";
-            this.Load += new System.EventHandler(this.CheckoutPage_Load);
             this.paymentGroupBox.ResumeLayout(false);
             this.paymentGroupBox.PerformLayout();
             this.orderGroupBox.ResumeLayout(false);
             this.orderGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox paymentGroupBox;
+        private System.Windows.Forms.Label delivTimeLabel;
+        private System.Windows.Forms.DateTimePicker deliveryDateTimePicker;
+        private System.Windows.Forms.Label cardNumberLabel;
+        private System.Windows.Forms.TextBox cardNumberTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label phoneLabel;
         private System.Windows.Forms.Label serviceLabel;
@@ -338,15 +328,10 @@
         private System.Windows.Forms.Label CVVLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.GroupBox orderGroupBox;
+        private System.Windows.Forms.PictureBox cartLogo;
         private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.ListBox orderListBox;
-        private System.Windows.Forms.Label trademarkLabel;
-        private System.Windows.Forms.Label cardNumberLabel;
-        private System.Windows.Forms.TextBox cardNumberTextBox;
-        private System.Windows.Forms.DateTimePicker deliveryDateTimePicker;
-        private System.Windows.Forms.Label delivTimeLabel;
-        private System.Windows.Forms.PictureBox cartLogo;
     }
 }
