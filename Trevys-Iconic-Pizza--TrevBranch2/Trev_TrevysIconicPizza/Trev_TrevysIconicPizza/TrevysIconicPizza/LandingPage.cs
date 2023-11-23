@@ -51,18 +51,11 @@ namespace TrevysIconicPizza
             createAccountButton.Enabled = false;
         }
 
-        private void continueAsGuestButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            MenuPage menuPage = new MenuPage();
-            // Handle the FormClosed event
-            menuPage.FormClosed += (s, args) =>
-            {
-                // Re-enable the loginButton when the LoginPage is closed
-                continueAsGuestButton.Enabled = true;
-            };
+            CartPage cartPage = new CartPage();
+            cartPage.Show();
 
-            menuPage.Show();
-            continueAsGuestButton.Enabled = false;
         }
     }
 }

@@ -59,13 +59,11 @@
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
-    <Compile Include="CustomPizza.cs" />
-    <Compile Include="Drink.cs" />
-    <Compile Include="DrinkPage.cs">
+    <Compile Include="CheckoutPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrinkPage.Designer.cs">
-      <DependentUpon>DrinkPage.cs</DependentUpon>
+    <Compile Include="CheckoutPage.Designer.cs">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
     </Compile>
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
@@ -79,16 +77,13 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MargheritaPizza.cs" />
     <Compile Include="MenuPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPage.Designer.cs">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="OriginalPizza.cs" />
-    <Compile Include="PepperoniPizza.cs" />
-    <Compile Include="Pizza.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="PizzaPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,15 +92,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VegetarianPizza.cs" />
     <EmbeddedResource Include="CartPage.resx">
       <DependentUpon>CartPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckoutPage.resx">
+      <DependentUpon>CheckoutPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountPage.resx">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DrinkPage.resx">
-      <DependentUpon>DrinkPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LandingPage.resx">
       <DependentUpon>LandingPage.cs</DependentUpon>
@@ -116,17 +110,24 @@
     <EmbeddedResource Include="MenuPage.resx">
       <DependentUpon>MenuPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PizzaPage.resx">
-      <DependentUpon>PizzaPage.cs</DependentUpon>
+    <EmbeddedResource Include="Properties\LogoutPage.resx">
+      <DependentUpon>LogoutPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\LogoutPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\LogoutPage.Designer.cs">
+      <DependentUpon>LogoutPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,6 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -159,8 +159,8 @@
             // createAcountButton
             // 
             this.createAcountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.createAcountButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createAcountButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.createAcountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAcountButton.ForeColor = System.Drawing.Color.White;
             this.createAcountButton.Location = new System.Drawing.Point(201, 361);
             this.createAcountButton.Name = "createAcountButton";
             this.createAcountButton.Size = new System.Drawing.Size(145, 50);
@@ -244,7 +244,7 @@
             this.loginPanel.Controls.Add(this.lastNameLabel);
             this.loginPanel.Controls.Add(this.firstNameLabel);
             this.loginPanel.Location = new System.Drawing.Point(23, 18);
-            this.loginPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(520, 433);
             this.loginPanel.TabIndex = 15;

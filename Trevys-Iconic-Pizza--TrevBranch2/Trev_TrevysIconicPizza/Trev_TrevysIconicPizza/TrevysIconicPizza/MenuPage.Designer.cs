@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPage));
             this.pizzaButton = new System.Windows.Forms.Button();
-            this.drinkButton = new System.Windows.Forms.Button();
+            this.drinksButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accountLogo = new System.Windows.Forms.PictureBox();
             this.questionLogo = new System.Windows.Forms.PictureBox();
@@ -46,36 +46,31 @@
             this.pizzaButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.pizzaButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pizzaButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.pizzaButton.Location = new System.Drawing.Point(125, 321);
-            this.pizzaButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pizzaButton.Location = new System.Drawing.Point(94, 261);
             this.pizzaButton.Name = "pizzaButton";
-            this.pizzaButton.Size = new System.Drawing.Size(271, 95);
+            this.pizzaButton.Size = new System.Drawing.Size(203, 77);
             this.pizzaButton.TabIndex = 0;
             this.pizzaButton.Text = "PIZZA";
             this.pizzaButton.UseVisualStyleBackColor = false;
-            this.pizzaButton.Click += new System.EventHandler(this.pizzaButton_Click);
             // 
-            // drinkButton
+            // drinksButton
             // 
-            this.drinkButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.drinkButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drinkButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.drinkButton.Location = new System.Drawing.Point(440, 321);
-            this.drinkButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.drinkButton.Name = "drinkButton";
-            this.drinkButton.Size = new System.Drawing.Size(271, 95);
-            this.drinkButton.TabIndex = 1;
-            this.drinkButton.Text = "DRINKS";
-            this.drinkButton.UseVisualStyleBackColor = false;
-            this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
+            this.drinksButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.drinksButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drinksButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.drinksButton.Location = new System.Drawing.Point(330, 261);
+            this.drinksButton.Name = "drinksButton";
+            this.drinksButton.Size = new System.Drawing.Size(203, 77);
+            this.drinksButton.TabIndex = 1;
+            this.drinksButton.Text = "DRINKS";
+            this.drinksButton.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(257, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(193, 17);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 276);
+            this.pictureBox1.Size = new System.Drawing.Size(241, 224);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -83,10 +78,9 @@
             // 
             this.accountLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.accountLogo.Image = ((System.Drawing.Image)(resources.GetObject("accountLogo.Image")));
-            this.accountLogo.Location = new System.Drawing.Point(16, 15);
-            this.accountLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accountLogo.Location = new System.Drawing.Point(12, 12);
             this.accountLogo.Name = "accountLogo";
-            this.accountLogo.Size = new System.Drawing.Size(32, 30);
+            this.accountLogo.Size = new System.Drawing.Size(24, 24);
             this.accountLogo.TabIndex = 3;
             this.accountLogo.TabStop = false;
             // 
@@ -94,10 +88,9 @@
             // 
             this.questionLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.questionLogo.Image = ((System.Drawing.Image)(resources.GetObject("questionLogo.Image")));
-            this.questionLogo.Location = new System.Drawing.Point(732, 15);
-            this.questionLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.questionLogo.Location = new System.Drawing.Point(549, 12);
             this.questionLogo.Name = "questionLogo";
-            this.questionLogo.Size = new System.Drawing.Size(32, 30);
+            this.questionLogo.Size = new System.Drawing.Size(24, 24);
             this.questionLogo.TabIndex = 4;
             this.questionLogo.TabStop = false;
             // 
@@ -105,27 +98,24 @@
             // 
             this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
-            this.cartLogo.Location = new System.Drawing.Point(787, 15);
-            this.cartLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartLogo.Location = new System.Drawing.Point(590, 12);
             this.cartLogo.Name = "cartLogo";
-            this.cartLogo.Size = new System.Drawing.Size(32, 30);
+            this.cartLogo.Size = new System.Drawing.Size(24, 24);
             this.cartLogo.TabIndex = 5;
             this.cartLogo.TabStop = false;
-            this.cartLogo.Click += new System.EventHandler(this.cartLogo_Click);
             // 
             // MenuPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(835, 449);
+            this.ClientSize = new System.Drawing.Size(626, 365);
             this.Controls.Add(this.cartLogo);
             this.Controls.Add(this.questionLogo);
             this.Controls.Add(this.accountLogo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.drinkButton);
+            this.Controls.Add(this.drinksButton);
             this.Controls.Add(this.pizzaButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuPage";
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -139,7 +129,7 @@
         #endregion
 
         private System.Windows.Forms.Button pizzaButton;
-        private System.Windows.Forms.Button drinkButton;
+        private System.Windows.Forms.Button drinksButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox accountLogo;
         private System.Windows.Forms.PictureBox questionLogo;
