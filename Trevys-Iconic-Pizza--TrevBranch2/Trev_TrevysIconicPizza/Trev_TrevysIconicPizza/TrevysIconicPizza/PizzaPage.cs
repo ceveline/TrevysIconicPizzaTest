@@ -38,7 +38,7 @@ namespace TrevysIconicPizza
 
         private void toppingsCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            string item = toppingsCheckedListBox.SelectedItem.ToString();
+            string item = toppingsCheckedListBox.Items[e.Index].ToString(); // Use e.Index to get the correct item
 
             if (e.NewValue == CheckState.Checked)
             {
@@ -50,7 +50,6 @@ namespace TrevysIconicPizza
                 selectedListBox.Items.Remove(item);
                 customPizzaItems.Remove(item);
             }
-
 
         }
 
