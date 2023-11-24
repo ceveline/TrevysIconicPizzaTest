@@ -35,7 +35,7 @@ namespace TrevysIconicPizza
             return Price;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return String.Format("{0, -20}{1,0:C}", Type, Price);
         }
