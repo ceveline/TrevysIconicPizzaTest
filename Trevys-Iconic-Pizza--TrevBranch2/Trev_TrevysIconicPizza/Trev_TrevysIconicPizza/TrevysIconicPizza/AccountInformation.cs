@@ -12,7 +12,7 @@ namespace TrevysIconicPizza
 {
     public partial class AccountInformation : Form
     {
-        //Saves any error message 
+        // Saves any error message 
         List<string> invalidResult = new List<string>();
         public AccountInformation()
         {
@@ -79,7 +79,7 @@ namespace TrevysIconicPizza
         private bool verifyUsername()
         {
             bool result = true;
-            //Username must contain a upper and lowercase letter, a digit, and must be of length 6
+            // Username must contain a upper and lowercase letter, a digit, and must be of length 6
             if (System.Text.RegularExpressions.Regex.IsMatch(usernameTextBox.Text, "^(?=.*[a-zA-Z])(?=.*\\d).{6,}$\r\n"))
             {
                 invalidResult.Add($"Invalid username.\n");
@@ -159,7 +159,7 @@ namespace TrevysIconicPizza
             }
             return result;
         }
-        //Allow user to edit account information
+        // Allow user to edit account information
         private void showEdit()
         {
             firstNameTextBox.ReadOnly = false;
@@ -177,9 +177,10 @@ namespace TrevysIconicPizza
             cvvLabel.Visible = true;
             cvvTextBox.Visible = true;
             doneButton.Visible = true;
+            cancelButton.Visible = true;
 
         }
-        //Prevent user to edit fields 
+        // Prevent user to edit fields 
         private void hideEdit()
         {
             firstNameTextBox.ReadOnly = true;
@@ -197,6 +198,7 @@ namespace TrevysIconicPizza
             cvvLabel.Visible = false;
             cvvTextBox.Visible = false;
             doneButton.Visible = false;
+            cancelButton.Visible = false;
 
         }
 
@@ -245,6 +247,18 @@ namespace TrevysIconicPizza
                     hideEdit();
                 }
             }
+        }
+        // Allow user to cancel edit process
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to Cancel?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                hideEdit();
+            }
+            
+            
         }
     }
 }

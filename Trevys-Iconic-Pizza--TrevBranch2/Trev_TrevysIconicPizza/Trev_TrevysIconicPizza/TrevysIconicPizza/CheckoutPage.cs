@@ -34,7 +34,7 @@ namespace TrevysIconicPizza
         private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             // Rush hour time
-            TimeSpan rushHourStart = TimeSpan.Parse("16:00");
+            TimeSpan rushHourStart = TimeSpan.Parse("17:00");
             TimeSpan rushHourEnd = TimeSpan.Parse("19:00");
             TimeSpan now = DateTime.Now.TimeOfDay;
             
