@@ -49,6 +49,8 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
+            this.estimatedPrepTime = new System.Windows.Forms.Label();
+            this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -57,6 +59,7 @@
             // paymentGroupBox
             // 
             this.paymentGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
+            this.paymentGroupBox.Controls.Add(this.pickUpTimeLabel);
             this.paymentGroupBox.Controls.Add(this.delivTimeLabel);
             this.paymentGroupBox.Controls.Add(this.deliveryDateTimePicker);
             this.paymentGroupBox.Controls.Add(this.cardNumberLabel);
@@ -70,6 +73,7 @@
             this.paymentGroupBox.Controls.Add(this.deliveryRadioButton);
             this.paymentGroupBox.Controls.Add(this.CVVLabel);
             this.paymentGroupBox.Controls.Add(this.addressLabel);
+            this.paymentGroupBox.Controls.Add(this.estimatedPrepTime);
             this.paymentGroupBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.paymentGroupBox.Location = new System.Drawing.Point(46, 28);
@@ -293,6 +297,28 @@
             this.orderListBox.Size = new System.Drawing.Size(310, 284);
             this.orderListBox.TabIndex = 0;
             // 
+            // estimatedPrepTime
+            // 
+            this.estimatedPrepTime.AutoSize = true;
+            this.estimatedPrepTime.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estimatedPrepTime.Location = new System.Drawing.Point(12, 340);
+            this.estimatedPrepTime.Name = "estimatedPrepTime";
+            this.estimatedPrepTime.Size = new System.Drawing.Size(234, 22);
+            this.estimatedPrepTime.TabIndex = 14;
+            this.estimatedPrepTime.Text = "Estimated Delivery Time";
+            this.estimatedPrepTime.Visible = false;
+            // 
+            // pickUpTimeLabel
+            // 
+            this.pickUpTimeLabel.AutoSize = true;
+            this.pickUpTimeLabel.Location = new System.Drawing.Point(11, 369);
+            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
+            this.pickUpTimeLabel.Size = new System.Drawing.Size(77, 32);
+            this.pickUpTimeLabel.TabIndex = 15;
+            this.pickUpTimeLabel.Text = "label";
+            this.pickUpTimeLabel.Visible = false;
+            this.pickUpTimeLabel.Click += new System.EventHandler(this.pickUpTimeLabel_Click);
+            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +362,7 @@
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.ListBox orderListBox;
+        private System.Windows.Forms.Label pickUpTimeLabel;
+        private System.Windows.Forms.Label estimatedPrepTime;
     }
 }

@@ -34,15 +34,28 @@ namespace TrevysIconicPizza
 
         private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            TimeSpan rushHourStart = TimeSpan.Parse("17:00");
+            TimeSpan rushHourEnd = TimeSpan.Parse("18:00");
+            TimeSpan now = DateTime.Now.TimeOfDay;
             if (pickupRadioButton.Checked) 
             {
                 delivTimeLabel.Visible = false;
                 deliveryDateTimePicker.Visible = false;
+
+                if(now > rushHourStart && now < rushHourEnd)
+                {
+                    pickUpTimeLabel.Text = DateTime.Now.AddMinutes(20).ToString;
+                }
             } else
             {
                 deliveryDateTimePicker.Visible = true;
                 delivTimeLabel.Visible = true;
             }
+        }
+
+        private void pickUpTimeLabel_Click(object sender, EventArgs e)
+        {
+            pickUpTimeLabel.Text =  DateTime.Now.AddMinutes(40).ToString();
         }
     }
 
