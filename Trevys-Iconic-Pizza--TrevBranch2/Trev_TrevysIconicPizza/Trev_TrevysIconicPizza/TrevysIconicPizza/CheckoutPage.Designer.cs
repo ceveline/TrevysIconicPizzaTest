@@ -247,6 +247,7 @@
             this.cartLogo.Size = new System.Drawing.Size(24, 24);
             this.cartLogo.TabIndex = 7;
             this.cartLogo.TabStop = false;
+            this.cartLogo.Click += new System.EventHandler(this.cartLogo_Click);
             // 
             // checkoutButton
             // 

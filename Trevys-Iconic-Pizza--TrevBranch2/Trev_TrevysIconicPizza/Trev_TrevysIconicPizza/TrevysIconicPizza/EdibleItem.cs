@@ -8,5 +8,7 @@ namespace TrevysIconicPizza
 {
     internal class EdibleItem
     {
+        private List<Pizza> pizzaList;
+        private List<Drink> drinkList;
     }
 }

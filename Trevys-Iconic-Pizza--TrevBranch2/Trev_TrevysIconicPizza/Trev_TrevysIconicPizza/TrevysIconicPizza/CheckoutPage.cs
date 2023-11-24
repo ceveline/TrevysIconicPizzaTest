@@ -12,6 +12,15 @@ namespace TrevysIconicPizza
 {
     public partial class CheckoutPage : Form
     {
+
+        private CartPage cartPage;
+        public CheckoutPage(CartPage cartPageInstance)
+        {
+            InitializeComponent();
+            this.cartPage = cartPageInstance;
+
+        }
+
         public CheckoutPage()
         {
             InitializeComponent();
@@ -31,8 +40,21 @@ namespace TrevysIconicPizza
 
 
         }
+
+        private void cartLogo_Click(object sender, EventArgs e)
+        {
+            // Handle the FormClosed event
+            cartPage.Hide(); // Hide the cartPage instead of closing it
+            cartLogo.Enabled = false;
+
+            cartPage.VisibleChanged += (s, args) =>
+            {
+                cartLogo.Enabled = true; // Re-enable the cartLogo when the cartPage is closed
+            };
+
+            cartPage.Show();
+        }
+
     }
-
-
 }
 
