@@ -75,15 +75,17 @@
             this.accountInfoPanel.Controls.Add(this.accountInfoLabel);
             this.accountInfoPanel.Controls.Add(this.doneButton);
             this.accountInfoPanel.Controls.Add(this.editAccountButton);
-            this.accountInfoPanel.Location = new System.Drawing.Point(29, 21);
+            this.accountInfoPanel.Location = new System.Drawing.Point(12, 12);
+            this.accountInfoPanel.MaximumSize = new System.Drawing.Size(537, 446);
             this.accountInfoPanel.Name = "accountInfoPanel";
-            this.accountInfoPanel.Size = new System.Drawing.Size(503, 425);
+            this.accountInfoPanel.Size = new System.Drawing.Size(537, 446);
             this.accountInfoPanel.TabIndex = 1;
             // 
             // accountInfoLabel
             // 
             this.accountInfoLabel.AutoSize = true;
             this.accountInfoLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.accountInfoLabel.Location = new System.Drawing.Point(4, 4);
             this.accountInfoLabel.Name = "accountInfoLabel";
             this.accountInfoLabel.Size = new System.Drawing.Size(198, 22);

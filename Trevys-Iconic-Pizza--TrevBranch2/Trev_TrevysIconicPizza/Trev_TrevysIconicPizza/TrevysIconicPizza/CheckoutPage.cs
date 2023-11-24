@@ -23,13 +23,26 @@ namespace TrevysIconicPizza
         private void CheckoutPage_Load(object sender, EventArgs e)
         {
             // setting min date to curent time
-            deliveryDateTimePicker.MinDate = DateTime.Now;
+            deliveryDateTimePicker.MinDate = DateTime.Today;
 
             // user can only select today or next day
             DateTime endOfNextDay = DateTime.Today.AddDays(2).AddTicks(-1);
             deliveryDateTimePicker.MaxDate = endOfNextDay;
 
 
+        }
+
+        private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (pickupRadioButton.Checked) 
+            {
+                delivTimeLabel.Visible = false;
+                deliveryDateTimePicker.Visible = false;
+            } else
+            {
+                deliveryDateTimePicker.Visible = true;
+                delivTimeLabel.Visible = true;
+            }
         }
     }
 

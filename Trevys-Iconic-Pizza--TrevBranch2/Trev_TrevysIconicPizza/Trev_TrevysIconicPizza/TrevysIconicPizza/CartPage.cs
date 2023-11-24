@@ -71,22 +71,20 @@ namespace TrevysIconicPizza
             return result;
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void checkOutButton_Click(object sender, EventArgs e)
         {
-            //This is for testing
-            
-            //Pizza p = new Pizza("vegetarian", "s", null);
-            //cartListBox.Items.Add(p.ToString());
-            
+            CheckoutPage checkoutPage = new CheckoutPage();
 
-            List<String> test = new List<string>();
-
-            foreach(String item in cartListBox.Items)
+            // Handle the FormClosed event
+            checkoutPage.FormClosed += (s, args) =>
             {
-                test.Add(item);
-            }
+                // Re-enable the loginButton when the LoginPage is closed
+                checkOutButton.Enabled = true;
+            };
 
-            checkEmpty();
+            checkoutPage.Show();
+            checkOutButton.Enabled = false;
+
         }
 
         public void AddPizzaToCart(Pizza pizza)
