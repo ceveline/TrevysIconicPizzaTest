@@ -73,6 +73,7 @@
     <Compile Include="DrinkPage.Designer.cs">
       <DependentUpon>DrinkPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EdibleItem.cs" />
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
