@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPage));
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
+            this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.delivTimeLabel = new System.Windows.Forms.Label();
             this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cardNumberLabel = new System.Windows.Forms.Label();
@@ -43,14 +44,13 @@
             this.deliveryRadioButton = new System.Windows.Forms.RadioButton();
             this.CVVLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
+            this.estimatedPrepTime = new System.Windows.Forms.Label();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.cartLogo = new System.Windows.Forms.PictureBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
-            this.estimatedPrepTime = new System.Windows.Forms.Label();
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -59,9 +59,7 @@
             // paymentGroupBox
             // 
             this.paymentGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
-            this.paymentGroupBox.Controls.Add(this.pickUpTimeLabel);
             this.paymentGroupBox.Controls.Add(this.delivTimeLabel);
-            this.paymentGroupBox.Controls.Add(this.deliveryDateTimePicker);
             this.paymentGroupBox.Controls.Add(this.cardNumberLabel);
             this.paymentGroupBox.Controls.Add(this.cardNumberTextBox);
             this.paymentGroupBox.Controls.Add(this.phoneTextBox);
@@ -74,7 +72,9 @@
             this.paymentGroupBox.Controls.Add(this.CVVLabel);
             this.paymentGroupBox.Controls.Add(this.addressLabel);
             this.paymentGroupBox.Controls.Add(this.estimatedPrepTime);
-            this.paymentGroupBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentGroupBox.Controls.Add(this.pickUpTimeLabel);
+            this.paymentGroupBox.Controls.Add(this.deliveryDateTimePicker);
+            this.paymentGroupBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.paymentGroupBox.Location = new System.Drawing.Point(46, 28);
             this.paymentGroupBox.Margin = new System.Windows.Forms.Padding(2);
@@ -85,15 +85,28 @@
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment";
             // 
+            // pickUpTimeLabel
+            // 
+            this.pickUpTimeLabel.AutoSize = true;
+            this.pickUpTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.pickUpTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pickUpTimeLabel.Location = new System.Drawing.Point(14, 368);
+            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
+            this.pickUpTimeLabel.Size = new System.Drawing.Size(59, 26);
+            this.pickUpTimeLabel.TabIndex = 15;
+            this.pickUpTimeLabel.Text = "label";
+            this.pickUpTimeLabel.Visible = false;
+            // 
             // delivTimeLabel
             // 
             this.delivTimeLabel.AutoSize = true;
+            this.delivTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.delivTimeLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delivTimeLabel.Location = new System.Drawing.Point(11, 343);
             this.delivTimeLabel.Name = "delivTimeLabel";
-            this.delivTimeLabel.Size = new System.Drawing.Size(187, 19);
+            this.delivTimeLabel.Size = new System.Drawing.Size(193, 19);
             this.delivTimeLabel.TabIndex = 13;
-            this.delivTimeLabel.Text = "Preferred Delivery Time";
+            this.delivTimeLabel.Text = "Preferred Delivery Time:";
             // 
             // deliveryDateTimePicker
             // 
@@ -109,6 +122,7 @@
             // cardNumberLabel
             // 
             this.cardNumberLabel.AutoSize = true;
+            this.cardNumberLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.cardNumberLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardNumberLabel.Location = new System.Drawing.Point(11, 56);
             this.cardNumberLabel.Name = "cardNumberLabel";
@@ -135,6 +149,7 @@
             // phoneLabel
             // 
             this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.phoneLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneLabel.Location = new System.Drawing.Point(12, 241);
             this.phoneLabel.Name = "phoneLabel";
@@ -145,6 +160,7 @@
             // serviceLabel
             // 
             this.serviceLabel.AutoSize = true;
+            this.serviceLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.serviceLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.serviceLabel.Location = new System.Drawing.Point(11, 291);
@@ -201,6 +217,7 @@
             // CVVLabel
             // 
             this.CVVLabel.AutoSize = true;
+            this.CVVLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.CVVLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CVVLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.CVVLabel.Location = new System.Drawing.Point(11, 117);
@@ -213,6 +230,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.addressLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.addressLabel.Location = new System.Drawing.Point(11, 178);
@@ -221,6 +239,18 @@
             this.addressLabel.Size = new System.Drawing.Size(73, 19);
             this.addressLabel.TabIndex = 1;
             this.addressLabel.Text = "Address";
+            // 
+            // estimatedPrepTime
+            // 
+            this.estimatedPrepTime.AutoSize = true;
+            this.estimatedPrepTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.estimatedPrepTime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estimatedPrepTime.Location = new System.Drawing.Point(11, 343);
+            this.estimatedPrepTime.Name = "estimatedPrepTime";
+            this.estimatedPrepTime.Size = new System.Drawing.Size(189, 19);
+            this.estimatedPrepTime.TabIndex = 14;
+            this.estimatedPrepTime.Text = "Estimated Pickup Time:";
+            this.estimatedPrepTime.Visible = false;
             // 
             // orderGroupBox
             // 
@@ -231,7 +261,7 @@
             this.orderGroupBox.Controls.Add(this.totalTextBox);
             this.orderGroupBox.Controls.Add(this.orderListBox);
             this.orderGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderGroupBox.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderGroupBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.orderGroupBox.Location = new System.Drawing.Point(446, 28);
             this.orderGroupBox.Margin = new System.Windows.Forms.Padding(2);
@@ -267,6 +297,7 @@
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
+            this.totalLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.totalLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.totalLabel.Location = new System.Drawing.Point(10, 371);
@@ -281,7 +312,7 @@
             this.totalTextBox.Location = new System.Drawing.Point(76, 363);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(100, 39);
+            this.totalTextBox.Size = new System.Drawing.Size(100, 32);
             this.totalTextBox.TabIndex = 1;
             // 
             // orderListBox
@@ -296,28 +327,6 @@
             this.orderListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.orderListBox.Size = new System.Drawing.Size(310, 284);
             this.orderListBox.TabIndex = 0;
-            // 
-            // estimatedPrepTime
-            // 
-            this.estimatedPrepTime.AutoSize = true;
-            this.estimatedPrepTime.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.estimatedPrepTime.Location = new System.Drawing.Point(12, 340);
-            this.estimatedPrepTime.Name = "estimatedPrepTime";
-            this.estimatedPrepTime.Size = new System.Drawing.Size(234, 22);
-            this.estimatedPrepTime.TabIndex = 14;
-            this.estimatedPrepTime.Text = "Estimated Delivery Time";
-            this.estimatedPrepTime.Visible = false;
-            // 
-            // pickUpTimeLabel
-            // 
-            this.pickUpTimeLabel.AutoSize = true;
-            this.pickUpTimeLabel.Location = new System.Drawing.Point(11, 369);
-            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
-            this.pickUpTimeLabel.Size = new System.Drawing.Size(77, 32);
-            this.pickUpTimeLabel.TabIndex = 15;
-            this.pickUpTimeLabel.Text = "label";
-            this.pickUpTimeLabel.Visible = false;
-            this.pickUpTimeLabel.Click += new System.EventHandler(this.pickUpTimeLabel_Click);
             // 
             // CheckoutPage
             // 

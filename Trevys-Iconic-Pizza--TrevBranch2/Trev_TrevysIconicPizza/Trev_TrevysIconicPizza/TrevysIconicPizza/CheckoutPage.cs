@@ -29,34 +29,40 @@ namespace TrevysIconicPizza
             DateTime endOfNextDay = DateTime.Today.AddDays(2).AddTicks(-1);
             deliveryDateTimePicker.MaxDate = endOfNextDay;
 
-
         }
 
         private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            TimeSpan rushHourStart = TimeSpan.Parse("17:00");
-            TimeSpan rushHourEnd = TimeSpan.Parse("18:00");
+            // Rush hour time
+            TimeSpan rushHourStart = TimeSpan.Parse("16:00");
+            TimeSpan rushHourEnd = TimeSpan.Parse("19:00");
             TimeSpan now = DateTime.Now.TimeOfDay;
+            
+            //If pickup is selected display pickup estimated time and hide calendar
             if (pickupRadioButton.Checked) 
             {
                 delivTimeLabel.Visible = false;
                 deliveryDateTimePicker.Visible = false;
+                pickUpTimeLabel.Visible = true;
+                estimatedPrepTime.Visible = true;
 
-                if(now > rushHourStart && now < rushHourEnd)
+                pickUpTimeLabel.Text = DateTime.Now.AddMinutes(40).ToString("g");
+
+                //Rush hour will add an extra 20 minutes to pick up time 
+                if (now > rushHourStart && now < rushHourEnd)
                 {
-                    pickUpTimeLabel.Text = DateTime.Now.AddMinutes(20).ToString;
+                    pickUpTimeLabel.Text = DateTime.Now.AddMinutes(60).ToString("g");
                 }
             } else
             {
                 deliveryDateTimePicker.Visible = true;
                 delivTimeLabel.Visible = true;
+                pickUpTimeLabel.Visible =false;
+                estimatedPrepTime.Visible = false;
             }
         }
 
-        private void pickUpTimeLabel_Click(object sender, EventArgs e)
-        {
-            pickUpTimeLabel.Text =  DateTime.Now.AddMinutes(40).ToString();
-        }
+
     }
 
 
