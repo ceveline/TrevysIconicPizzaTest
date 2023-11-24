@@ -73,3 +73,4 @@ C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevB
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.pdb
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.CheckoutPage.resources
+C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.CheckoutPage.resources
