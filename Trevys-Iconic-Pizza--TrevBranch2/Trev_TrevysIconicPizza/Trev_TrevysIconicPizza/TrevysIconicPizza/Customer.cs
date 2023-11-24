@@ -14,6 +14,7 @@ namespace TrevysIconicPizza
         private string lastName;
         private string password;
         private string card;
+        private string cvv;
 
         //Keeps track of id
         static int idCustomerCounter = 0;
@@ -98,6 +99,17 @@ namespace TrevysIconicPizza
             set 
             {
                 user_ID = value; 
+            }
+        }
+        public string CVV
+        {
+            get
+            {
+                return CVV;
+            }
+            set 
+            { 
+                CVV = value; 
             }
         }
     }
