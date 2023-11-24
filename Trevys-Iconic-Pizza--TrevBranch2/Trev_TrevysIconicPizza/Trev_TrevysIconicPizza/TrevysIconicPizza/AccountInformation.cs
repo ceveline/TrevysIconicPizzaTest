@@ -159,6 +159,7 @@ namespace TrevysIconicPizza
             }
             return result;
         }
+        //Allow user to edit account information
         private void showEdit()
         {
             firstNameTextBox.ReadOnly = false;
@@ -178,6 +179,7 @@ namespace TrevysIconicPizza
             doneButton.Visible = true;
 
         }
+        //Prevent user to edit fields 
         private void hideEdit()
         {
             firstNameTextBox.ReadOnly = true;

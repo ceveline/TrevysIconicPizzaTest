@@ -95,7 +95,7 @@ namespace TrevysIconicPizza
             checkEmpty();
 
             TotalPrice += pizza.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
+            //totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 
@@ -107,7 +107,7 @@ namespace TrevysIconicPizza
             checkEmpty();
 
             TotalPrice += drink.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
+           // totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 

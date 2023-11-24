@@ -15,17 +15,17 @@ namespace TrevysIconicPizza
         public CheckoutPage()
         {
             InitializeComponent();
-            //display date and time
+            // Display date and time
             deliveryDateTimePicker.Format = DateTimePickerFormat.Custom;
             deliveryDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
         }
 
         private void CheckoutPage_Load(object sender, EventArgs e)
         {
-            // setting min date to curent time
+            // Setting min date to curent time
             deliveryDateTimePicker.MinDate = DateTime.Today;
 
-            // user can only select today or next day
+            // User can only select today or next day
             DateTime endOfNextDay = DateTime.Today.AddDays(2).AddTicks(-1);
             deliveryDateTimePicker.MaxDate = endOfNextDay;
 
@@ -38,7 +38,7 @@ namespace TrevysIconicPizza
             TimeSpan rushHourEnd = TimeSpan.Parse("19:00");
             TimeSpan now = DateTime.Now.TimeOfDay;
             
-            //If pickup is selected display pickup estimated time and hide calendar
+            // If pickup is selected display pickup estimated time and hide calendar/ delivery label
             if (pickupRadioButton.Checked) 
             {
                 delivTimeLabel.Visible = false;
@@ -48,7 +48,7 @@ namespace TrevysIconicPizza
 
                 pickUpTimeLabel.Text = DateTime.Now.AddMinutes(40).ToString("g");
 
-                //Rush hour will add an extra 20 minutes to pick up time 
+                // Rush hour will add an extra 20 minutes to pick up time 
                 if (now > rushHourStart && now < rushHourEnd)
                 {
                     pickUpTimeLabel.Text = DateTime.Now.AddMinutes(60).ToString("g");
