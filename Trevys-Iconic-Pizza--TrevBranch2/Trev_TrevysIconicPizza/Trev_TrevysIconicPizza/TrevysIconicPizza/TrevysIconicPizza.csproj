@@ -65,6 +65,7 @@
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomPizza.cs" />
     <Compile Include="Drink.cs" />
     <Compile Include="DrinkPage.cs">
       <SubType>Form</SubType>
@@ -72,6 +73,7 @@
     <Compile Include="DrinkPage.Designer.cs">
       <DependentUpon>DrinkPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="EdibleItem.cs" />
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>

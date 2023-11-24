@@ -16,7 +16,7 @@ namespace TrevysIconicPizza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckoutPage());
+            Application.Run(new MenuPage());
         }
     }
 }
