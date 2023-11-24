@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,14 @@ namespace TrevysIconicPizza
 {
     internal class CustomPizza : Pizza
     {
-        List<string> ingredients = new List<string>();
-        public List<String> Ingredients {  get; set; }
-        public CustomPizza(String size, List<String> ingredients) : base("Custom Pizza", size)
+        private List<String> ingredients = new List<String>();
+        private List<String> Ingredients {  get; set; }
+        public CustomPizza(String size, List<string> ingredients) : base("Custom Pizza", size)
         {
             Size = size;
-            Price = calculatePizzaPrice();
             Ingredients = ingredients;
+            Price = calculatePizzaPrice();
+
         }
 
         public virtual decimal calculatePizzaPrice()
@@ -32,7 +34,6 @@ namespace TrevysIconicPizza
             {
                 Price += 9.99m;
             }
-
 
             foreach (String ingredient in Ingredients)
             {
@@ -58,21 +59,11 @@ namespace TrevysIconicPizza
                 {
                     Price += 2.75m;
                 }
-                else
-                {
-                    Price += 0;
-                }
             }
+
+
             return Price;
         }
 
-        public override string ToString()
-        {
-            String str = String.Format("{0, -20}{1,-30}{2,0:C}", Type, Size, Price);
-            
-            str += String.Format("\n{0}", Ingredients);
-
-            return str;
-        }
     }
 }

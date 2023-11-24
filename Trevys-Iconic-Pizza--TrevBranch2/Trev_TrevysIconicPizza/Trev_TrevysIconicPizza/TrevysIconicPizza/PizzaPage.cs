@@ -14,6 +14,7 @@ namespace TrevysIconicPizza
     {
         //CartPage cartPage = new CartPage();
         private CartPage cartPage;
+        List<string> customPizzaItems = new List<string>();
         public PizzaPage(CartPage cartPageInstance)
         {
             InitializeComponent();
@@ -37,19 +38,18 @@ namespace TrevysIconicPizza
 
         private void toppingsCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            //string item = toppingsCheckedListBox.SelectedItem.ToString();
+            string item = toppingsCheckedListBox.Items[e.Index].ToString(); // Use e.Index to get the correct item
 
-
-            //if (e.NewValue == CheckState.Checked)
-            //{
-            //    selectedItemsRichTextBox.AppendText(item);
-            //}
-            //else
-            //{
-            //    //condition
-            //}
-
-            UpdateDisplayListBox();
+            if (e.NewValue == CheckState.Checked)
+            {
+                selectedListBox.Items.Add(item);
+                customPizzaItems.Add(item);
+            }
+            else
+            {
+                selectedListBox.Items.Remove(item);
+                customPizzaItems.Remove(item);
+            }
 
         }
 
@@ -57,36 +57,31 @@ namespace TrevysIconicPizza
 
         private void UpdateDisplayListBox()
         {
-
-            selectedItemsRichTextBox.Clear();
+            // Clear existing items in displayListBox
+            selectedListBox.Items.Clear();
 
             // Check if any item is selected in crustListBox
             if (crustListBox.SelectedIndex != -1)
             {
+                // Get the selected crust from crustListBox
                 string selectedCrust = crustListBox.SelectedItem.ToString();
-                // Append the selected crust to the RichTextBox
-                selectedItemsRichTextBox.AppendText(selectedCrust + "\n");
+                // Add the selected crust to the displayListBox
+                selectedListBox.Items.Add(selectedCrust);
+                customPizzaItems.Add(selectedCrust);
             }
 
             // Check if any item is selected in sauceListBox
             if (sauceListBox.SelectedIndex != -1)
             {
+                // Get the selected sauce from sauceListBox
                 string selectedSauce = sauceListBox.SelectedItem.ToString();
-                // Append the selected sauce to the RichTextBox
-                selectedItemsRichTextBox.AppendText(selectedSauce + "\n");
+                // Add the selected sauce to the displayListBox
+                selectedListBox.Items.Add(selectedSauce);
+                customPizzaItems.Add(selectedSauce);
             }
-
-            // Handle checked toppings
-            foreach (var item in toppingsCheckedListBox.CheckedItems)
-            {
-                string checkedItem = item.ToString();
-                // Append the checked toppings to the RichTextBox
-                selectedItemsRichTextBox.AppendText(checkedItem + "\n");
-            }
-
 
         }
-
+        //vege vegetarian
         private void vegAddToCartButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Vegetarian pizza has been added to your cart successfully!");
@@ -100,7 +95,7 @@ namespace TrevysIconicPizza
         }
 
         //ori
-        private void oriAddToCartButton_Click(object sender, EventArgs e)
+        private void oriAddToCartButton2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Original pizza has been added to your cart successfully!");
             string size = oriComboBox.Text;
@@ -108,15 +103,15 @@ namespace TrevysIconicPizza
             cartPage.AddPizzaToCart(original);
         }
 
-        private void pepperoniAddToCartButton_Click(object sender, EventArgs e)
+        private void pepAddToCartButton3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Pepperoni pizza has been added to your cart successfully!");
             string size = pepComboBox.Text;
-            Pizza pepperoni = new PepperoniPizza(size);
+            Pizza pepperoni = new OriginalPizza(size);
             cartPage.AddPizzaToCart(pepperoni);
         }
 
-        private void margAddToCartButton_Click(object sender, EventArgs e)
+        private void margAddToCartButton4_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Margherita pizza has been added to your cart successfully!");
             string size = margComboBox.Text;
@@ -124,20 +119,7 @@ namespace TrevysIconicPizza
             cartPage.AddPizzaToCart(margherita);
         }
 
-        private void customAddToCartButton_Click(object sender, EventArgs e)
-        {
-            String size = customSizeComboBox.Text;
-            List<String> ingredients = new List<String>();
-
-            // Retrieve ingredients from the RichTextBox
-            string[] lines = selectedItemsRichTextBox.Text.Split('\n');
-            ingredients.AddRange(lines);
-
-            // Create and add the custom pizza
-            Pizza customPizza = new CustomPizza(size, ingredients);
-            cartPage.AddPizzaToCart(customPizza);
-        }
-
+        
         private void cartLogo_Click(object sender, EventArgs e)
         {
             // Handle the FormClosed event
@@ -152,7 +134,32 @@ namespace TrevysIconicPizza
             cartPage.Show();
         }
 
-       
+        private void customAddToCartButton_Click(object sender, EventArgs e)
+        {
+            
+            
+            string sauce = sauceListBox.Text;
+            string crust = crustListBox.Text;
+
+            string size = customComboBox.Text;
+
+            if (sauceListBox.SelectedItem == null || crustListBox.SelectedItem == null || customComboBox.SelectedItem == null) 
+            {
+                MessageBox.Show("Please make sure the size, crust, and sauce are chosen.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            Pizza custom = new CustomPizza(size, customPizzaItems);
+            cartPage.AddPizzaToCart(custom);
+            MessageBox.Show("Custom pizza has been added to your cart successfully!");
+
+
+        }
+
+        private void sizeListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

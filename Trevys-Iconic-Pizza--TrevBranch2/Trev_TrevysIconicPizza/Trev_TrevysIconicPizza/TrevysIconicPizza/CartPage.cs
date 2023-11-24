@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace TrevysIconicPizza
     public partial class CartPage : Form
     {
         private static CartPage _instance;
+        private decimal totalPrice;
+        private decimal TotalPrice { get; set; }
         public CartPage()
         {
             InitializeComponent();
@@ -31,8 +34,6 @@ namespace TrevysIconicPizza
             }
             return _instance;
         }
-
-
 
 
         private void removeButton_Click(object sender, EventArgs e)
@@ -93,6 +94,9 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(pizza.ToString());
             checkEmpty();
 
+            TotalPrice += pizza.Price;
+            totalLabel.Text = "$" + TotalPrice.ToString();
+
             cartListBox.Refresh();
 
         } 
@@ -101,6 +105,9 @@ namespace TrevysIconicPizza
             //cartListBox.Refresh();
             cartListBox.Items.Add(drink.ToString());
             checkEmpty();
+
+            TotalPrice += drink.Price;
+            totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 
