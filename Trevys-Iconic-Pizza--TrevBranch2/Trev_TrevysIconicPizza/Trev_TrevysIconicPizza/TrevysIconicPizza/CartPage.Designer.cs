@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CartPage));
             this.cartPanel = new System.Windows.Forms.Panel();
-            this.addButton = new System.Windows.Forms.Button();
+            this.checkOutButton = new System.Windows.Forms.Button();
             this.emptyLabel = new System.Windows.Forms.Label();
             this.yourItemsLabel = new System.Windows.Forms.Label();
             this.editButton = new System.Windows.Forms.Button();
@@ -38,17 +38,13 @@
             this.cartListBox = new System.Windows.Forms.ListBox();
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.closePictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.totalLabel = new System.Windows.Forms.Label();
             this.cartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // cartPanel
             // 
-            this.cartPanel.Controls.Add(this.totalLabel);
-            this.cartPanel.Controls.Add(this.label1);
-            this.cartPanel.Controls.Add(this.addButton);
+            this.cartPanel.Controls.Add(this.checkOutButton);
             this.cartPanel.Controls.Add(this.emptyLabel);
             this.cartPanel.Controls.Add(this.yourItemsLabel);
             this.cartPanel.Controls.Add(this.editButton);
@@ -59,37 +55,38 @@
             this.cartPanel.Size = new System.Drawing.Size(503, 344);
             this.cartPanel.TabIndex = 0;
             // 
-            // addButton
+            // checkOutButton
             // 
-            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.addButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.addButton.Location = new System.Drawing.Point(343, 167);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(145, 50);
-            this.addButton.TabIndex = 5;
-            this.addButton.Text = "Add";
-            this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.checkOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.checkOutButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkOutButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.checkOutButton.Location = new System.Drawing.Point(355, 171);
+            this.checkOutButton.Name = "checkOutButton";
+            this.checkOutButton.Size = new System.Drawing.Size(145, 50);
+            this.checkOutButton.TabIndex = 5;
+            this.checkOutButton.Text = "Checkout ";
+            this.checkOutButton.UseVisualStyleBackColor = false;
+            this.checkOutButton.Click += new System.EventHandler(this.checkOutButton_Click);
             // 
             // emptyLabel
             // 
             this.emptyLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emptyLabel.Location = new System.Drawing.Point(357, 43);
+            this.emptyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.emptyLabel.Location = new System.Drawing.Point(367, 41);
             this.emptyLabel.Name = "emptyLabel";
             this.emptyLabel.Size = new System.Drawing.Size(114, 116);
             this.emptyLabel.TabIndex = 4;
-            this.emptyLabel.Text = "It Seems That Your Cart Is Empty... Click Add";
+            this.emptyLabel.Text = "It Seems That Your Cart Is Empty... \r\n";
             this.emptyLabel.Visible = false;
             // 
             // yourItemsLabel
             // 
             this.yourItemsLabel.AutoSize = true;
-            this.yourItemsLabel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yourItemsLabel.ForeColor = System.Drawing.Color.White;
+            this.yourItemsLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourItemsLabel.ForeColor = System.Drawing.Color.Cornsilk;
             this.yourItemsLabel.Location = new System.Drawing.Point(350, 4);
             this.yourItemsLabel.Name = "yourItemsLabel";
-            this.yourItemsLabel.Size = new System.Drawing.Size(156, 64);
+            this.yourItemsLabel.Size = new System.Drawing.Size(134, 58);
             this.yourItemsLabel.TabIndex = 3;
             this.yourItemsLabel.Text = "Your Items\r\n\r\n";
             this.yourItemsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,7 +96,7 @@
             this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.editButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.editButton.Location = new System.Drawing.Point(343, 223);
+            this.editButton.Location = new System.Drawing.Point(355, 227);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(145, 50);
             this.editButton.TabIndex = 2;
@@ -111,7 +108,7 @@
             this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.removeButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.removeButton.Location = new System.Drawing.Point(343, 279);
+            this.removeButton.Location = new System.Drawing.Point(355, 283);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(145, 50);
             this.removeButton.TabIndex = 1;
@@ -122,11 +119,11 @@
             // cartListBox
             // 
             this.cartListBox.FormattingEnabled = true;
-            this.cartListBox.Location = new System.Drawing.Point(15, 13);
+            this.cartListBox.Location = new System.Drawing.Point(4, 4);
             this.cartListBox.MaximumSize = new System.Drawing.Size(317, 394);
             this.cartListBox.Name = "cartListBox";
             this.cartListBox.ScrollAlwaysVisible = true;
-            this.cartListBox.Size = new System.Drawing.Size(317, 290);
+            this.cartListBox.Size = new System.Drawing.Size(317, 329);
             this.cartListBox.TabIndex = 0;
             // 
             // copyrightLabel
@@ -150,26 +147,6 @@
             this.closePictureBox.TabIndex = 9;
             this.closePictureBox.TabStop = false;
             this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 310);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 19);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Subtotal:";
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(100, 310);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(40, 19);
-            this.totalLabel.TabIndex = 7;
-            this.totalLabel.Text = "0.00";
             // 
             // CartPage
             // 
@@ -201,10 +178,8 @@
         private System.Windows.Forms.ListBox cartListBox;
         private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.Label yourItemsLabel;
-        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button checkOutButton;
         private System.Windows.Forms.Label emptyLabel;
         private System.Windows.Forms.PictureBox closePictureBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label totalLabel;
     }
 }

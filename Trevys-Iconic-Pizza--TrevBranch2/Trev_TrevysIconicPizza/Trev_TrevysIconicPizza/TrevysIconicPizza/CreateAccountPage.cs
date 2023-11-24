@@ -51,6 +51,11 @@ namespace TrevysIconicPizza
                 firstNameTextBox.Clear();
                 result = false;
             }
+            if (firstNameTextBox.TextLength == 0)
+            {
+                invalidResult.Add("First name is required.\n");
+                result = false;
+            }
             return result;
         }
 
@@ -63,6 +68,11 @@ namespace TrevysIconicPizza
                 lastNameTextBox.Clear();
                 result = false;
             }
+            if (lastNameTextBox.TextLength == 0)
+            {
+                invalidResult.Add("Last name is required.\n");
+                result  =false;
+            }
             return result;
         }
 
@@ -72,8 +82,13 @@ namespace TrevysIconicPizza
             //Username must contain a upper and lowercase letter, a digit, and must be of length 6
             if(System.Text.RegularExpressions.Regex.IsMatch(usernameTextBox.Text, "^(?=.*[a-zA-Z])(?=.*\\d).{6,}$\r\n"))
             {
-                invalidResult.Add($"Invalid username\n");
+                invalidResult.Add($"Invalid username.\n");
                 usernameTextBox.Clear();
+                result = false;
+            }
+            if (usernameTextBox.TextLength == 0)
+            {
+                invalidResult.Add("Username is required.\n");
                 result = false;
             }
             return result;
@@ -83,14 +98,20 @@ namespace TrevysIconicPizza
         {
             bool result = true;
             if (!passwordTextBox.Text.Equals(reEnterTextBox.Text)) {
-                invalidResult.Add("Password does not match\n");
+                invalidResult.Add("Password does not match.\n");
                 reEnterTextBox.Clear();
                 result = false;
             }
-            if(passwordTextBox.Text.Length < 8)
+            if(passwordTextBox.Text.Length < 8 && passwordTextBox.Text.Length > 0)
             {
-                invalidResult.Add("Password must be eight characters or longer");
+                invalidResult.Add("Password must be eight characters or longer.\n");
                 passwordTextBox.Clear();
+                reEnterTextBox.Clear();
+                result = false;
+            }
+            if (passwordTextBox.Text.Length == 0 && result == true)
+            {
+                invalidResult.Add("Password is required.\n");
                 result = false;
             }
             return result;
@@ -98,13 +119,43 @@ namespace TrevysIconicPizza
         private bool verifyCard()
         {
             bool result = true;
+            if (cardTextBox.Text.Length == 0)
+            {
+                return true;
+            }
             if (!System.Text.RegularExpressions.Regex.IsMatch(cardTextBox.Text, @"^(?! )[\d ]{13,19}$"))
             {
-                invalidResult.Add("Invalid Card input\n");
+                invalidResult.Add("Invalid Card input.\n");
                 cardTextBox.Clear();
                 result = false;
             }
+            // If result is true that means something was entered. We then need to check the CVV and return the result.
+            if( result == true)
+            {
+            result = verifyCVV();
+            }
 
+            return result;
+        }
+        private bool verifyCVV()
+        {
+            bool result = true;
+            if (cvvTextBox.Text.Length == 0)
+            {
+                return true;
+            }
+            if(!System.Text.RegularExpressions.Regex.IsMatch(cvvTextBox.Text, @"\d+"))
+            {
+                invalidResult.Add("Invalid CVV input.\n");
+                cvvTextBox.Clear();
+                result = false;
+            }
+            if (cvvTextBox.Text.Length > 0 && cvvTextBox.Text.Length < 3)
+            {
+                invalidResult.Add("CVV length is three.\n");
+                cvvTextBox.Clear();
+                result = false;
+            }
             return result;
         }
         private void createAcountButton_Click(object sender, EventArgs e)

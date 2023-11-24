@@ -41,12 +41,14 @@
             this.cardTextBox = new System.Windows.Forms.TextBox();
             this.createAcountButton = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.reEnterLabel = new System.Windows.Forms.Label();
             this.reEnterTextBox = new System.Windows.Forms.TextBox();
             this.reEnterPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.cvvLabel = new System.Windows.Forms.Label();
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.copyrightLabel = new System.Windows.Forms.Label();
+            this.cvvTextBox = new System.Windows.Forms.TextBox();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,18 +186,18 @@
             this.showPasswordCheckBox.UseVisualStyleBackColor = false;
             this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
-            // label1
+            // reEnterLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.label1.Location = new System.Drawing.Point(52, 286);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Re-enter Password";
+            this.reEnterLabel.AutoSize = true;
+            this.reEnterLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.reEnterLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reEnterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.reEnterLabel.Location = new System.Drawing.Point(52, 286);
+            this.reEnterLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.reEnterLabel.Name = "reEnterLabel";
+            this.reEnterLabel.Size = new System.Drawing.Size(126, 16);
+            this.reEnterLabel.TabIndex = 12;
+            this.reEnterLabel.Text = "Re-enter Password";
             // 
             // reEnterTextBox
             // 
@@ -227,8 +229,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginPanel.Controls.Add(this.cvvLabel);
             this.loginPanel.Controls.Add(this.WelcomeLabel);
-            this.loginPanel.Controls.Add(this.label1);
+            this.loginPanel.Controls.Add(this.reEnterLabel);
             this.loginPanel.Controls.Add(this.showPasswordCheckBox);
             this.loginPanel.Controls.Add(this.reEnterPasswordCheckBox);
             this.loginPanel.Controls.Add(this.passwordLabel);
@@ -244,10 +247,23 @@
             this.loginPanel.Controls.Add(this.lastNameLabel);
             this.loginPanel.Controls.Add(this.firstNameLabel);
             this.loginPanel.Location = new System.Drawing.Point(23, 18);
-            this.loginPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(520, 433);
             this.loginPanel.TabIndex = 15;
+            // 
+            // cvvLabel
+            // 
+            this.cvvLabel.AutoSize = true;
+            this.cvvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.cvvLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cvvLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.cvvLabel.Location = new System.Drawing.Point(385, 333);
+            this.cvvLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.cvvLabel.Name = "cvvLabel";
+            this.cvvLabel.Size = new System.Drawing.Size(34, 16);
+            this.cvvLabel.TabIndex = 16;
+            this.cvvLabel.Text = "CVV";
             // 
             // WelcomeLabel
             // 
@@ -273,21 +289,32 @@
             this.copyrightLabel.Text = "© 2023 Trevy\'s Iconic Pizza";
             this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cvvTextBox
+            // 
+            this.cvvTextBox.Location = new System.Drawing.Point(458, 352);
+            this.cvvTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.cvvTextBox.MaxLength = 3;
+            this.cvvTextBox.Name = "cvvTextBox";
+            this.cvvTextBox.Size = new System.Drawing.Size(47, 20);
+            this.cvvTextBox.TabIndex = 17;
+            // 
             // CreateAccountPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(563, 485);
+            this.ClientSize = new System.Drawing.Size(561, 479);
+            this.Controls.Add(this.cvvTextBox);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.loginPanel);
-            this.MaximumSize = new System.Drawing.Size(583, 535);
+            this.MaximumSize = new System.Drawing.Size(581, 529);
             this.Name = "CreateAccountPage";
             this.Text = "CreateAccountPage";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -305,11 +332,13 @@
         private System.Windows.Forms.TextBox cardTextBox;
         private System.Windows.Forms.Button createAcountButton;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label reEnterLabel;
         private System.Windows.Forms.TextBox reEnterTextBox;
         private System.Windows.Forms.CheckBox reEnterPasswordCheckBox;
         private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.Label copyrightLabel;
         private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.Label cvvLabel;
+        private System.Windows.Forms.TextBox cvvTextBox;
     }
 }
