@@ -8,5 +8,11 @@ namespace TrevysIconicPizza
 {
     internal class ChocolateMilkshake : Drink
     {
+        public ChocolateMilkshake() : base("Chocolate Milkshake")
+        {
+            Price= 8.99m;
+        }
+
+
     }
 }
