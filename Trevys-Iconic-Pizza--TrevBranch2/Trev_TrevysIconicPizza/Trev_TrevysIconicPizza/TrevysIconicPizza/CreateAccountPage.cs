@@ -17,6 +17,7 @@ namespace TrevysIconicPizza
         public CreateAccountPage()
         {
             InitializeComponent();
+            SetMyCustomFormat();
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace TrevysIconicPizza
             {
                 reEnterTextBox.UseSystemPasswordChar = true;
             }
+        }
+        public void SetMyCustomFormat()
+        {
+            // Set the Format type and the CustomFormat string.
+            expirationDateTimePicker.Format = DateTimePickerFormat.Custom;
+            expirationDateTimePicker.CustomFormat = "MM/yyyy";
         }
         private bool verifyFirstName()
         {
@@ -192,13 +199,19 @@ namespace TrevysIconicPizza
                 DialogResult  result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
-                    Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text);
-                    MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text, expirationDateTimePicker.Value);
+                    MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
             }
         }
 
+        private void CreateAccountPage_Load(object sender, EventArgs e)
+        {
+            // Setting min date to curent time
+            expirationDateTimePicker.MinDate = DateTime.Today;
 
+            expirationDateTimePicker.MaxDate = DateTime.Today.AddYears(10);
+        }
     }
 }

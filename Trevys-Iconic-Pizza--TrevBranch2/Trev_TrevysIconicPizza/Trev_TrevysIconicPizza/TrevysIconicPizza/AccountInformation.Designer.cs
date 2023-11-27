@@ -29,15 +29,7 @@
         private void InitializeComponent()
         {
             this.accountInfoPanel = new System.Windows.Forms.Panel();
-            this.accountInfoLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.lastNameLabel = new System.Windows.Forms.Label();
-            this.firstNameLabel = new System.Windows.Forms.Label();
-            this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.editAccountButton = new System.Windows.Forms.Button();
-            this.logOutButton = new System.Windows.Forms.Button();
+            this.cvvTextBox = new System.Windows.Forms.TextBox();
             this.cvvLabel = new System.Windows.Forms.Label();
             this.reEnterLabel = new System.Windows.Forms.Label();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
@@ -47,14 +39,24 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.cardTextBox = new System.Windows.Forms.TextBox();
             this.cardLabel = new System.Windows.Forms.Label();
-            this.cvvTextBox = new System.Windows.Forms.TextBox();
+            this.logOutButton = new System.Windows.Forms.Button();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.lastNameLabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.accountInfoLabel = new System.Windows.Forms.Label();
             this.doneButton = new System.Windows.Forms.Button();
+            this.editAccountButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.accountInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountInfoPanel
             // 
             this.accountInfoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
+            this.accountInfoPanel.Controls.Add(this.cancelButton);
             this.accountInfoPanel.Controls.Add(this.cvvTextBox);
             this.accountInfoPanel.Controls.Add(this.cvvLabel);
             this.accountInfoPanel.Controls.Add(this.reEnterLabel);
@@ -81,107 +83,15 @@
             this.accountInfoPanel.Size = new System.Drawing.Size(537, 446);
             this.accountInfoPanel.TabIndex = 1;
             // 
-            // accountInfoLabel
+            // cvvTextBox
             // 
-            this.accountInfoLabel.AutoSize = true;
-            this.accountInfoLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.accountInfoLabel.Location = new System.Drawing.Point(4, 4);
-            this.accountInfoLabel.Name = "accountInfoLabel";
-            this.accountInfoLabel.Size = new System.Drawing.Size(198, 22);
-            this.accountInfoLabel.TabIndex = 0;
-            this.accountInfoLabel.Text = "Account Information";
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.usernameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.usernameLabel.Location = new System.Drawing.Point(41, 158);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(71, 16);
-            this.usernameLabel.TabIndex = 4;
-            this.usernameLabel.Text = "Username";
-            // 
-            // lastNameLabel
-            // 
-            this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.lastNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.lastNameLabel.Location = new System.Drawing.Point(41, 102);
-            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(1, 20, 3, 20);
-            this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(74, 16);
-            this.lastNameLabel.TabIndex = 7;
-            this.lastNameLabel.Text = "Last Name";
-            // 
-            // firstNameLabel
-            // 
-            this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.firstNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.firstNameLabel.Location = new System.Drawing.Point(41, 46);
-            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
-            this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(75, 16);
-            this.firstNameLabel.TabIndex = 6;
-            this.firstNameLabel.Text = "First Name";
-            // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(177, 46);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.ReadOnly = true;
-            this.firstNameTextBox.Size = new System.Drawing.Size(187, 20);
-            this.firstNameTextBox.TabIndex = 8;
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(177, 98);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.ReadOnly = true;
-            this.lastNameTextBox.Size = new System.Drawing.Size(187, 20);
-            this.lastNameTextBox.TabIndex = 9;
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(177, 158);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.ReadOnly = true;
-            this.usernameTextBox.Size = new System.Drawing.Size(187, 20);
-            this.usernameTextBox.TabIndex = 10;
-            // 
-            // editAccountButton
-            // 
-            this.editAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.editAccountButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editAccountButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.editAccountButton.Location = new System.Drawing.Point(44, 357);
-            this.editAccountButton.Name = "editAccountButton";
-            this.editAccountButton.Size = new System.Drawing.Size(145, 50);
-            this.editAccountButton.TabIndex = 11;
-            this.editAccountButton.Text = "Edit Account";
-            this.editAccountButton.UseVisualStyleBackColor = false;
-            this.editAccountButton.Click += new System.EventHandler(this.editAccountButton_Click);
-            // 
-            // logOutButton
-            // 
-            this.logOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.logOutButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.logOutButton.Location = new System.Drawing.Point(313, 357);
-            this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(145, 50);
-            this.logOutButton.TabIndex = 12;
-            this.logOutButton.Text = "Log Out";
-            this.logOutButton.UseVisualStyleBackColor = false;
+            this.cvvTextBox.Location = new System.Drawing.Point(421, 313);
+            this.cvvTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.cvvTextBox.MaxLength = 3;
+            this.cvvTextBox.Name = "cvvTextBox";
+            this.cvvTextBox.Size = new System.Drawing.Size(47, 20);
+            this.cvvTextBox.TabIndex = 26;
+            this.cvvTextBox.Visible = false;
             // 
             // cvvLabel
             // 
@@ -300,15 +210,94 @@
             this.cardLabel.Text = "Card";
             this.cardLabel.Visible = false;
             // 
-            // cvvTextBox
+            // logOutButton
             // 
-            this.cvvTextBox.Location = new System.Drawing.Point(421, 313);
-            this.cvvTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
-            this.cvvTextBox.MaxLength = 3;
-            this.cvvTextBox.Name = "cvvTextBox";
-            this.cvvTextBox.Size = new System.Drawing.Size(47, 20);
-            this.cvvTextBox.TabIndex = 26;
-            this.cvvTextBox.Visible = false;
+            this.logOutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.logOutButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.logOutButton.Location = new System.Drawing.Point(343, 357);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(145, 50);
+            this.logOutButton.TabIndex = 12;
+            this.logOutButton.Text = "Log Out";
+            this.logOutButton.UseVisualStyleBackColor = false;
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.Location = new System.Drawing.Point(177, 46);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.ReadOnly = true;
+            this.firstNameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.firstNameTextBox.TabIndex = 8;
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.Location = new System.Drawing.Point(177, 98);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.ReadOnly = true;
+            this.lastNameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.lastNameTextBox.TabIndex = 9;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(177, 158);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.ReadOnly = true;
+            this.usernameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.usernameTextBox.TabIndex = 10;
+            // 
+            // lastNameLabel
+            // 
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.lastNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.lastNameLabel.Location = new System.Drawing.Point(41, 102);
+            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(1, 20, 3, 20);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(74, 16);
+            this.lastNameLabel.TabIndex = 7;
+            this.lastNameLabel.Text = "Last Name";
+            // 
+            // firstNameLabel
+            // 
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.firstNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.firstNameLabel.Location = new System.Drawing.Point(41, 46);
+            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(75, 16);
+            this.firstNameLabel.TabIndex = 6;
+            this.firstNameLabel.Text = "First Name";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.usernameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.usernameLabel.Location = new System.Drawing.Point(41, 158);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(71, 16);
+            this.usernameLabel.TabIndex = 4;
+            this.usernameLabel.Text = "Username";
+            // 
+            // accountInfoLabel
+            // 
+            this.accountInfoLabel.AutoSize = true;
+            this.accountInfoLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accountInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.accountInfoLabel.Location = new System.Drawing.Point(4, 4);
+            this.accountInfoLabel.Name = "accountInfoLabel";
+            this.accountInfoLabel.Size = new System.Drawing.Size(198, 22);
+            this.accountInfoLabel.TabIndex = 0;
+            this.accountInfoLabel.Text = "Account Information";
             // 
             // doneButton
             // 
@@ -323,6 +312,33 @@
             this.doneButton.UseVisualStyleBackColor = false;
             this.doneButton.Visible = false;
             this.doneButton.Click += new System.EventHandler(this.doneButton_Click);
+            // 
+            // editAccountButton
+            // 
+            this.editAccountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.editAccountButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editAccountButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.editAccountButton.Location = new System.Drawing.Point(44, 357);
+            this.editAccountButton.Name = "editAccountButton";
+            this.editAccountButton.Size = new System.Drawing.Size(145, 50);
+            this.editAccountButton.TabIndex = 11;
+            this.editAccountButton.Text = "Edit Account";
+            this.editAccountButton.UseVisualStyleBackColor = false;
+            this.editAccountButton.Click += new System.EventHandler(this.editAccountButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.cancelButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.cancelButton.Location = new System.Drawing.Point(195, 357);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(145, 50);
+            this.cancelButton.TabIndex = 28;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Visible = false;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // AccountInformation
             // 
@@ -363,5 +379,6 @@
         private System.Windows.Forms.Label cardLabel;
         private System.Windows.Forms.TextBox cvvTextBox;
         private System.Windows.Forms.Button doneButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
