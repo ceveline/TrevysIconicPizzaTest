@@ -15,10 +15,11 @@ namespace TrevysIconicPizza
         private string password;
         private string card;
         private string cvv;
+        private DateTime cardExpireDate;
 
         //Keeps track of id
         static int idCustomerCounter = 0;
-        public Customer( string firstName, string lastName, string password, string card, string username) 
+        public Customer( string firstName, string lastName, string password, string card, string username, DateTime expiration) 
         {
             Username = username;
             FirstName = firstName;
@@ -26,6 +27,7 @@ namespace TrevysIconicPizza
             Password = password;
             Card = card;
             User_ID = Generate_ID();
+            CardExpireDate = expiration;
         }
         //Method generates ID that starts with C for client
         public string Generate_ID()
@@ -110,6 +112,17 @@ namespace TrevysIconicPizza
             set 
             { 
                 CVV = value; 
+            }
+        }
+        public DateTime CardExpireDate
+        {
+            get
+            {
+                return cardExpireDate;
+            }
+            set
+            {
+                cardExpireDate = value;
             }
         }
     }
