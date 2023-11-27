@@ -172,7 +172,7 @@
             // 
             this.CVVTextBox.BackColor = System.Drawing.Color.White;
             this.CVVTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CVVTextBox.ForeColor = System.Drawing.Color.White;
+            this.CVVTextBox.ForeColor = System.Drawing.Color.Black;
             this.CVVTextBox.Location = new System.Drawing.Point(14, 136);
             this.CVVTextBox.MaxLength = 3;
             this.CVVTextBox.Name = "CVVTextBox";
