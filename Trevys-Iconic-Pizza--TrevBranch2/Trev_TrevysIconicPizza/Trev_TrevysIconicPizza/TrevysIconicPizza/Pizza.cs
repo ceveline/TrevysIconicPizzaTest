@@ -20,91 +20,16 @@ namespace TrevysIconicPizza
             this.type = type;
             this.size = size;
 
-            if ((type.Equals("Original", StringComparison.OrdinalIgnoreCase) ||
-                (type.Equals("Vegetarian", StringComparison.OrdinalIgnoreCase) ||
-                (type.Equals("Pepperoni", StringComparison.OrdinalIgnoreCase)) ||
-                (type.Equals("Margherita", StringComparison.OrdinalIgnoreCase)))))
-            {
-                this.price = calculatePizzaPrice();
-            }
-            //else
-            //{
-            //    this.price = calculatePriceForCustomPizza();
-            //}
+            this.price = 0;
 
             this.size = Size;
-            //this.ingredients = ingredients ?? new List<string>();
+            
         }
 
         //count price (to determine price of size, ingredients, type) -> 4 methods
         public decimal calculatePizzaPrice()
         {
             Price = 0;
-            //decimal price = 0;
-            //Size = Size.ToLower();
-
-            //if (type.Equals("Original", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    switch (Size)
-            //    {
-            //        case "s":
-            //            price = 10.99m;
-            //            break;
-            //        case "m":
-            //            price = 13.99m;
-            //            break;
-            //        case "l":
-            //            price = 16.99m;
-            //            break;
-            //    }
-            //}
-            //else if (type.Equals("Vegetarian", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    switch (Size)
-            //    {
-            //        case "small":
-            //            price = 13.99m;
-            //            break;
-            //        case "medium":
-            //            price = 16.99m;
-            //            break;
-            //        case "large":
-            //            price = 19.99m;
-            //            break;
-            //    }
-            //}
-            //else if (type.Equals("Pepperoni", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    switch (Size)
-            //    {
-            //        case "s":
-            //            price = 14.99m;
-            //            break;
-            //        case "m":
-            //            price = 17.99m;
-            //            break;
-            //        case "l":
-            //            price = 19.99m;
-            //            break;
-            //    }
-            //}
-            //else if (type.Equals("Margherita", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    switch (Size)
-            //    {
-            //        case "s":
-            //            price = 13.99m;
-            //            break;
-            //        case "m":
-            //            price = 16.99m;
-            //            break;
-            //        case "l":
-            //            price = 18.99m;
-            //            break;
-            //    }
-            //}
-
-            //Price = price;
 
             return Price;
         }
@@ -161,7 +86,7 @@ namespace TrevysIconicPizza
         //needs to be edited
         public override string ToString()
         {
-            return String.Format("{0, -20}{1,-30}{2,0:C}", Type, Size, Price);
+            return String.Format("{0,-35}{1}{2,35:C}", Type, Size, Price);
         }
 
         public String Type

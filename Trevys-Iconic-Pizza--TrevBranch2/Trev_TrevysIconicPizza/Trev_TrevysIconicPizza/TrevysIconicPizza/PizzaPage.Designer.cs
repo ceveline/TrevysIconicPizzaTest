@@ -33,7 +33,7 @@
             this.cartLogo = new System.Windows.Forms.PictureBox();
             this.byoPanel = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.customPizzaListBox = new System.Windows.Forms.ListBox();
+            this.selectedListBox = new System.Windows.Forms.ListBox();
             this.customAddToCartButton = new System.Windows.Forms.Button();
             this.sauceListBox = new System.Windows.Forms.ListBox();
             this.crustListBox = new System.Windows.Forms.ListBox();
@@ -43,19 +43,16 @@
             this.toppingsCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.margComboBox = new System.Windows.Forms.ComboBox();
             this.margAddToCartButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.originalGroupBox = new System.Windows.Forms.GroupBox();
-            this.oriComboBox = new System.Windows.Forms.ComboBox();
             this.oriAddToCartButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pepComboBox = new System.Windows.Forms.ComboBox();
             this.pepperoniAddToCartButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,8 +63,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customSizeComboBox = new System.Windows.Forms.ComboBox();
-            this.selectedItemsRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.customComboBox = new System.Windows.Forms.ComboBox();
+            this.oriComboBox = new System.Windows.Forms.ComboBox();
+            this.pepComboBox = new System.Windows.Forms.ComboBox();
+            this.margComboBox = new System.Windows.Forms.ComboBox();
             this.pizzaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.byoPanel.SuspendLayout();
@@ -108,10 +107,9 @@
             // 
             // byoPanel
             // 
-            this.byoPanel.Controls.Add(this.selectedItemsRichTextBox);
-            this.byoPanel.Controls.Add(this.customSizeComboBox);
+            this.byoPanel.Controls.Add(this.customComboBox);
             this.byoPanel.Controls.Add(this.label12);
-            this.byoPanel.Controls.Add(this.customPizzaListBox);
+            this.byoPanel.Controls.Add(this.selectedListBox);
             this.byoPanel.Controls.Add(this.customAddToCartButton);
             this.byoPanel.Controls.Add(this.sauceListBox);
             this.byoPanel.Controls.Add(this.crustListBox);
@@ -141,22 +139,22 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Size";
             // 
-            // customPizzaListBox
+            // selectedListBox
             // 
-            this.customPizzaListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.customPizzaListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customPizzaListBox.FormattingEnabled = true;
-            this.customPizzaListBox.ItemHeight = 21;
-            this.customPizzaListBox.Location = new System.Drawing.Point(571, 82);
-            this.customPizzaListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customPizzaListBox.Name = "customPizzaListBox";
-            this.customPizzaListBox.Size = new System.Drawing.Size(281, 235);
-            this.customPizzaListBox.TabIndex = 10;
+            this.selectedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.selectedListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedListBox.FormattingEnabled = true;
+            this.selectedListBox.ItemHeight = 21;
+            this.selectedListBox.Location = new System.Drawing.Point(571, 82);
+            this.selectedListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.selectedListBox.Name = "selectedListBox";
+            this.selectedListBox.Size = new System.Drawing.Size(281, 235);
+            this.selectedListBox.TabIndex = 10;
             // 
             // customAddToCartButton
             // 
             this.customAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.customAddToCartButton.Location = new System.Drawing.Point(876, 281);
+            this.customAddToCartButton.Location = new System.Drawing.Point(877, 289);
             this.customAddToCartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.customAddToCartButton.Name = "customAddToCartButton";
             this.customAddToCartButton.Size = new System.Drawing.Size(129, 34);
@@ -174,7 +172,7 @@
             this.sauceListBox.Items.AddRange(new object[] {
             "Tomato",
             "Pesto"});
-            this.sauceListBox.Location = new System.Drawing.Point(21, 199);
+            this.sauceListBox.Location = new System.Drawing.Point(17, 179);
             this.sauceListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sauceListBox.Name = "sauceListBox";
             this.sauceListBox.Size = new System.Drawing.Size(199, 46);
@@ -190,7 +188,7 @@
             this.crustListBox.Items.AddRange(new object[] {
             "Thick",
             "Thin"});
-            this.crustListBox.Location = new System.Drawing.Point(21, 318);
+            this.crustListBox.Location = new System.Drawing.Point(17, 298);
             this.crustListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.crustListBox.Name = "crustListBox";
             this.crustListBox.Size = new System.Drawing.Size(199, 46);
@@ -202,7 +200,7 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label11.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 164);
+            this.label11.Location = new System.Drawing.Point(17, 144);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 27);
             this.label11.TabIndex = 5;
@@ -213,7 +211,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label10.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(21, 281);
+            this.label10.Location = new System.Drawing.Point(17, 261);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 27);
             this.label10.TabIndex = 3;
@@ -288,21 +286,6 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             // 
-            // margComboBox
-            // 
-            this.margComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.margComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.margComboBox.FormattingEnabled = true;
-            this.margComboBox.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large"});
-            this.margComboBox.Location = new System.Drawing.Point(265, 137);
-            this.margComboBox.Name = "margComboBox";
-            this.margComboBox.Size = new System.Drawing.Size(129, 29);
-            this.margComboBox.TabIndex = 16;
-            this.margComboBox.Text = "Select Size";
-            // 
             // margAddToCartButton
             // 
             this.margAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
@@ -313,7 +296,6 @@
             this.margAddToCartButton.TabIndex = 4;
             this.margAddToCartButton.Text = "Add to Cart";
             this.margAddToCartButton.UseVisualStyleBackColor = true;
-            this.margAddToCartButton.Click += new System.EventHandler(this.margAddToCartButton_Click);
             // 
             // label8
             // 
@@ -361,21 +343,6 @@
             this.originalGroupBox.TabIndex = 1;
             this.originalGroupBox.TabStop = false;
             // 
-            // oriComboBox
-            // 
-            this.oriComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.oriComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oriComboBox.FormattingEnabled = true;
-            this.oriComboBox.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large"});
-            this.oriComboBox.Location = new System.Drawing.Point(265, 143);
-            this.oriComboBox.Name = "oriComboBox";
-            this.oriComboBox.Size = new System.Drawing.Size(129, 29);
-            this.oriComboBox.TabIndex = 16;
-            this.oriComboBox.Text = "Select Size";
-            // 
             // oriAddToCartButton
             // 
             this.oriAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
@@ -386,7 +353,7 @@
             this.oriAddToCartButton.TabIndex = 3;
             this.oriAddToCartButton.Text = "Add to Cart";
             this.oriAddToCartButton.UseVisualStyleBackColor = true;
-            this.oriAddToCartButton.Click += new System.EventHandler(this.oriAddToCartButton_Click);
+            this.oriAddToCartButton.Click += new System.EventHandler(this.oriAddToCartButton2_Click);
             // 
             // label7
             // 
@@ -434,21 +401,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
-            // pepComboBox
-            // 
-            this.pepComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.pepComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pepComboBox.FormattingEnabled = true;
-            this.pepComboBox.Items.AddRange(new object[] {
-            "Small",
-            "Medium",
-            "Large"});
-            this.pepComboBox.Location = new System.Drawing.Point(261, 137);
-            this.pepComboBox.Name = "pepComboBox";
-            this.pepComboBox.Size = new System.Drawing.Size(129, 29);
-            this.pepComboBox.TabIndex = 16;
-            this.pepComboBox.Text = "Select Size";
-            // 
             // pepperoniAddToCartButton
             // 
             this.pepperoniAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
@@ -459,7 +411,7 @@
             this.pepperoniAddToCartButton.TabIndex = 3;
             this.pepperoniAddToCartButton.Text = "Add to Cart";
             this.pepperoniAddToCartButton.UseVisualStyleBackColor = true;
-            this.pepperoniAddToCartButton.Click += new System.EventHandler(this.pepperoniAddToCartButton_Click);
+            this.pepperoniAddToCartButton.Click += new System.EventHandler(this.pepAddToCartButton3_Click);
             // 
             // label6
             // 
@@ -565,28 +517,66 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // customSizeComboBox
+            // customComboBox
             // 
-            this.customSizeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.customSizeComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customSizeComboBox.FormattingEnabled = true;
-            this.customSizeComboBox.Items.AddRange(new object[] {
+            this.customComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.customComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customComboBox.FormattingEnabled = true;
+            this.customComboBox.Items.AddRange(new object[] {
             "Small",
             "Medium",
             "Large"});
-            this.customSizeComboBox.Location = new System.Drawing.Point(17, 86);
-            this.customSizeComboBox.Name = "customSizeComboBox";
-            this.customSizeComboBox.Size = new System.Drawing.Size(129, 29);
-            this.customSizeComboBox.TabIndex = 17;
-            this.customSizeComboBox.Text = "Select Size";
+            this.customComboBox.Location = new System.Drawing.Point(17, 86);
+            this.customComboBox.Name = "customComboBox";
+            this.customComboBox.Size = new System.Drawing.Size(129, 29);
+            this.customComboBox.TabIndex = 16;
+            this.customComboBox.Text = "Select Size";
             // 
-            // selectedItemsRichTextBox
+            // oriComboBox
             // 
-            this.selectedItemsRichTextBox.Location = new System.Drawing.Point(876, 78);
-            this.selectedItemsRichTextBox.Name = "selectedItemsRichTextBox";
-            this.selectedItemsRichTextBox.Size = new System.Drawing.Size(222, 198);
-            this.selectedItemsRichTextBox.TabIndex = 18;
-            this.selectedItemsRichTextBox.Text = "";
+            this.oriComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.oriComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oriComboBox.FormattingEnabled = true;
+            this.oriComboBox.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.oriComboBox.Location = new System.Drawing.Point(265, 143);
+            this.oriComboBox.Name = "oriComboBox";
+            this.oriComboBox.Size = new System.Drawing.Size(129, 29);
+            this.oriComboBox.TabIndex = 16;
+            this.oriComboBox.Text = "Select Size";
+            // 
+            // pepComboBox
+            // 
+            this.pepComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.pepComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pepComboBox.FormattingEnabled = true;
+            this.pepComboBox.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.pepComboBox.Location = new System.Drawing.Point(261, 137);
+            this.pepComboBox.Name = "pepComboBox";
+            this.pepComboBox.Size = new System.Drawing.Size(129, 29);
+            this.pepComboBox.TabIndex = 17;
+            this.pepComboBox.Text = "Select Size";
+            // 
+            // margComboBox
+            // 
+            this.margComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.margComboBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.margComboBox.FormattingEnabled = true;
+            this.margComboBox.Items.AddRange(new object[] {
+            "Small",
+            "Medium",
+            "Large"});
+            this.margComboBox.Location = new System.Drawing.Point(265, 137);
+            this.margComboBox.Name = "margComboBox";
+            this.margComboBox.Size = new System.Drawing.Size(129, 29);
+            this.margComboBox.TabIndex = 17;
+            this.margComboBox.Text = "Select Size";
+            this.margComboBox.Click += new System.EventHandler(this.margAddToCartButton4_Click);
             // 
             // PizzaPage
             // 
@@ -626,7 +616,7 @@
         private System.Windows.Forms.Panel pizzaPanel;
         private System.Windows.Forms.GroupBox byoPanel;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListBox customPizzaListBox;
+        private System.Windows.Forms.ListBox selectedListBox;
         private System.Windows.Forms.Button customAddToCartButton;
         private System.Windows.Forms.ListBox sauceListBox;
         private System.Windows.Forms.ListBox crustListBox;
@@ -657,10 +647,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox cartLogo;
         private System.Windows.Forms.ComboBox vegComboBox;
+        private System.Windows.Forms.ComboBox customComboBox;
         private System.Windows.Forms.ComboBox margComboBox;
         private System.Windows.Forms.ComboBox oriComboBox;
         private System.Windows.Forms.ComboBox pepComboBox;
-        private System.Windows.Forms.ComboBox customSizeComboBox;
-        private System.Windows.Forms.RichTextBox selectedItemsRichTextBox;
     }
 }
