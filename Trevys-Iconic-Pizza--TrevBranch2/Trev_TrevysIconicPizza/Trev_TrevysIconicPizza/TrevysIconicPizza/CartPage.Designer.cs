@@ -38,12 +38,16 @@
             this.cartListBox = new System.Windows.Forms.ListBox();
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.closePictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.cartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // cartPanel
             // 
+            this.cartPanel.Controls.Add(this.totalLabel);
+            this.cartPanel.Controls.Add(this.label1);
             this.cartPanel.Controls.Add(this.checkOutButton);
             this.cartPanel.Controls.Add(this.emptyLabel);
             this.cartPanel.Controls.Add(this.yourItemsLabel);
@@ -119,11 +123,11 @@
             // cartListBox
             // 
             this.cartListBox.FormattingEnabled = true;
-            this.cartListBox.Location = new System.Drawing.Point(4, 4);
+            this.cartListBox.Location = new System.Drawing.Point(3, 4);
             this.cartListBox.MaximumSize = new System.Drawing.Size(317, 394);
             this.cartListBox.Name = "cartListBox";
             this.cartListBox.ScrollAlwaysVisible = true;
-            this.cartListBox.Size = new System.Drawing.Size(317, 329);
+            this.cartListBox.Size = new System.Drawing.Size(317, 290);
             this.cartListBox.TabIndex = 0;
             // 
             // copyrightLabel
@@ -141,12 +145,34 @@
             this.closePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closePictureBox.BackgroundImage")));
             this.closePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closePictureBox.Location = new System.Drawing.Point(535, 3);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(18, 20);
             this.closePictureBox.TabIndex = 9;
             this.closePictureBox.TabStop = false;
             this.closePictureBox.Click += new System.EventHandler(this.closePictureBox_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.label1.Location = new System.Drawing.Point(12, 304);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 22);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Subtotal:";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.Color.Black;
+            this.totalLabel.Location = new System.Drawing.Point(123, 304);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(59, 22);
+            this.totalLabel.TabIndex = 7;
+            this.totalLabel.Text = "$0.00";
             // 
             // CartPage
             // 
@@ -181,5 +207,7 @@
         private System.Windows.Forms.Button checkOutButton;
         private System.Windows.Forms.Label emptyLabel;
         private System.Windows.Forms.PictureBox closePictureBox;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

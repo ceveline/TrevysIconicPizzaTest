@@ -18,7 +18,7 @@ namespace TrevysIconicPizza
         public Drink(string type)
         {
             Type = type;
-            Price = 0;
+            Price = CalculatePrice();
         }
 
         // can be overridden by child classes

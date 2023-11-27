@@ -18,11 +18,11 @@ namespace TrevysIconicPizza
 
         public virtual decimal CalculatePrice()
         {
-            Price = 0;
+            Price = 3.25m ;
 
             foreach (String ingredient in ingredients)
             {
-                if (ingredient.Equals("Banana", StringComparison.OrdinalIgnoreCase)
+                if (ingredient.Equals("banana", StringComparison.OrdinalIgnoreCase)
                 || ingredient.Equals("Strawberry", StringComparison.OrdinalIgnoreCase)
                 || ingredient.Equals("Smores", StringComparison.OrdinalIgnoreCase)
                 || ingredient.Equals("Pretzel", StringComparison.OrdinalIgnoreCase)

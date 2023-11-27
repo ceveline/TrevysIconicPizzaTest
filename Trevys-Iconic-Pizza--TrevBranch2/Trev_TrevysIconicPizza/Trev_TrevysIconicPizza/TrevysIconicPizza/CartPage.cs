@@ -46,6 +46,7 @@ namespace TrevysIconicPizza
                 {
                     cartListBox.Items.RemoveAt(cartListBox.SelectedIndex);
                     checkEmpty();
+                    TotalPrice = 0;
                 }
             }
         }
@@ -95,7 +96,7 @@ namespace TrevysIconicPizza
             checkEmpty();
 
             TotalPrice += pizza.Price;
-            //totalLabel.Text = "$" + TotalPrice.ToString();
+            totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 
@@ -107,10 +108,21 @@ namespace TrevysIconicPizza
             checkEmpty();
 
             TotalPrice += drink.Price;
-           // totalLabel.Text = "$" + TotalPrice.ToString();
+            totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 
+        }
+
+        public void RemovePizzaFromCart(Pizza pizza)
+        {
+            cartListBox.Items.Remove(pizza.ToString());
+            checkEmpty();
+
+            TotalPrice -= pizza.Price;
+            totalLabel.Text = "$" + TotalPrice.ToString();
+
+            cartListBox.Refresh();
         }
 
         private void CartPage_FormClosed(object sender, FormClosedEventArgs e)

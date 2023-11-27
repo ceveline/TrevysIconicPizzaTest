@@ -13,7 +13,8 @@ namespace TrevysIconicPizza
     public partial class DrinkPage : Form
     {
         private CartPage cartPage;
-       
+        List<string> customMilkshakeItems = new List<string>();
+
         public DrinkPage(CartPage cartPageInstance)
         {
             InitializeComponent();
@@ -63,6 +64,33 @@ namespace TrevysIconicPizza
             cartPage.Show();
         }
 
-        
+        private void addCustomButton_Click(object sender, EventArgs e)
+        {
+            string flavor = flavorListBox.Text;
+
+            if (flavorListBox.SelectedItems.Count == 0 || toppingsListBox.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Please make sure flavor and at least one topping are selected!");
+                return;
+            }
+
+            Drink custom = new CustomMilkshake(customMilkshakeItems);
+            cartPage.AddDrinkToCart(custom);
+            MessageBox.Show("Custom milkshake has been added to your cart successfully!");
+        }
+
+        private void toppingsListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            string item = toppingsListBox.Items[e.Index].ToString(); // Use e.Index to get the correct item
+
+            if (e.NewValue == CheckState.Checked)
+            {
+                customMilkshakeItems.Add(item);
+            }
+            else
+            {
+                customMilkshakeItems.Remove(item);
+            }
+        }
     }
 }
