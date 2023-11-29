@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using System.Xml.Linq;
 using System.IO;
+using static System.Windows.Forms.LinkLabel;
 
 namespace TrevysIconicPizza
 {
@@ -18,6 +19,8 @@ namespace TrevysIconicPizza
     {
         private static CartPage _instance;
         private decimal totalPrice;
+        // pricelist List to store the prices of the items
+        private List<decimal> priceList = new List<decimal>();
         private decimal TotalPrice { get; set; }
         public CartPage()
         {
@@ -44,9 +47,18 @@ namespace TrevysIconicPizza
 
                 if (result == DialogResult.Yes)
                 {
-                    cartListBox.Items.RemoveAt(cartListBox.SelectedIndex);
+                    int selectedIndex = cartListBox.SelectedIndex;
+                    cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
-                    TotalPrice = 0;
+
+                    decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
+                    
+                    priceList.RemoveAt(selectedIndex);
+                    
+                    // FIX THIS
+                    //TotalPrice -= ;
+
+                    totalLabel.Text = "$" + TotalPrice;
                 }
             }
         }
@@ -95,8 +107,16 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(pizza.ToString());
             checkEmpty();
 
-            TotalPrice += pizza.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
+            // add the price to the price list
+
+            decimal price = pizza.Price;
+            priceList.Add(price);
+
+
+            TotalPrice += price;
+
+
+            totalLabel.Text = "$" + TotalPrice;
 
             cartListBox.Refresh();
 
@@ -107,8 +127,14 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(drink.ToString());
             checkEmpty();
 
-            TotalPrice += drink.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
+            decimal price = drink.Price;
+            priceList.Add(price);
+
+           
+            TotalPrice += price;
+
+
+            totalLabel.Text = "$" + TotalPrice;
 
             cartListBox.Refresh();
 
@@ -119,8 +145,8 @@ namespace TrevysIconicPizza
             cartListBox.Items.Remove(pizza.ToString());
             checkEmpty();
 
-            TotalPrice -= pizza.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
+            //TotalPrice -= pizza.Price;
+            //totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
         }
@@ -136,6 +162,6 @@ namespace TrevysIconicPizza
             
         }
 
-        
+        // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
 }
