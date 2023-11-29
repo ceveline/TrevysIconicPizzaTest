@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPage));
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.delivTimeLabel = new System.Windows.Forms.Label();
-            this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cardNumberLabel = new System.Windows.Forms.Label();
             this.cardNumberTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
@@ -45,12 +44,15 @@
             this.CVVLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.estimatedPrepTime = new System.Windows.Forms.Label();
+            this.pickUpTimeLabel = new System.Windows.Forms.Label();
+            this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.cartLogo = new System.Windows.Forms.PictureBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
+            this.pickUpTimer = new System.Windows.Forms.Timer(this.components);
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -85,18 +87,6 @@
             this.paymentGroupBox.TabStop = false;
             this.paymentGroupBox.Text = "Payment";
             // 
-            // pickUpTimeLabel
-            // 
-            this.pickUpTimeLabel.AutoSize = true;
-            this.pickUpTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.pickUpTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pickUpTimeLabel.Location = new System.Drawing.Point(14, 368);
-            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
-            this.pickUpTimeLabel.Size = new System.Drawing.Size(59, 26);
-            this.pickUpTimeLabel.TabIndex = 15;
-            this.pickUpTimeLabel.Text = "label";
-            this.pickUpTimeLabel.Visible = false;
-            // 
             // delivTimeLabel
             // 
             this.delivTimeLabel.AutoSize = true;
@@ -107,17 +97,6 @@
             this.delivTimeLabel.Size = new System.Drawing.Size(193, 19);
             this.delivTimeLabel.TabIndex = 13;
             this.delivTimeLabel.Text = "Preferred Delivery Time:";
-            // 
-            // deliveryDateTimePicker
-            // 
-            this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
-            this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
-            this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 26);
-            this.deliveryDateTimePicker.TabIndex = 7;
-            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
             // 
             // cardNumberLabel
             // 
@@ -252,6 +231,29 @@
             this.estimatedPrepTime.Text = "Estimated Pickup Time:";
             this.estimatedPrepTime.Visible = false;
             // 
+            // pickUpTimeLabel
+            // 
+            this.pickUpTimeLabel.AutoSize = true;
+            this.pickUpTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.pickUpTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pickUpTimeLabel.Location = new System.Drawing.Point(14, 368);
+            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
+            this.pickUpTimeLabel.Size = new System.Drawing.Size(54, 26);
+            this.pickUpTimeLabel.TabIndex = 15;
+            this.pickUpTimeLabel.Text = "Test";
+            this.pickUpTimeLabel.Visible = false;
+            // 
+            // deliveryDateTimePicker
+            // 
+            this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
+            this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
+            this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 26);
+            this.deliveryDateTimePicker.TabIndex = 7;
+            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
+            // 
             // orderGroupBox
             // 
             this.orderGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
@@ -328,6 +330,10 @@
             this.orderListBox.Size = new System.Drawing.Size(310, 284);
             this.orderListBox.TabIndex = 0;
             // 
+            // pickUpTimer
+            // 
+            this.pickUpTimer.Tick += new System.EventHandler(this.pickUpTimer_Tick);
+            // 
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,5 +379,6 @@
         private System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label pickUpTimeLabel;
         private System.Windows.Forms.Label estimatedPrepTime;
+        private System.Windows.Forms.Timer pickUpTimer;
     }
 }
