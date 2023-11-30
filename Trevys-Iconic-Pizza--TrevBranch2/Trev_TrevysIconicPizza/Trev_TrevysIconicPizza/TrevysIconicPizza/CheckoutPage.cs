@@ -71,8 +71,6 @@ namespace TrevysIconicPizza
                 estimatedPrepTime.Visible = false;
             }
         }
-<<<<<<< HEAD
-
         public void UpdateCheckoutItems(List<string> items)
         {
             foreach (string item in items)
@@ -81,8 +79,6 @@ namespace TrevysIconicPizza
             }
         }
 
-=======
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
     }
 
 
