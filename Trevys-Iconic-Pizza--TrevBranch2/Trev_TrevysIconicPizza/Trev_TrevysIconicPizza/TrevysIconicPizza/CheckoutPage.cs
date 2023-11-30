@@ -35,7 +35,7 @@ namespace TrevysIconicPizza
 
         private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            pickUpTimer.Start();
+            //pickUpTimer.Start();
             pickUpTimer_Tick(this, EventArgs.Empty);
            
         }
@@ -81,10 +81,6 @@ namespace TrevysIconicPizza
             }
         }
 
-        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 =======
 >>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
     }
