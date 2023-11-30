@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    public class Pizza
+    public class Pizza : EdibleItem
     {
         //String name;
         String type;

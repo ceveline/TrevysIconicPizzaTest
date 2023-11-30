@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    internal class EdibleItem
+    public class EdibleItem
     {
+        private List<EdibleItem> edibleItems;
+        public List<EdibleItem> EdibleItems { get; set; }
 
+        public EdibleItem ()
+        {
+            EdibleItems = new List<EdibleItem>();
+        }
     }
 }
