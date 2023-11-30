@@ -192,7 +192,5 @@ namespace TrevysIconicPizza
             this.Hide(); // Hide the form when the close button is clicked
             
         }
-
-        // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
 }
