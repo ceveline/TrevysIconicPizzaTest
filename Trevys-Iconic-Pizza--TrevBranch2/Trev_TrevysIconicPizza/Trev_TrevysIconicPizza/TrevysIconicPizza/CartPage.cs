@@ -59,13 +59,19 @@ namespace TrevysIconicPizza
                     cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
 
-                    decimal priceToRemove = priceList[selectedIndex];
+                    decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
                     
                     priceList.RemoveAt(selectedIndex);
+<<<<<<< HEAD
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     // minus the price from the total price
                     TotalPrice -= priceToRemove;
+=======
+                    
+                    // FIX THIS
+                    //TotalPrice -= ;
+>>>>>>> parent of fd26696 (subtotal works and SoftDrink class is added)
 
                     totalLabel.Text = "$" + TotalPrice;
                 }

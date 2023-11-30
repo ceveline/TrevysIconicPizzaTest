@@ -98,4 +98,3 @@ C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--Trev
 C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.AccountInformation.resources
-C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.AccountInformation.resources
