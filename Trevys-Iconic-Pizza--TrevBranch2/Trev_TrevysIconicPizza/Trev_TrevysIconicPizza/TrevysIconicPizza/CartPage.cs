@@ -126,6 +126,7 @@ namespace TrevysIconicPizza
             };
 
             checkoutPage.Show();
+            this.Hide();
             checkOutButton.Enabled = false;
 
         }
