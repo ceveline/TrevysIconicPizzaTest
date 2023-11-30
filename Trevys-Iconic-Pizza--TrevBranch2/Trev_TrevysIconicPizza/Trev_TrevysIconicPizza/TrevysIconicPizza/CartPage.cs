@@ -51,12 +51,12 @@ namespace TrevysIconicPizza
                     cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
 
-                    decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
+                    decimal priceToRemove = priceList[selectedIndex];
                     
                     priceList.RemoveAt(selectedIndex);
-                    
-                    // FIX THIS
-                    //TotalPrice -= ;
+
+                    // minus the price from the total price
+                    TotalPrice -= priceToRemove;
 
                     totalLabel.Text = "$" + TotalPrice;
                 }

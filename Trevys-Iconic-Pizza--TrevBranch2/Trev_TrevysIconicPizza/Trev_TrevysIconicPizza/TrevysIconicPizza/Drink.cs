@@ -30,7 +30,7 @@ namespace TrevysIconicPizza
 
         public override string ToString()
         {
-            return String.Format("{0, -35}{1,35:C}", Type, Price);
+            return String.Format("{0,-25} {1,45:C}", Type, Price);
         }
 
         /*
