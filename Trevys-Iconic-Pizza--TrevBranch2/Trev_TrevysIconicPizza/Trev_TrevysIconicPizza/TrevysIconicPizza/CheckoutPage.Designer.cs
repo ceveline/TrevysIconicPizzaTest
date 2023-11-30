@@ -45,7 +45,6 @@
             this.addressLabel = new System.Windows.Forms.Label();
             this.estimatedPrepTime = new System.Windows.Forms.Label();
 
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.cartLogo = new System.Windows.Forms.PictureBox();
@@ -53,8 +52,7 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
-            //this.pickUpTimer = new System.Windows.Forms.Timer(this.components);
+
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -117,7 +115,7 @@
             // 
             this.cardNumberTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardNumberTextBox.Location = new System.Drawing.Point(19, 92);
-            this.cardNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cardNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cardNumberTextBox.Name = "cardNumberTextBox";
             this.cardNumberTextBox.Size = new System.Drawing.Size(316, 23);
             this.cardNumberTextBox.TabIndex = 11;
@@ -126,7 +124,7 @@
             // 
             this.phoneTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneTextBox.Location = new System.Drawing.Point(19, 319);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(316, 23);
             this.phoneTextBox.TabIndex = 10;
@@ -160,7 +158,7 @@
             // 
             this.addressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressTextBox.Location = new System.Drawing.Point(19, 242);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(316, 23);
             this.addressTextBox.TabIndex = 7;
@@ -171,7 +169,7 @@
             this.pickupRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickupRadioButton.ForeColor = System.Drawing.Color.Black;
             this.pickupRadioButton.Location = new System.Drawing.Point(137, 389);
-            this.pickupRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pickupRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.pickupRadioButton.Name = "pickupRadioButton";
             this.pickupRadioButton.Size = new System.Drawing.Size(92, 29);
             this.pickupRadioButton.TabIndex = 6;
@@ -186,7 +184,7 @@
             this.CVVTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CVVTextBox.ForeColor = System.Drawing.Color.White;
             this.CVVTextBox.Location = new System.Drawing.Point(19, 167);
-            this.CVVTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CVVTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.CVVTextBox.Name = "CVVTextBox";
             this.CVVTextBox.Size = new System.Drawing.Size(97, 23);
             this.CVVTextBox.TabIndex = 5;
@@ -197,7 +195,7 @@
             this.deliveryRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryRadioButton.ForeColor = System.Drawing.Color.Black;
             this.deliveryRadioButton.Location = new System.Drawing.Point(20, 389);
-            this.deliveryRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deliveryRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.deliveryRadioButton.Name = "deliveryRadioButton";
             this.deliveryRadioButton.Size = new System.Drawing.Size(103, 29);
             this.deliveryRadioButton.TabIndex = 4;
@@ -241,11 +239,23 @@
             this.estimatedPrepTime.TabIndex = 14;
             this.estimatedPrepTime.Text = "Estimated Pickup Time:";
             this.estimatedPrepTime.Visible = false;
-            //  pickUpTimeLabel
+            // 
+
+            // pickUpTimeLabel
             // 
             this.pickUpTimeLabel.AutoSize = true;
             this.pickUpTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.pickUpTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+
+            this.pickUpTimeLabel.Location = new System.Drawing.Point(19, 453);
+            this.pickUpTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pickUpTimeLabel.Name = "pickUpTimeLabel";
+            this.pickUpTimeLabel.Size = new System.Drawing.Size(79, 34);
+            this.pickUpTimeLabel.TabIndex = 15;
+            this.pickUpTimeLabel.Text = "label";
+            this.pickUpTimeLabel.Visible = false;
+            // 
+
             this.pickUpTimeLabel.Location = new System.Drawing.Point(14, 368);
             this.pickUpTimeLabel.Name = "pickUpTimeLabel";
             this.pickUpTimeLabel.Size = new System.Drawing.Size(54, 26);
@@ -253,20 +263,25 @@
             this.pickUpTimeLabel.Text = "Test";
             this.pickUpTimeLabel.Visible = false;
             // 
+
             // deliveryDateTimePicker
             // 
             this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+
             this.deliveryDateTimePicker.Location = new System.Drawing.Point(19, 453);
-            this.deliveryDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deliveryDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.deliveryDateTimePicker.MinDate = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
             this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
             this.deliveryDateTimePicker.Size = new System.Drawing.Size(316, 30);
+
             this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
             this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
             this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 26);
+
             this.deliveryDateTimePicker.TabIndex = 7;
-            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
+            this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
             // 
             // orderGroupBox
             // 
@@ -293,7 +308,7 @@
             this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
             this.cartLogo.Location = new System.Drawing.Point(403, 32);
-            this.cartLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartLogo.Margin = new System.Windows.Forms.Padding(4);
             this.cartLogo.Name = "cartLogo";
             this.cartLogo.Size = new System.Drawing.Size(32, 30);
             this.cartLogo.TabIndex = 7;
@@ -305,9 +320,9 @@
             this.checkoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkoutButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.checkoutButton.Location = new System.Drawing.Point(243, 446);
-            this.checkoutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkoutButton.Margin = new System.Windows.Forms.Padding(4);
             this.checkoutButton.Name = "checkoutButton";
-            this.checkoutButton.Size = new System.Drawing.Size(192, 48);
+            this.checkoutButton.Size = new System.Drawing.Size(192, 41);
             this.checkoutButton.TabIndex = 3;
             this.checkoutButton.Text = "Checkout";
             this.checkoutButton.UseVisualStyleBackColor = false;
@@ -329,7 +344,7 @@
             // 
             this.totalTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.totalTextBox.Location = new System.Drawing.Point(101, 447);
-            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
             this.totalTextBox.Size = new System.Drawing.Size(133, 38);
@@ -338,17 +353,18 @@
             // orderListBox
             // 
             this.orderListBox.BackColor = System.Drawing.Color.White;
-            this.orderListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderListBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderListBox.FormattingEnabled = true;
-            this.orderListBox.ItemHeight = 25;
+            this.orderListBox.ItemHeight = 19;
             this.orderListBox.Location = new System.Drawing.Point(21, 69);
-            this.orderListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderListBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderListBox.Name = "orderListBox";
             this.orderListBox.ScrollAlwaysVisible = true;
             this.orderListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.orderListBox.Size = new System.Drawing.Size(412, 329);
+            this.orderListBox.Size = new System.Drawing.Size(412, 327);
             this.orderListBox.TabIndex = 0;
             // 
+
             // pickUpTimeLabel
             // 
             this.pickUpTimeLabel.AutoSize = true;
@@ -361,10 +377,13 @@
             this.pickUpTimeLabel.TabIndex = 15;
             this.pickUpTimeLabel.Text = "label";
             this.pickUpTimeLabel.Visible = false;
+
             // pickUpTimer
             // 
             this.pickUpTimer.Tick += new System.EventHandler(this.pickUpTimer_Tick);
+
             // 
+
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -374,7 +393,7 @@
             this.ClientSize = new System.Drawing.Size(1140, 624);
             this.Controls.Add(this.orderGroupBox);
             this.Controls.Add(this.paymentGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CheckoutPage";
             this.Text = "Checkout Page";
             this.Load += new System.EventHandler(this.CheckoutPage_Load);
@@ -410,7 +429,10 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label estimatedPrepTime;
+
         private System.Windows.Forms.Label pickUpTimeLabel;
+
         private System.Windows.Forms.Timer pickUpTimer;
+
     }
 }

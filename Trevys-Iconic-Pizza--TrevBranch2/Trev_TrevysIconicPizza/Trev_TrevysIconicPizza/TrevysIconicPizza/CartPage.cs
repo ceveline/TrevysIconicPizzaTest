@@ -62,16 +62,18 @@ namespace TrevysIconicPizza
                     decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
                     
                     priceList.RemoveAt(selectedIndex);
-<<<<<<< HEAD
+
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     // minus the price from the total price
                     TotalPrice -= priceToRemove;
-=======
+
                     
                     // FIX THIS
                     //TotalPrice -= ;
->>>>>>> parent of fd26696 (subtotal works and SoftDrink class is added)
+                    
+                    // FIX THIS
+                    //TotalPrice -= ;
 
                     totalLabel.Text = "$" + TotalPrice;
                 }
@@ -132,6 +134,7 @@ namespace TrevysIconicPizza
             };
 
             checkoutPage.Show();
+            this.Hide();
             checkOutButton.Enabled = false;
 
         }
@@ -197,7 +200,5 @@ namespace TrevysIconicPizza
             this.Hide(); // Hide the form when the close button is clicked
             
         }
-
-        // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
 }

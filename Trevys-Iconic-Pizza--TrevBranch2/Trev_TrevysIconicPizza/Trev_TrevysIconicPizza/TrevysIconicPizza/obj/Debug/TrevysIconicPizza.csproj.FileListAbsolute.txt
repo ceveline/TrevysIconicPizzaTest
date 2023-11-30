@@ -56,8 +56,6 @@ C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--Tre
 C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.CoreCompileInputs.cache
 C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
-C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe
-C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.pdb
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.CheckoutPage.resources
 C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.AccountInformation.resources
 C:\Users\2149315\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.CheckoutPage.resources
@@ -83,8 +81,6 @@ C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--Trev
 C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\Trevor\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
 C:\Users\2027495\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.AccountInformation.resources
-<<<<<<< HEAD
-C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe.config
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.AssemblyReference.cache
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.AccountInformation.resources
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.CartPage.resources
@@ -98,7 +94,8 @@ C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevB
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.Properties.Resources.resources
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.GenerateResource.cache
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.CoreCompileInputs.cache
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe.config
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.exe
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\TrevysIconicPizza.pdb
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trevys-Iconic-Pizza--TrevBranch2\Trev_TrevysIconicPizza\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
-=======
->>>>>>> parent of fd26696 (subtotal works and SoftDrink class is added)
