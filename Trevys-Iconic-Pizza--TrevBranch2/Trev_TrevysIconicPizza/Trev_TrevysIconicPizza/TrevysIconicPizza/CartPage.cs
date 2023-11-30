@@ -73,13 +73,11 @@ namespace TrevysIconicPizza
             if (cartListBox.Items.Count == 0)
             {
                 emptyLabel.Show();
-                editButton.Enabled = false;
                 removeButton.Enabled = false;
                 result = true;
             } else
             {
                 emptyLabel.Hide();
-                editButton.Enabled = true;
                 removeButton.Enabled = true;
             }
             return result;
