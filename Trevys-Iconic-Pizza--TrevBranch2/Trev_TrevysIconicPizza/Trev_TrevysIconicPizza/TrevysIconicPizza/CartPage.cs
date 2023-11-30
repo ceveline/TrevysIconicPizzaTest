@@ -20,12 +20,12 @@ namespace TrevysIconicPizza
         private decimal totalPrice;
         private decimal TotalPrice { get; set; }
 
+
+        // pricelist List to store the prices of the items
+        private List<decimal> priceList = new List<decimal>();
+
         private EdibleItem edibleItem = new EdibleItem();
 
-        //private List<Pizza> pizzaOrders = new List<Pizza>();
-        //private List<Pizza> PizzaOrders { get; set; }
-        //private List<Drink> drinkOrders = new List<Drink>();
-        //private List<Drink> DrinkOrders { get; set; }
 
         public CartPage()
         {
@@ -52,30 +52,19 @@ namespace TrevysIconicPizza
 
                 if (result == DialogResult.Yes)
                 {
-                    cartListBox.Items.RemoveAt(cartListBox.SelectedIndex);
+                    int selectedIndex = cartListBox.SelectedIndex;
+                    cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
-<<<<<<< HEAD
 
-                    decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
-                    
+                    decimal priceToRemove = priceList[selectedIndex];
+
                     priceList.RemoveAt(selectedIndex);
-
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     // minus the price from the total price
                     TotalPrice -= priceToRemove;
 
-                    
-                    // FIX THIS
-                    //TotalPrice -= ;
-                    
-                    // FIX THIS
-                    //TotalPrice -= ;
-
                     totalLabel.Text = "$" + TotalPrice;
-=======
-                    TotalPrice = 0;
->>>>>>> parent of 98c9bd3 (total price text is still not updating. need to fix it still)
                 }
             }
         }
@@ -145,7 +134,6 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(pizza.ToString());
             checkEmpty();
 
-<<<<<<< HEAD
             // add the price to the price list
 
             decimal price = pizza.Price;
@@ -158,10 +146,6 @@ namespace TrevysIconicPizza
 
 
             totalLabel.Text = "$" + TotalPrice;
-=======
-            TotalPrice += pizza.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
->>>>>>> parent of 98c9bd3 (total price text is still not updating. need to fix it still)
 
             cartListBox.Refresh();
 
@@ -172,7 +156,6 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(drink.ToString());
             checkEmpty();
 
-<<<<<<< HEAD
             decimal price = drink.Price;
             priceList.Add(price);
             edibleItem.EdibleItems.Add(drink);
@@ -181,10 +164,6 @@ namespace TrevysIconicPizza
 
 
             totalLabel.Text = "$" + TotalPrice;
-=======
-            TotalPrice += drink.Price;
-            totalLabel.Text = "$" + TotalPrice.ToString();
->>>>>>> parent of 98c9bd3 (total price text is still not updating. need to fix it still)
 
             cartListBox.Refresh();
 
@@ -195,12 +174,8 @@ namespace TrevysIconicPizza
             cartListBox.Items.Remove(pizza.ToString());
             checkEmpty();
 
-<<<<<<< HEAD
-            //PizzaOrders.Remove(pizza);
-=======
             TotalPrice -= pizza.Price;
             totalLabel.Text = "$" + TotalPrice.ToString();
->>>>>>> parent of 98c9bd3 (total price text is still not updating. need to fix it still)
 
             cartListBox.Refresh();
         }
@@ -215,10 +190,5 @@ namespace TrevysIconicPizza
             this.Hide(); // Hide the form when the close button is clicked
             
         }
-<<<<<<< HEAD
-=======
-
-        
->>>>>>> parent of 98c9bd3 (total price text is still not updating. need to fix it still)
     }
 }
