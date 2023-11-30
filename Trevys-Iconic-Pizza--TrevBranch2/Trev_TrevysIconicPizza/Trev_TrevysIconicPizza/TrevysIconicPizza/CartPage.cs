@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +11,17 @@ using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using System.Xml.Linq;
 using System.IO;
+using static System.Windows.Forms.LinkLabel;
 
 namespace TrevysIconicPizza
 {
     public partial class CartPage : Form
     {
         private static CartPage _instance;
+        private decimal totalPrice;
+        // pricelist List to store the prices of the items
+        private List<decimal> priceList = new List<decimal>();
+        private decimal TotalPrice { get; set; }
         public CartPage()
         {
             InitializeComponent();
@@ -33,8 +39,6 @@ namespace TrevysIconicPizza
         }
 
 
-
-
         private void removeButton_Click(object sender, EventArgs e)
         {
             if (cartListBox.SelectedIndex != -1)
@@ -43,8 +47,18 @@ namespace TrevysIconicPizza
 
                 if (result == DialogResult.Yes)
                 {
-                    cartListBox.Items.RemoveAt(cartListBox.SelectedIndex);
+                    int selectedIndex = cartListBox.SelectedIndex;
+                    cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
+
+                    decimal priceToRemove = priceList[selectedIndex];
+                    
+                    priceList.RemoveAt(selectedIndex);
+
+                    // minus the price from the total price
+                    TotalPrice -= priceToRemove;
+
+                    totalLabel.Text = "$" + TotalPrice;
                 }
             }
         }
@@ -71,22 +85,20 @@ namespace TrevysIconicPizza
             return result;
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void checkOutButton_Click(object sender, EventArgs e)
         {
-            //This is for testing
-            
-            //Pizza p = new Pizza("vegetarian", "s", null);
-            //cartListBox.Items.Add(p.ToString());
-            
+            CheckoutPage checkoutPage = new CheckoutPage();
 
-            List<String> test = new List<string>();
-
-            foreach(String item in cartListBox.Items)
+            // Handle the FormClosed event
+            checkoutPage.FormClosed += (s, args) =>
             {
-                test.Add(item);
-            }
+                // Re-enable the loginButton when the LoginPage is closed
+                checkOutButton.Enabled = true;
+            };
 
-            checkEmpty();
+            checkoutPage.Show();
+            checkOutButton.Enabled = false;
+
         }
 
         public void AddPizzaToCart(Pizza pizza)
@@ -94,6 +106,17 @@ namespace TrevysIconicPizza
             //cartListBox.Refresh();
             cartListBox.Items.Add(pizza.ToString());
             checkEmpty();
+
+            // add the price to the price list
+
+            decimal price = pizza.Price;
+            priceList.Add(price);
+
+
+            TotalPrice += price;
+
+
+            totalLabel.Text = "$" + TotalPrice;
 
             cartListBox.Refresh();
 
@@ -104,8 +127,28 @@ namespace TrevysIconicPizza
             cartListBox.Items.Add(drink.ToString());
             checkEmpty();
 
+            decimal price = drink.Price;
+            priceList.Add(price);
+
+           
+            TotalPrice += price;
+
+
+            totalLabel.Text = "$" + TotalPrice;
+
             cartListBox.Refresh();
 
+        }
+
+        public void RemovePizzaFromCart(Pizza pizza)
+        {
+            cartListBox.Items.Remove(pizza.ToString());
+            checkEmpty();
+
+            //TotalPrice -= pizza.Price;
+            //totalLabel.Text = "$" + TotalPrice.ToString();
+
+            cartListBox.Refresh();
         }
 
         private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -119,6 +162,6 @@ namespace TrevysIconicPizza
             
         }
 
-        
+        // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
 }

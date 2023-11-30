@@ -11,25 +11,18 @@ namespace TrevysIconicPizza
     {
         String type;
         decimal price;
-        char size;
-        //List<String> ingredients;
 
         public string Type { get; set; }
         public decimal Price { get; set; }
-        public Drink()
-        {
-            Type = "";
-            Price = 0;
-        }
 
         public Drink(string type)
         {
             Type = type;
-            Price = 0;
+            Price = CalculatePrice();
         }
 
         // can be overridden by child classes
-        public virtual decimal CalculatePrice()
+        protected virtual decimal CalculatePrice()
         {
             // Default behavior for a generic drink
             return Price;
@@ -37,7 +30,7 @@ namespace TrevysIconicPizza
 
         public override string ToString()
         {
-            return String.Format("{0, -20}{1,0:C}", Type, Price);
+            return String.Format("{0,-25} {1,45:C}", Type, Price);
         }
 
         /*

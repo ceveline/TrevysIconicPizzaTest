@@ -41,12 +41,16 @@
             this.cardTextBox = new System.Windows.Forms.TextBox();
             this.createAcountButton = new System.Windows.Forms.Button();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.reEnterLabel = new System.Windows.Forms.Label();
             this.reEnterTextBox = new System.Windows.Forms.TextBox();
             this.reEnterPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.cvvLabel = new System.Windows.Forms.Label();
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.copyrightLabel = new System.Windows.Forms.Label();
+            this.cvvTextBox = new System.Windows.Forms.TextBox();
+            this.expireDateLabel = new System.Windows.Forms.Label();
+            this.expirationDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,10 +60,10 @@
             this.firstNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.firstNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.firstNameLabel.Location = new System.Drawing.Point(52, 75);
-            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.firstNameLabel.Location = new System.Drawing.Point(78, 115);
+            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(75, 16);
+            this.firstNameLabel.Size = new System.Drawing.Size(112, 24);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "First Name";
             // 
@@ -69,10 +73,10 @@
             this.lastNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.lastNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.lastNameLabel.Location = new System.Drawing.Point(52, 131);
-            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(1, 20, 3, 20);
+            this.lastNameLabel.Location = new System.Drawing.Point(78, 202);
+            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(2, 31, 4, 31);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(74, 16);
+            this.lastNameLabel.Size = new System.Drawing.Size(110, 24);
             this.lastNameLabel.TabIndex = 1;
             this.lastNameLabel.Text = "Last Name";
             // 
@@ -82,10 +86,10 @@
             this.usernameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.usernameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.usernameLabel.Location = new System.Drawing.Point(52, 184);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.usernameLabel.Location = new System.Drawing.Point(78, 283);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(71, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(105, 24);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username";
             // 
@@ -95,10 +99,10 @@
             this.passwordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.passwordLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.passwordLabel.Location = new System.Drawing.Point(52, 233);
-            this.passwordLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.passwordLabel.Location = new System.Drawing.Point(78, 358);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(68, 16);
+            this.passwordLabel.Size = new System.Drawing.Size(103, 24);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password";
             // 
@@ -108,52 +112,52 @@
             this.cardLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.cardLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.cardLabel.Location = new System.Drawing.Point(52, 338);
-            this.cardLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.cardLabel.Location = new System.Drawing.Point(78, 520);
+            this.cardLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
             this.cardLabel.Name = "cardLabel";
-            this.cardLabel.Size = new System.Drawing.Size(37, 16);
+            this.cardLabel.Size = new System.Drawing.Size(55, 24);
             this.cardLabel.TabIndex = 4;
             this.cardLabel.Text = "Card";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(188, 74);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.firstNameTextBox.Location = new System.Drawing.Point(282, 114);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.firstNameTextBox.Size = new System.Drawing.Size(278, 26);
             this.firstNameTextBox.TabIndex = 5;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(188, 126);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.lastNameTextBox.Location = new System.Drawing.Point(282, 194);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.lastNameTextBox.Size = new System.Drawing.Size(278, 26);
             this.lastNameTextBox.TabIndex = 6;
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(188, 183);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.usernameTextBox.Location = new System.Drawing.Point(282, 282);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(278, 26);
             this.usernameTextBox.TabIndex = 7;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(188, 232);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.passwordTextBox.Location = new System.Drawing.Point(282, 357);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(187, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(278, 26);
             this.passwordTextBox.TabIndex = 8;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // cardTextBox
             // 
-            this.cardTextBox.Location = new System.Drawing.Point(188, 333);
-            this.cardTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.cardTextBox.Location = new System.Drawing.Point(282, 512);
+            this.cardTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.cardTextBox.Name = "cardTextBox";
-            this.cardTextBox.Size = new System.Drawing.Size(187, 20);
+            this.cardTextBox.Size = new System.Drawing.Size(278, 26);
             this.cardTextBox.TabIndex = 9;
             // 
             // createAcountButton
@@ -161,9 +165,10 @@
             this.createAcountButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.createAcountButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAcountButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.createAcountButton.Location = new System.Drawing.Point(201, 361);
+            this.createAcountButton.Location = new System.Drawing.Point(283, 668);
+            this.createAcountButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.createAcountButton.Name = "createAcountButton";
-            this.createAcountButton.Size = new System.Drawing.Size(145, 50);
+            this.createAcountButton.Size = new System.Drawing.Size(218, 77);
             this.createAcountButton.TabIndex = 10;
             this.createAcountButton.Text = "Create Account";
             this.createAcountButton.UseVisualStyleBackColor = false;
@@ -175,34 +180,34 @@
             this.showPasswordCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.showPasswordCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showPasswordCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(388, 231);
-            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(582, 355);
+            this.showPasswordCheckBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
-            this.showPasswordCheckBox.Size = new System.Drawing.Size(127, 20);
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(187, 28);
             this.showPasswordCheckBox.TabIndex = 11;
             this.showPasswordCheckBox.Text = "Show Password";
             this.showPasswordCheckBox.UseVisualStyleBackColor = false;
             this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
-            // label1
+            // reEnterLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.label1.Location = new System.Drawing.Point(52, 286);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Re-enter Password";
+            this.reEnterLabel.AutoSize = true;
+            this.reEnterLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.reEnterLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reEnterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.reEnterLabel.Location = new System.Drawing.Point(78, 440);
+            this.reEnterLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
+            this.reEnterLabel.Name = "reEnterLabel";
+            this.reEnterLabel.Size = new System.Drawing.Size(190, 24);
+            this.reEnterLabel.TabIndex = 12;
+            this.reEnterLabel.Text = "Re-enter Password";
             // 
             // reEnterTextBox
             // 
-            this.reEnterTextBox.Location = new System.Drawing.Point(188, 285);
-            this.reEnterTextBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.reEnterTextBox.Location = new System.Drawing.Point(282, 438);
+            this.reEnterTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.reEnterTextBox.Name = "reEnterTextBox";
-            this.reEnterTextBox.Size = new System.Drawing.Size(187, 20);
+            this.reEnterTextBox.Size = new System.Drawing.Size(278, 26);
             this.reEnterTextBox.TabIndex = 13;
             this.reEnterTextBox.UseSystemPasswordChar = true;
             // 
@@ -212,10 +217,10 @@
             this.reEnterPasswordCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.reEnterPasswordCheckBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reEnterPasswordCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.reEnterPasswordCheckBox.Location = new System.Drawing.Point(388, 284);
-            this.reEnterPasswordCheckBox.Margin = new System.Windows.Forms.Padding(10, 20, 3, 20);
+            this.reEnterPasswordCheckBox.Location = new System.Drawing.Point(582, 437);
+            this.reEnterPasswordCheckBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
             this.reEnterPasswordCheckBox.Name = "reEnterPasswordCheckBox";
-            this.reEnterPasswordCheckBox.Size = new System.Drawing.Size(127, 20);
+            this.reEnterPasswordCheckBox.Size = new System.Drawing.Size(187, 28);
             this.reEnterPasswordCheckBox.TabIndex = 14;
             this.reEnterPasswordCheckBox.Text = "Show Password";
             this.reEnterPasswordCheckBox.UseVisualStyleBackColor = false;
@@ -227,8 +232,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.loginPanel.Controls.Add(this.expirationDateTimePicker);
+            this.loginPanel.Controls.Add(this.expireDateLabel);
+            this.loginPanel.Controls.Add(this.cvvLabel);
             this.loginPanel.Controls.Add(this.WelcomeLabel);
-            this.loginPanel.Controls.Add(this.label1);
+            this.loginPanel.Controls.Add(this.reEnterLabel);
             this.loginPanel.Controls.Add(this.showPasswordCheckBox);
             this.loginPanel.Controls.Add(this.reEnterPasswordCheckBox);
             this.loginPanel.Controls.Add(this.passwordLabel);
@@ -243,11 +251,23 @@
             this.loginPanel.Controls.Add(this.cardLabel);
             this.loginPanel.Controls.Add(this.lastNameLabel);
             this.loginPanel.Controls.Add(this.firstNameLabel);
-            this.loginPanel.Location = new System.Drawing.Point(23, 18);
-            this.loginPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.loginPanel.Location = new System.Drawing.Point(34, 28);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(520, 433);
+            this.loginPanel.Size = new System.Drawing.Size(779, 772);
             this.loginPanel.TabIndex = 15;
+            // 
+            // cvvLabel
+            // 
+            this.cvvLabel.AutoSize = true;
+            this.cvvLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.cvvLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cvvLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.cvvLabel.Location = new System.Drawing.Point(578, 512);
+            this.cvvLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
+            this.cvvLabel.Name = "cvvLabel";
+            this.cvvLabel.Size = new System.Drawing.Size(50, 24);
+            this.cvvLabel.TabIndex = 16;
+            this.cvvLabel.Text = "CVV";
             // 
             // WelcomeLabel
             // 
@@ -256,9 +276,10 @@
             this.WelcomeLabel.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
             this.WelcomeLabel.Image = ((System.Drawing.Image)(resources.GetObject("WelcomeLabel.Image")));
-            this.WelcomeLabel.Location = new System.Drawing.Point(107, 19);
+            this.WelcomeLabel.Location = new System.Drawing.Point(160, 29);
+            this.WelcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(350, 35);
+            this.WelcomeLabel.Size = new System.Drawing.Size(525, 54);
             this.WelcomeLabel.TabIndex = 15;
             this.WelcomeLabel.Text = "Welcome To The Family!";
             this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,28 +287,70 @@
             // copyrightLabel
             // 
             this.copyrightLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.copyrightLabel.Location = new System.Drawing.Point(209, 453);
+            this.copyrightLabel.Location = new System.Drawing.Point(314, 804);
+            this.copyrightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(161, 23);
+            this.copyrightLabel.Size = new System.Drawing.Size(242, 35);
             this.copyrightLabel.TabIndex = 13;
             this.copyrightLabel.Text = "© 2023 Trevy\'s Iconic Pizza";
             this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cvvTextBox
+            // 
+            this.cvvTextBox.Location = new System.Drawing.Point(687, 542);
+            this.cvvTextBox.Margin = new System.Windows.Forms.Padding(15, 31, 4, 31);
+            this.cvvTextBox.MaxLength = 3;
+            this.cvvTextBox.Name = "cvvTextBox";
+            this.cvvTextBox.Size = new System.Drawing.Size(68, 26);
+            this.cvvTextBox.TabIndex = 17;
+            // 
+            // expireDateLabel
+            // 
+            this.expireDateLabel.AutoSize = true;
+            this.expireDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.expireDateLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expireDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.expireDateLabel.Location = new System.Drawing.Point(78, 606);
+            this.expireDateLabel.Margin = new System.Windows.Forms.Padding(4, 31, 4, 31);
+            this.expireDateLabel.Name = "expireDateLabel";
+            this.expireDateLabel.Size = new System.Drawing.Size(155, 24);
+            this.expireDateLabel.TabIndex = 17;
+            this.expireDateLabel.Text = "Expiration Date";
+            // 
+            // expirationDateTimePicker
+            // 
+            this.expirationDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDateTimePicker.CustomFormat = "";
+            this.expirationDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.expirationDateTimePicker.Location = new System.Drawing.Point(282, 595);
+            this.expirationDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.expirationDateTimePicker.Name = "expirationDateTimePicker";
+            this.expirationDateTimePicker.ShowUpDown = true;
+            this.expirationDateTimePicker.Size = new System.Drawing.Size(278, 35);
+            this.expirationDateTimePicker.TabIndex = 18;
+            this.expirationDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
+            // 
             // CreateAccountPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(563, 485);
+            this.ClientSize = new System.Drawing.Size(838, 835);
+            this.Controls.Add(this.cvvTextBox);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.loginPanel);
-            this.MaximumSize = new System.Drawing.Size(583, 535);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(860, 891);
             this.Name = "CreateAccountPage";
             this.Text = "CreateAccountPage";
+            this.Load += new System.EventHandler(this.CreateAccountPage_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -305,11 +368,15 @@
         private System.Windows.Forms.TextBox cardTextBox;
         private System.Windows.Forms.Button createAcountButton;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label reEnterLabel;
         private System.Windows.Forms.TextBox reEnterTextBox;
         private System.Windows.Forms.CheckBox reEnterPasswordCheckBox;
         private System.Windows.Forms.Panel loginPanel;
         private System.Windows.Forms.Label copyrightLabel;
         private System.Windows.Forms.Label WelcomeLabel;
+        private System.Windows.Forms.Label cvvLabel;
+        private System.Windows.Forms.TextBox cvvTextBox;
+        private System.Windows.Forms.Label expireDateLabel;
+        private System.Windows.Forms.DateTimePicker expirationDateTimePicker;
     }
 }

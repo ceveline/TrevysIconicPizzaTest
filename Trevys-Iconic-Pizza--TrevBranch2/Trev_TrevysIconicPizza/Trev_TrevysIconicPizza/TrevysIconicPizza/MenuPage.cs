@@ -37,7 +37,7 @@ namespace TrevysIconicPizza
 
         private void drinkButton_Click(object sender, EventArgs e)
         {
- 
+
             DrinkPage drinkPage = new DrinkPage(cartPageInstance);
 
             // Handle the FormClosed event
@@ -64,6 +64,22 @@ namespace TrevysIconicPizza
 
             cartPageInstance.Show();
 
+        }
+
+        private void accountLogo_Click(object sender, EventArgs e)
+        {
+            AccountInformation accountInformation = new AccountInformation();
+
+            // Handle the FormClosed event
+            accountInformation.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                accountLogo.Enabled = true;
+
+            };
+
+            accountInformation.Show();
+            accountLogo.Enabled = false;
         }
     }
 }
