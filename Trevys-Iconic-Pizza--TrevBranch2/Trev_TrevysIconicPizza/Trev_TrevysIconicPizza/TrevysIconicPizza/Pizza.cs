@@ -95,7 +95,7 @@ namespace TrevysIconicPizza
             set { type = value; }
         }
 
-        public decimal Price { get { return price; } set { price = value; } }
+        public decimal Price { get; set;} 
         public String Size { get { return size; } set { size = value; } }
 
         //public List<String> Ingredients { get { return ingredients; } set { ingredients = value; } }
