@@ -44,14 +44,7 @@
             this.CVVLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.estimatedPrepTime = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
-=======
-<<<<<<< HEAD
-=======
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
->>>>>>> main
+
             this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.cartLogo = new System.Windows.Forms.PictureBox();
@@ -59,14 +52,7 @@
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.orderListBox = new System.Windows.Forms.ListBox();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            this.pickUpTimeLabel = new System.Windows.Forms.Label();
-=======
-            this.pickUpTimer = new System.Windows.Forms.Timer(this.components);
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
->>>>>>> main
+
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
@@ -254,17 +240,13 @@
             this.estimatedPrepTime.Text = "Estimated Pickup Time:";
             this.estimatedPrepTime.Visible = false;
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
+
             // pickUpTimeLabel
             // 
             this.pickUpTimeLabel.AutoSize = true;
             this.pickUpTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.pickUpTimeLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-<<<<<<< HEAD
+
             this.pickUpTimeLabel.Location = new System.Drawing.Point(19, 453);
             this.pickUpTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pickUpTimeLabel.Name = "pickUpTimeLabel";
@@ -273,7 +255,7 @@
             this.pickUpTimeLabel.Text = "label";
             this.pickUpTimeLabel.Visible = false;
             // 
-=======
+
             this.pickUpTimeLabel.Location = new System.Drawing.Point(14, 368);
             this.pickUpTimeLabel.Name = "pickUpTimeLabel";
             this.pickUpTimeLabel.Size = new System.Drawing.Size(54, 26);
@@ -281,24 +263,23 @@
             this.pickUpTimeLabel.Text = "Test";
             this.pickUpTimeLabel.Visible = false;
             // 
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
->>>>>>> main
+
             // deliveryDateTimePicker
             // 
             this.deliveryDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-<<<<<<< HEAD
+
             this.deliveryDateTimePicker.Location = new System.Drawing.Point(19, 453);
             this.deliveryDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.deliveryDateTimePicker.MinDate = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
             this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
             this.deliveryDateTimePicker.Size = new System.Drawing.Size(316, 30);
-=======
+
             this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
             this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
             this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 26);
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
+
             this.deliveryDateTimePicker.TabIndex = 7;
             this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 30, 0, 0, 0, 0);
             // 
@@ -383,9 +364,7 @@
             this.orderListBox.Size = new System.Drawing.Size(412, 327);
             this.orderListBox.TabIndex = 0;
             // 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
             // pickUpTimeLabel
             // 
             this.pickUpTimeLabel.AutoSize = true;
@@ -398,13 +377,13 @@
             this.pickUpTimeLabel.TabIndex = 15;
             this.pickUpTimeLabel.Text = "label";
             this.pickUpTimeLabel.Visible = false;
-=======
+
             // pickUpTimer
             // 
             this.pickUpTimer.Tick += new System.EventHandler(this.pickUpTimer_Tick);
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
+
             // 
->>>>>>> main
+
             // CheckoutPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,10 +429,10 @@
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.ListBox orderListBox;
         private System.Windows.Forms.Label estimatedPrepTime;
-<<<<<<< HEAD
+
         private System.Windows.Forms.Label pickUpTimeLabel;
-=======
+
         private System.Windows.Forms.Timer pickUpTimer;
->>>>>>> c04fee9f99a383d21139c10c240e5c48307b4b58
+
     }
 }
