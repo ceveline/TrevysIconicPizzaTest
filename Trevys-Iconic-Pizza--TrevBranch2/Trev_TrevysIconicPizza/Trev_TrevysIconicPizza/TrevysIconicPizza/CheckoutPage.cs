@@ -12,6 +12,7 @@ namespace TrevysIconicPizza
 {
     public partial class CheckoutPage : Form
     {
+        private EdibleItem edibleItem = new EdibleItem();
         public CheckoutPage()
         {
             InitializeComponent();
@@ -62,7 +63,18 @@ namespace TrevysIconicPizza
             }
         }
 
+        public void UpdateCheckoutItems(List<string> items)
+        {
+            foreach (string item in items)
+            {
+                orderListBox.Items.Add(item);
+            }
+        }
 
+        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -63,6 +63,7 @@ namespace TrevysIconicPizza
 
             menuPage.Show();
             continueAsGuestButton.Enabled = false;
+            this.Hide();
         }
     }
 }
