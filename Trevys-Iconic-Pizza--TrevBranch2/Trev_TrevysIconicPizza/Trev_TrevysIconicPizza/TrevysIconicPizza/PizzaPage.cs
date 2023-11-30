@@ -100,9 +100,6 @@ namespace TrevysIconicPizza
                 MessageBox.Show("Please select a proper size!");
             }
 
-            
-            
-
         }
 
         //ori
