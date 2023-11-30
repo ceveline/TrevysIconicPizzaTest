@@ -19,6 +19,7 @@ namespace TrevysIconicPizza
             // Display date and time
             deliveryDateTimePicker.Format = DateTimePickerFormat.Custom;
             deliveryDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            
         }
 
         private void CheckoutPage_Load(object sender, EventArgs e)
@@ -34,13 +35,20 @@ namespace TrevysIconicPizza
 
         private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            //pickUpTimer.Start();
+            pickUpTimer_Tick(this, EventArgs.Empty);
+           
+        }
+
+        private void pickUpTimer_Tick(object sender, EventArgs e)
+        {
             // Rush hour time
             TimeSpan rushHourStart = TimeSpan.Parse("17:00");
             TimeSpan rushHourEnd = TimeSpan.Parse("19:00");
             TimeSpan now = DateTime.Now.TimeOfDay;
-            
+
             // If pickup is selected display pickup estimated time and hide calendar/ delivery label
-            if (pickupRadioButton.Checked) 
+            if (pickupRadioButton.Checked)
             {
                 delivTimeLabel.Visible = false;
                 deliveryDateTimePicker.Visible = false;
@@ -54,15 +62,15 @@ namespace TrevysIconicPizza
                 {
                     pickUpTimeLabel.Text = DateTime.Now.AddMinutes(60).ToString("g");
                 }
-            } else
+            }
+            else
             {
                 deliveryDateTimePicker.Visible = true;
                 delivTimeLabel.Visible = true;
-                pickUpTimeLabel.Visible =false;
+                pickUpTimeLabel.Visible = false;
                 estimatedPrepTime.Visible = false;
             }
         }
-
         public void UpdateCheckoutItems(List<string> items)
         {
             foreach (string item in items)
@@ -71,10 +79,6 @@ namespace TrevysIconicPizza
             }
         }
 
-        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 
 
