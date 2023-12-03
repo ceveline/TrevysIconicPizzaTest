@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="accountHelpLabel2.Text" xml:space="preserve">
+    <value>Once you have created your account and logged in, you will be brought  to the menu page where a profile icon is displayed on the top left corner. After pressing this icon your account information will be displayed and you are given the option to edit your personal information and password.</value>
+  </data>
 </root>

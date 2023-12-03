@@ -153,3 +153,4 @@ C:\Users\maria\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\Tre
 C:\Users\maria\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.CopyComplete
 C:\Users\maria\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\maria\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
+C:\Users\maria\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.HelpPage.resources
