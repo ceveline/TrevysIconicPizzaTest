@@ -77,6 +77,9 @@ namespace TrevysIconicPizza
             Drink custom = new CustomMilkshake(customMilkshakeItems);
             cartPage.AddDrinkToCart(custom);
             MessageBox.Show("Custom milkshake has been added to your cart successfully!");
+
+            flavorListBox.SelectedIndex = -1;
+            toppingsListBox.SelectedIndex = -1;
         }
 
         private void toppingsListBox_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -99,7 +102,7 @@ namespace TrevysIconicPizza
 
             cartPage.AddDrinkToCart(sDrink);
 
-            MessageBox.Show("Strawberry milkshake has been added to your cart successfully!");
+            MessageBox.Show("Soft drink has been added to your cart successfully!");
         }
     }
 }

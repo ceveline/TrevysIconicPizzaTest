@@ -181,30 +181,36 @@ namespace TrevysIconicPizza
 
         private void customAddToCartButton_Click(object sender, EventArgs e)
         {
-            
-            
-            string sauce = sauceListBox.Text;
-            string crust = crustListBox.Text;
-
+            //string sauce = sauceListBox.Text;
+            //string crust = crustListBox.Text;
             string size = customComboBox.Text;
 
-            if (sauceListBox.SelectedItem == null || crustListBox.SelectedItem == null || customComboBox.SelectedItem == null || customComboBox.SelectedItem.Equals("Select Size")) 
+            if (size != "Select Size")
             {
-                MessageBox.Show("Please make sure the size, crust, and sauce are chosen.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+
+                if (sauceListBox.SelectedItem == null || crustListBox.SelectedItem == null || customComboBox.SelectedItem == null || customComboBox.SelectedItem.Equals("Select Size"))
+                {
+                    MessageBox.Show("Please make sure the size, crust, and sauce are chosen.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Pizza custom = new CustomPizza(size, customPizzaItems);
+                cartPage.AddPizzaToCart(custom);
+                MessageBox.Show("Custom pizza has been added to your cart successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Please select a proper size!");
             }
 
-            Pizza custom = new CustomPizza(size, customPizzaItems);
-            cartPage.AddPizzaToCart(custom);
-            MessageBox.Show("Custom pizza has been added to your cart successfully!");
-
-
-        }
-
-        private void sizeListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            selectedListBox.Items.Clear();
+            sauceListBox.SelectedIndex = -1;
+            crustListBox.SelectedIndex = -1;
+            toppingsCheckedListBox.SelectedIndex = -1;
+            customComboBox.SelectedIndex = -1;
 
         }
+
     }
 
 }

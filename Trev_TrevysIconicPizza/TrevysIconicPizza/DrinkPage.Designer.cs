@@ -126,7 +126,7 @@
             this.softDrinkListBox.Location = new System.Drawing.Point(277, 55);
             this.softDrinkListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.softDrinkListBox.Name = "softDrinkListBox";
-            this.softDrinkListBox.Size = new System.Drawing.Size(199, 46);
+            this.softDrinkListBox.Size = new System.Drawing.Size(199, 88);
             this.softDrinkListBox.TabIndex = 16;
             // 
             // pictureBox4
