@@ -21,16 +21,26 @@ namespace TrevysIconicPizza
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LandingPage());
 
-            EdibleItemDBManager edibleItemDBM = new EdibleItemDBManager();
+            DBManager dbManager = new DBManager();
 
             // create table(s) if they don't exist
-            edibleItemDBM.CreateTableIfNotExists("EdibleItem");
+            dbManager.CreateEdibleItemTableIfNotExists("EdibleItem");
 
             // insert the items into EdibleItem table
-            InsertInitialItems(edibleItemDBM);
+            InsertInitialItems(dbManager);
+
+            // Create Order table
+            dbManager.CreateOrderTable();
+
+            // Create OrderStatus table
+            dbManager.CreateOrderStatusTable();
+
+            // Create OrderItem table
+            dbManager.CreateOrderItemTable();
+
         }
 
-        static void InsertInitialItems(EdibleItemDBManager dbManager)
+        static void InsertInitialItems(DBManager dbManager)
         {
             // Example: Inserting a pizza and a drink
             dbManager.InsertEdibleItem("EdibleItem", "Pepperoni Pizza", "Small", 14.99m, "Pizza");

@@ -101,7 +101,7 @@
       <DependentUpon>DrinkPage.cs</DependentUpon>
     </Compile>
     <Compile Include="EdibleItem.cs" />
-    <Compile Include="EdibleItemDBManager.cs" />
+    <Compile Include="DBManager.cs" />
     <Compile Include="LandingPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +122,7 @@
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs" />
+    <Compile Include="OrderDBManager.cs" />
     <Compile Include="OriginalPizza.cs" />
     <Compile Include="PepperoniPizza.cs" />
     <Compile Include="Pizza.cs" />
