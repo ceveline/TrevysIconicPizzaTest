@@ -10,7 +10,7 @@ namespace TrevysIconicPizza
     {
         public VanillaMilkshake() : base("Vanilla Milkshake")
         {
-            Price = 7.99m;
+            Price = 8.99m;
         }
     }
 }
