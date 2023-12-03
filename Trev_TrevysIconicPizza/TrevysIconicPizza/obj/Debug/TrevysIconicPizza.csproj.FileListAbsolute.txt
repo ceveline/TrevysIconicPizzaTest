@@ -120,3 +120,9 @@ C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\Tre
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.csproj.CopyComplete
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.exe
 C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\obj\Debug\TrevysIconicPizza.pdb
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\EntityFramework.dll
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\EntityFramework.xml
+C:\Users\cevel\Documents\GitHub\TrevysIconicPizzaTest\Trev_TrevysIconicPizza\TrevysIconicPizza\bin\Debug\EntityFramework.SqlServer.xml
