@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TrevysIconicPizza
 {
-    public class Drink
+    public class Drink : EdibleItem
     {
         String type;
         decimal price;

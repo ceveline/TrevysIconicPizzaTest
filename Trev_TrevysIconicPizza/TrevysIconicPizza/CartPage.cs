@@ -12,6 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Xml.Linq;
 using System.IO;
 using static System.Windows.Forms.LinkLabel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TrevysIconicPizza
 {
@@ -19,9 +20,10 @@ namespace TrevysIconicPizza
     {
         private static CartPage _instance;
         private decimal totalPrice;
-        // pricelist List to store the prices of the items
-        private List<decimal> priceList = new List<decimal>();
         private decimal TotalPrice { get; set; }
+
+        private EdibleItem edibleItem = new EdibleItem();
+        private List<decimal> priceList = new List<decimal>();
         public CartPage()
         {
             InitializeComponent();
@@ -48,15 +50,23 @@ namespace TrevysIconicPizza
                 if (result == DialogResult.Yes)
                 {
                     int selectedIndex = cartListBox.SelectedIndex;
+
                     cartListBox.Items.RemoveAt(selectedIndex);
                     checkEmpty();
 
-                    decimal priceToRemove = priceList.IndexOf(priceList[selectedIndex]);
-                    
+                    decimal priceToRemove = priceList[selectedIndex];
+
                     priceList.RemoveAt(selectedIndex);
-                    
-                    // FIX THIS
-                    //TotalPrice -= ;
+
+                    edibleItem.EdibleItems.RemoveAt(selectedIndex);
+
+                    // minus the price from the total price
+                    //TotalPrice -= priceToRemove;
+
+                    //totalLabel.Text = "$" + TotalPrice;
+                    //TotalPrice = 0;
+
+                    TotalPrice -= priceToRemove;
 
                     totalLabel.Text = "$" + TotalPrice;
                 }
@@ -111,6 +121,7 @@ namespace TrevysIconicPizza
 
             decimal price = pizza.Price;
             priceList.Add(price);
+            edibleItem.EdibleItems.Add(pizza);
 
 
             TotalPrice += price;
@@ -129,12 +140,14 @@ namespace TrevysIconicPizza
 
             decimal price = drink.Price;
             priceList.Add(price);
+            edibleItem.EdibleItems.Add(drink);
 
-           
             TotalPrice += price;
 
 
             totalLabel.Text = "$" + TotalPrice;
+            TotalPrice += drink.Price;
+            //totalLabel.Text = "$" + TotalPrice.ToString();
 
             cartListBox.Refresh();
 
