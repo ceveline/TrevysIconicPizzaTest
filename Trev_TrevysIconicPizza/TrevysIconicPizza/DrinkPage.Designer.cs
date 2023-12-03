@@ -77,19 +77,20 @@
             this.drinkPanel.Controls.Add(this.cartLogo);
             this.drinkPanel.Controls.Add(this.SoftdrinkPanel);
             this.drinkPanel.Controls.Add(this.groupBox1);
-            this.drinkPanel.Location = new System.Drawing.Point(15, 20);
-            this.drinkPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.drinkPanel.Location = new System.Drawing.Point(20, 25);
+            this.drinkPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.drinkPanel.Name = "drinkPanel";
-            this.drinkPanel.Size = new System.Drawing.Size(915, 775);
+            this.drinkPanel.Size = new System.Drawing.Size(1220, 954);
             this.drinkPanel.TabIndex = 1;
             // 
             // cartLogo
             // 
             this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
-            this.cartLogo.Location = new System.Drawing.Point(852, 11);
+            this.cartLogo.Location = new System.Drawing.Point(1136, 14);
+            this.cartLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cartLogo.Name = "cartLogo";
-            this.cartLogo.Size = new System.Drawing.Size(24, 24);
+            this.cartLogo.Size = new System.Drawing.Size(32, 30);
             this.cartLogo.TabIndex = 6;
             this.cartLogo.TabStop = false;
             this.cartLogo.Click += new System.EventHandler(this.cartLogo_Click);
@@ -101,11 +102,11 @@
             this.SoftdrinkPanel.Controls.Add(this.addSoftButton);
             this.SoftdrinkPanel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SoftdrinkPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.SoftdrinkPanel.Location = new System.Drawing.Point(40, 496);
-            this.SoftdrinkPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.SoftdrinkPanel.Location = new System.Drawing.Point(53, 610);
+            this.SoftdrinkPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SoftdrinkPanel.Name = "SoftdrinkPanel";
-            this.SoftdrinkPanel.Padding = new System.Windows.Forms.Padding(2);
-            this.SoftdrinkPanel.Size = new System.Drawing.Size(410, 257);
+            this.SoftdrinkPanel.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SoftdrinkPanel.Size = new System.Drawing.Size(547, 316);
             this.SoftdrinkPanel.TabIndex = 6;
             this.SoftdrinkPanel.TabStop = false;
             this.SoftdrinkPanel.Text = "Soft Drinks";
@@ -116,25 +117,25 @@
             this.softDrinkListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.softDrinkListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
             this.softDrinkListBox.FormattingEnabled = true;
-            this.softDrinkListBox.ItemHeight = 16;
+            this.softDrinkListBox.ItemHeight = 21;
             this.softDrinkListBox.Items.AddRange(new object[] {
             "Coca Cola",
             "Diet Coke",
             "Ginger Ale",
             "Sprite"});
-            this.softDrinkListBox.Location = new System.Drawing.Point(208, 45);
-            this.softDrinkListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.softDrinkListBox.Location = new System.Drawing.Point(277, 55);
+            this.softDrinkListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.softDrinkListBox.Name = "softDrinkListBox";
-            this.softDrinkListBox.Size = new System.Drawing.Size(150, 52);
+            this.softDrinkListBox.Size = new System.Drawing.Size(199, 46);
             this.softDrinkListBox.TabIndex = 16;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(13, 45);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(17, 55);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(172, 175);
+            this.pictureBox4.Size = new System.Drawing.Size(229, 215);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 15;
             this.pictureBox4.TabStop = false;
@@ -142,13 +143,14 @@
             // addSoftButton
             // 
             this.addSoftButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.addSoftButton.Location = new System.Drawing.Point(208, 132);
-            this.addSoftButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addSoftButton.Location = new System.Drawing.Point(277, 162);
+            this.addSoftButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addSoftButton.Name = "addSoftButton";
-            this.addSoftButton.Size = new System.Drawing.Size(97, 28);
+            this.addSoftButton.Size = new System.Drawing.Size(129, 34);
             this.addSoftButton.TabIndex = 5;
             this.addSoftButton.Text = "Add to Cart";
             this.addSoftButton.UseVisualStyleBackColor = true;
+            this.addSoftButton.Click += new System.EventHandler(this.addSoftButton_Click);
             // 
             // groupBox1
             // 
@@ -158,11 +160,11 @@
             this.groupBox1.Controls.Add(this.VegetarianGroupBox);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.groupBox1.Location = new System.Drawing.Point(40, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(53, 38);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(836, 451);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1115, 555);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Milkshakes";
@@ -175,11 +177,11 @@
             this.groupBox4.Controls.Add(this.flavorListBox);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.addCustomButton);
-            this.groupBox4.Location = new System.Drawing.Point(425, 245);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(567, 302);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(398, 189);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(531, 233);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             // 
@@ -188,10 +190,9 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label8.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 28);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(13, 34);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(98, 22);
+            this.label8.Size = new System.Drawing.Size(116, 27);
             this.label8.TabIndex = 14;
             this.label8.Text = "Toppings";
             // 
@@ -211,10 +212,10 @@
             "Pretzel",
             "Smores",
             "Strawberry"});
-            this.toppingsListBox.Location = new System.Drawing.Point(8, 60);
-            this.toppingsListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.toppingsListBox.Location = new System.Drawing.Point(11, 74);
+            this.toppingsListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.toppingsListBox.Name = "toppingsListBox";
-            this.toppingsListBox.Size = new System.Drawing.Size(150, 80);
+            this.toppingsListBox.Size = new System.Drawing.Size(199, 96);
             this.toppingsListBox.Sorted = true;
             this.toppingsListBox.TabIndex = 13;
             this.toppingsListBox.ThreeDCheckBoxes = true;
@@ -226,15 +227,15 @@
             this.flavorListBox.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flavorListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
             this.flavorListBox.FormattingEnabled = true;
-            this.flavorListBox.ItemHeight = 16;
+            this.flavorListBox.ItemHeight = 21;
             this.flavorListBox.Items.AddRange(new object[] {
             "Vanilla",
             "Chocolate",
             "Strawberry"});
-            this.flavorListBox.Location = new System.Drawing.Point(173, 60);
-            this.flavorListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.flavorListBox.Location = new System.Drawing.Point(231, 74);
+            this.flavorListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flavorListBox.Name = "flavorListBox";
-            this.flavorListBox.Size = new System.Drawing.Size(150, 52);
+            this.flavorListBox.Size = new System.Drawing.Size(199, 46);
             this.flavorListBox.TabIndex = 12;
             // 
             // label7
@@ -242,20 +243,19 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.label7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(170, 31);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(227, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 22);
+            this.label7.Size = new System.Drawing.Size(95, 27);
             this.label7.TabIndex = 11;
             this.label7.Text = "Flavors";
             // 
             // addCustomButton
             // 
             this.addCustomButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.addCustomButton.Location = new System.Drawing.Point(189, 132);
-            this.addCustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addCustomButton.Location = new System.Drawing.Point(252, 162);
+            this.addCustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addCustomButton.Name = "addCustomButton";
-            this.addCustomButton.Size = new System.Drawing.Size(97, 28);
+            this.addCustomButton.Size = new System.Drawing.Size(129, 34);
             this.addCustomButton.TabIndex = 3;
             this.addCustomButton.Text = "Add to Cart";
             this.addCustomButton.UseVisualStyleBackColor = true;
@@ -268,21 +268,21 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Location = new System.Drawing.Point(13, 245);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(17, 302);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(398, 189);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(531, 233);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             // 
             // addStrawberryButton
             // 
             this.addStrawberryButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.addStrawberryButton.Location = new System.Drawing.Point(196, 132);
-            this.addStrawberryButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addStrawberryButton.Location = new System.Drawing.Point(261, 162);
+            this.addStrawberryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addStrawberryButton.Name = "addStrawberryButton";
-            this.addStrawberryButton.Size = new System.Drawing.Size(97, 28);
+            this.addStrawberryButton.Size = new System.Drawing.Size(129, 34);
             this.addStrawberryButton.TabIndex = 3;
             this.addStrawberryButton.Text = "Add to Cart";
             this.addStrawberryButton.UseVisualStyleBackColor = true;
@@ -291,10 +291,9 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Arial", 11F);
-            this.label6.Location = new System.Drawing.Point(193, 51);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(257, 63);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 58);
+            this.label6.Size = new System.Drawing.Size(273, 71);
             this.label6.TabIndex = 2;
             this.label6.Text = "Strawberry ice cream, milk, and strawberry syrup";
             // 
@@ -302,20 +301,19 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(191, 18);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(255, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 26);
+            this.label5.Size = new System.Drawing.Size(164, 33);
             this.label5.TabIndex = 1;
             this.label5.Text = "Strawberry";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 17);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox3.Size = new System.Drawing.Size(229, 202);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -327,19 +325,21 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(425, 35);
+            this.groupBox2.Location = new System.Drawing.Point(567, 43);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 189);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(531, 233);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
             // addChocolateButton
             // 
             this.addChocolateButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.addChocolateButton.Location = new System.Drawing.Point(196, 136);
-            this.addChocolateButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addChocolateButton.Location = new System.Drawing.Point(261, 167);
+            this.addChocolateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addChocolateButton.Name = "addChocolateButton";
-            this.addChocolateButton.Size = new System.Drawing.Size(97, 28);
+            this.addChocolateButton.Size = new System.Drawing.Size(129, 34);
             this.addChocolateButton.TabIndex = 3;
             this.addChocolateButton.Text = "Add to Cart";
             this.addChocolateButton.UseVisualStyleBackColor = true;
@@ -348,10 +348,9 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Arial", 11F);
-            this.label3.Location = new System.Drawing.Point(193, 54);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(257, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 63);
+            this.label3.Size = new System.Drawing.Size(273, 78);
             this.label3.TabIndex = 2;
             this.label3.Text = "Chocolate ice cream, milk, and chocolate extract";
             // 
@@ -359,19 +358,19 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(191, 19);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(255, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 26);
+            this.label4.Size = new System.Drawing.Size(151, 33);
             this.label4.TabIndex = 1;
             this.label4.Text = "Chocolate";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox2.Size = new System.Drawing.Size(229, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -383,19 +382,21 @@
             this.VegetarianGroupBox.Controls.Add(this.label2);
             this.VegetarianGroupBox.Controls.Add(this.label1);
             this.VegetarianGroupBox.Controls.Add(this.pictureBox1);
-            this.VegetarianGroupBox.Location = new System.Drawing.Point(13, 35);
+            this.VegetarianGroupBox.Location = new System.Drawing.Point(17, 43);
+            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.VegetarianGroupBox.Name = "VegetarianGroupBox";
-            this.VegetarianGroupBox.Size = new System.Drawing.Size(398, 189);
+            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VegetarianGroupBox.Size = new System.Drawing.Size(531, 233);
             this.VegetarianGroupBox.TabIndex = 2;
             this.VegetarianGroupBox.TabStop = false;
             // 
             // addVanillaButton
             // 
             this.addVanillaButton.Font = new System.Drawing.Font("Arial", 11F);
-            this.addVanillaButton.Location = new System.Drawing.Point(196, 136);
-            this.addVanillaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.addVanillaButton.Location = new System.Drawing.Point(261, 167);
+            this.addVanillaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addVanillaButton.Name = "addVanillaButton";
-            this.addVanillaButton.Size = new System.Drawing.Size(97, 28);
+            this.addVanillaButton.Size = new System.Drawing.Size(129, 34);
             this.addVanillaButton.TabIndex = 3;
             this.addVanillaButton.Text = "Add to Cart";
             this.addVanillaButton.UseVisualStyleBackColor = true;
@@ -404,10 +405,9 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 11F);
-            this.label2.Location = new System.Drawing.Point(193, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(257, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 63);
+            this.label2.Size = new System.Drawing.Size(273, 78);
             this.label2.TabIndex = 2;
             this.label2.Text = "Vanilla ice cream, milk, and vanilla extract";
             // 
@@ -415,31 +415,32 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(255, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 26);
+            this.label1.Size = new System.Drawing.Size(105, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "Vanilla";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(172, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(229, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // DrinkPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(944, 815);
+            this.ClientSize = new System.Drawing.Size(1259, 1003);
             this.Controls.Add(this.drinkPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DrinkPage";
             this.Text = "DrinkPage";
             this.drinkPanel.ResumeLayout(false);

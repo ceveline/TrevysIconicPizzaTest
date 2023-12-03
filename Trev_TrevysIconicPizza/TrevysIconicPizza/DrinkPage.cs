@@ -23,32 +23,32 @@ namespace TrevysIconicPizza
 
         private void addVanillaButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Vanilla milkshake has been added to your cart successfully!");
-
-            //fix it
+            
             Drink vMilkshake = new VanillaMilkshake();
 
             cartPage.AddDrinkToCart(vMilkshake);
+
+            MessageBox.Show("Vanilla milkshake has been added to your cart successfully!");
         }
 
         private void addChocolateButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Chocolate milkshake has been added to your cart successfully!");
-
-            //fix it
+           
             Drink cMilkshake = new ChocolateMilkshake();
 
             cartPage.AddDrinkToCart(cMilkshake);
+
+            MessageBox.Show("Chocolate milkshake has been added to your cart successfully!");
         }
 
         private void addStrawberryButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Strawberry milkshake has been added to your cart successfully!");
-
-            //fix it
+            
             Drink sMilkshake = new StrawberryMilkshake();
 
             cartPage.AddDrinkToCart(sMilkshake);
+
+            MessageBox.Show("Strawberry milkshake has been added to your cart successfully!");
         }
 
         private void cartLogo_Click(object sender, EventArgs e)
@@ -91,6 +91,15 @@ namespace TrevysIconicPizza
             {
                 customMilkshakeItems.Remove(item);
             }
+        }
+
+        private void addSoftButton_Click(object sender, EventArgs e)
+        {
+            Drink sDrink = new SoftDrink();
+
+            cartPage.AddDrinkToCart(sDrink);
+
+            MessageBox.Show("Strawberry milkshake has been added to your cart successfully!");
         }
     }
 }

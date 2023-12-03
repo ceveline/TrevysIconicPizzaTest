@@ -60,12 +60,6 @@ namespace TrevysIconicPizza
 
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
-                    // minus the price from the total price
-                    //TotalPrice -= priceToRemove;
-
-                    //totalLabel.Text = "$" + TotalPrice;
-                    //TotalPrice = 0;
-
                     TotalPrice -= priceToRemove;
 
                     totalLabel.Text = "$" + TotalPrice;
