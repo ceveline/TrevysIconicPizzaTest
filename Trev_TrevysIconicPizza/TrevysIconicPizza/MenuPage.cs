@@ -27,10 +27,11 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             pizzaPage.FormClosed += (s, args) =>
             {
+                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
                 pizzaButton.Enabled = true;
             };
-
+            this.Hide();
             pizzaPage.Show();
             pizzaButton.Enabled = false;
         }
@@ -43,10 +44,12 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             drinkPage.FormClosed += (s, args) =>
             {
+                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
                 drinkButton.Enabled = true;
             };
 
+            this.Hide();
             drinkPage.Show();
             drinkButton.Enabled = false;
         }
@@ -59,9 +62,11 @@ namespace TrevysIconicPizza
 
             cartPageInstance.VisibleChanged += (s, args) =>
             {
+                this.Show();
                 cartLogo.Enabled = true; // Re-enable the cartLogo when the cartPage is closed
             };
 
+            this.Hide();
             cartPageInstance.Show();
 
         }

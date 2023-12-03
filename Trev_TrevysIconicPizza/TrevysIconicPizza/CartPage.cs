@@ -24,6 +24,8 @@ namespace TrevysIconicPizza
 
         private EdibleItem edibleItem = new EdibleItem();
         private List<decimal> priceList = new List<decimal>();
+        private List<EdibleItem> itemsToOrder = new List<EdibleItem>();
+        
         public CartPage()
         {
             InitializeComponent();
@@ -59,6 +61,8 @@ namespace TrevysIconicPizza
                     priceList.RemoveAt(selectedIndex);
 
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
+
+                    itemsToOrder.RemoveAt(selectedIndex);
 
                     TotalPrice -= priceToRemove;
 
@@ -96,12 +100,17 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             checkoutPage.FormClosed += (s, args) =>
             {
+                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
                 checkOutButton.Enabled = true;
             };
-
+            this.Hide();
             checkoutPage.Show();
             checkOutButton.Enabled = false;
+
+            checkoutPage.UpdateCheckoutItems(itemsToOrder);
+
+
 
         }
 
@@ -123,6 +132,8 @@ namespace TrevysIconicPizza
 
             totalLabel.Text = "$" + TotalPrice;
 
+            itemsToOrder.Add(pizza);
+
             cartListBox.Refresh();
 
         } 
@@ -142,6 +153,7 @@ namespace TrevysIconicPizza
             totalLabel.Text = "$" + TotalPrice;
             TotalPrice += drink.Price;
             //totalLabel.Text = "$" + TotalPrice.ToString();
+            itemsToOrder.Add(drink);
 
             cartListBox.Refresh();
 

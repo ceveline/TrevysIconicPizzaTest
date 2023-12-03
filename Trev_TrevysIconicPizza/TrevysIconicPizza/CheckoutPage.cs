@@ -70,6 +70,19 @@ namespace TrevysIconicPizza
                 estimatedPrepTime.Visible = false;
             }
         }
+
+        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void UpdateCheckoutItems(List<EdibleItem> items)
+        {
+            foreach (EdibleItem e in items)
+            {
+                orderListBox.Items.Add(e);
+            }
+        }
     }
 
 
