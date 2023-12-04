@@ -86,6 +86,22 @@ namespace TrevysIconicPizza
             accountInformation.Show();
             accountLogo.Enabled = false;
         }
+
+        private void questionLogo_Click(object sender, EventArgs e)
+        {
+            HelpPage helpPage = new HelpPage();
+
+            // Handle the FormClosed event
+            helpPage.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                questionLogo.Enabled = true;
+
+            };
+
+             helpPage.Show();
+            questionLogo.Enabled = false;
+        }
     }
 }
 
