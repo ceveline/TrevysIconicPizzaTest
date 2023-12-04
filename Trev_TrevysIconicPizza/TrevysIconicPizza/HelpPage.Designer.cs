@@ -32,6 +32,8 @@
             this.accountTabPage = new System.Windows.Forms.TabPage();
             this.orderTabPage = new System.Windows.Forms.TabPage();
             this.helpLabel = new System.Windows.Forms.Label();
+            this.cartTabPage = new System.Windows.Forms.TabPage();
+            this.checkoutTabPage = new System.Windows.Forms.TabPage();
             this.helpTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +41,8 @@
             // 
             this.helpTabControl.Controls.Add(this.accountTabPage);
             this.helpTabControl.Controls.Add(this.orderTabPage);
+            this.helpTabControl.Controls.Add(this.cartTabPage);
+            this.helpTabControl.Controls.Add(this.checkoutTabPage);
             this.helpTabControl.Location = new System.Drawing.Point(12, 69);
             this.helpTabControl.Name = "helpTabControl";
             this.helpTabControl.SelectedIndex = 0;
@@ -77,6 +81,26 @@
             this.helpLabel.Text = "Trevy\'s Iconic Pizza Help";
             this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cartTabPage
+            // 
+            this.cartTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.cartTabPage.Location = new System.Drawing.Point(4, 22);
+            this.cartTabPage.Name = "cartTabPage";
+            this.cartTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.cartTabPage.Size = new System.Drawing.Size(768, 343);
+            this.cartTabPage.TabIndex = 2;
+            this.cartTabPage.Text = "Cart";
+            // 
+            // checkoutTabPage
+            // 
+            this.checkoutTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.checkoutTabPage.Location = new System.Drawing.Point(4, 22);
+            this.checkoutTabPage.Name = "checkoutTabPage";
+            this.checkoutTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.checkoutTabPage.Size = new System.Drawing.Size(768, 343);
+            this.checkoutTabPage.TabIndex = 3;
+            this.checkoutTabPage.Text = "Checkout";
+            // 
             // HelpPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -98,5 +122,7 @@
         private System.Windows.Forms.TabPage accountTabPage;
         private System.Windows.Forms.TabPage orderTabPage;
         private System.Windows.Forms.Label helpLabel;
+        private System.Windows.Forms.TabPage cartTabPage;
+        private System.Windows.Forms.TabPage checkoutTabPage;
     }
 }
