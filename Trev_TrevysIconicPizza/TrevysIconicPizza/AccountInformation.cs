@@ -14,9 +14,11 @@ namespace TrevysIconicPizza
     {
         // Saves any error message 
         List<string> invalidResult = new List<string>();
+        CurrentClient client;
         public AccountInformation()
         {
             InitializeComponent();
+            fillInfo();
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -261,6 +263,23 @@ namespace TrevysIconicPizza
             }
             
             
+        }
+        private void fillInfo()
+        {
+            firstNameTextBox.Text = client.FirstName;
+            lastNameTextBox.Text = client.LastName;
+            passwordTextBox.Text = client.Password;
+            usernameTextBox.Text = client.Username;
+            cardTextBox.Text = client.CardNumber;
+            cvvTextBox.Text = client.CVV;
+        }
+
+        private void AccountInformation_Load(object sender, EventArgs e)
+        {
+            // Setting min date to curent time
+            expirationDateTimePicker.MinDate = DateTime.Today;
+
+            expirationDateTimePicker.MaxDate = DateTime.Today.AddYears(10);
         }
     }
 }

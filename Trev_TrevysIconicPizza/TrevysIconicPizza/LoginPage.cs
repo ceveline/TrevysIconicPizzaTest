@@ -17,6 +17,7 @@ namespace TrevysIconicPizza
         public LoginPage()
         {
             InitializeComponent();
+           
         }
         // database string
         private const String ConnectionString = "Data Source=trevysIconicPizza.db;Version=3";
@@ -33,38 +34,68 @@ namespace TrevysIconicPizza
         }
 
 
-        private bool IsValidUser(string username, string password)
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
+        //private bool IsValidUser(string username, string password)
+        //{
+        //    using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+        //    {
+        //        connection.Open();
 
-                using (SQLiteCommand command = new SQLiteCommand(connection))
-                {
-                    command.CommandText = "SELECT COUNT(*) FROM Customer WHERE username = @username AND password = @password";
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", password);
+        //        using (SQLiteCommand command = new SQLiteCommand(connection))
+        //        {
+        //            command.CommandText = "SELECT COUNT(*) FROM Customer WHERE username = @username AND password = @password";
+        //            command.Parameters.AddWithValue("@username", username);
+        //            command.Parameters.AddWithValue("@password", password);
 
-                    int count = Convert.ToInt32(command.ExecuteScalar());
+        //            int count = Convert.ToInt32(command.ExecuteScalar());
 
-                    return count > 0;
-                }
-            }
-        }
+        //            return count > 0;
+        //        }
+        //    }
+        //}
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
             string username = UserNameTextBox.Text;
             string password = PasswordTextBox.Text;
 
-            if (IsValidUser(username, password))
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
-                MessageBox.Show("Login successful!");
-                
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "SELECT * FROM Customer WHERE username = @username AND password = @password";
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Login successful
+                            MessageBox.Show("Login successful!");
+
+                            // Populate CurrentClient properties from the database
+                            CurrentClient.Instance.FirstName = reader["firstName"].ToString();
+                            CurrentClient.Instance.LastName = reader["lastName"].ToString();
+                            CurrentClient.Instance.Username = reader["username"].ToString();
+                            CurrentClient.Instance.Password = reader["password"].ToString();
+                            CurrentClient.Instance.CardNumber = reader["cardNumber"].ToString();
+                            CurrentClient.Instance.CVV = reader["CVV"].ToString();
+                            CurrentClient.Instance.CardExpireDate = Convert.ToDateTime(reader["cardExpirationDate"]);
+                            //CurrentClient.Instance.category_ID = char.Parse(reader["category_ID"].ToString());
+
+                            // Open the menu page or perform other actions
+                            MenuPage menuPage = new MenuPage();
+                            menuPage.Show();
+                        }
+                        else
+                        {
+                            // Invalid username or password
+                            MessageBox.Show("Invalid username or password.");
+                        }
+                    }
+                }
             }
         }
     }

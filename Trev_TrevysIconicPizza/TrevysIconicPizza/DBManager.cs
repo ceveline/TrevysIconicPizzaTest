@@ -171,7 +171,7 @@ namespace TrevysIconicPizza
                 lastName VARCHAR(50),
                 username VARCHAR(50),
                 password VARCHAR(50),
-                cardNumber VARCHAR(20),
+                cardNumber VARCHAR(50),
                 CVV VARCHAR(3),
                 cardExpirationDate VARCHAR(15),
                 category_ID CHAR,
@@ -191,8 +191,8 @@ namespace TrevysIconicPizza
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
-                string sql = @"INSERT INTO Customer (firstName, lastName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
-                       VALUES (@firstName, @username, @password, @cardNumber, @cvv, @card, @cardExpirationDate, @category_ID)";
+                string sql = @"INSERT INTO Customer (firstName, lastName, username, password, cardNumber, CVV, cardExpirationDate, category_ID) 
+                       VALUES (@firstName, @lastName, @username,  @password, @cardNumber, @cvv, @cardExpirationDate, @category_ID)";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
@@ -203,7 +203,7 @@ namespace TrevysIconicPizza
                     command.Parameters.AddWithValue("@cardNumber", cardNumber);
                     command.Parameters.AddWithValue("@cvv", cvv);
                     command.Parameters.AddWithValue("@cardExpirationDate", cardExpirationDate);
-                    command.Parameters.AddWithValue("@category", category_ID);
+                    command.Parameters.AddWithValue("@category_ID", category_ID);
 
                     command.ExecuteNonQuery();
                 }

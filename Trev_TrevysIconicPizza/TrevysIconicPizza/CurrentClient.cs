@@ -33,7 +33,9 @@ namespace TrevysIconicPizza
         public string Username { get; set; }
         public string Password { get; set; }
         public string CardNumber { get; set; }
+        public string CVV { get; set; }
         public DateTime CardExpireDate { get; set; }
+        public char category_ID { get; set; }
         // Method to populate CurrentClient instance from the database
         public void PopulateFromDatabase(string username, string password)
         {
