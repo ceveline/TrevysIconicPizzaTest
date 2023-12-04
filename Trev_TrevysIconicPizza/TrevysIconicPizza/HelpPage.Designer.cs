@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpPage));
             this.helpTabControl = new System.Windows.Forms.TabControl();
             this.accountTabPage = new System.Windows.Forms.TabPage();
             this.accountManagementLabel = new System.Windows.Forms.Label();
@@ -73,7 +74,7 @@
             this.accountManagementLabel.AutoSize = true;
             this.accountManagementLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.accountManagementLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountManagementLabel.Location = new System.Drawing.Point(22, 167);
+            this.accountManagementLabel.Location = new System.Drawing.Point(22, 128);
             this.accountManagementLabel.Name = "accountManagementLabel";
             this.accountManagementLabel.Size = new System.Drawing.Size(240, 26);
             this.accountManagementLabel.TabIndex = 0;
@@ -136,22 +137,23 @@
             // 
             this.accountCreationHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
             this.accountCreationHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountCreationHelpLabel.Location = new System.Drawing.Point(24, 69);
+            this.accountCreationHelpLabel.Location = new System.Drawing.Point(24, 60);
             this.accountCreationHelpLabel.Name = "accountCreationHelpLabel";
-            this.accountCreationHelpLabel.Size = new System.Drawing.Size(100, 23);
+            this.accountCreationHelpLabel.Size = new System.Drawing.Size(724, 41);
             this.accountCreationHelpLabel.TabIndex = 2;
-            this.accountCreationHelpLabel.Text = "label1";
+            this.accountCreationHelpLabel.Text = "Creating an account is easy, all you have to do is click on the \"Create Account\" " +
+    "button in the landing page and fill in the required information in the textboxes" +
+    " . ";
             // 
             // accountManagementHelpLabel
             // 
-            this.accountManagementHelpLabel.AutoSize = true;
             this.accountManagementHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
             this.accountManagementHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountManagementHelpLabel.Location = new System.Drawing.Point(24, 211);
+            this.accountManagementHelpLabel.Location = new System.Drawing.Point(25, 154);
             this.accountManagementHelpLabel.Name = "accountManagementHelpLabel";
-            this.accountManagementHelpLabel.Size = new System.Drawing.Size(46, 17);
+            this.accountManagementHelpLabel.Size = new System.Drawing.Size(740, 98);
             this.accountManagementHelpLabel.TabIndex = 3;
-            this.accountManagementHelpLabel.Text = "label1";
+            this.accountManagementHelpLabel.Text = resources.GetString("accountManagementHelpLabel.Text");
             // 
             // HelpPage
             // 
