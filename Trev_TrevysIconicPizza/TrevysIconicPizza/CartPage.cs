@@ -58,15 +58,17 @@ namespace TrevysIconicPizza
 
                     decimal priceToRemove = priceList[selectedIndex];
 
+                    TotalPrice -= priceToRemove;
+
+                    totalLabel.Text = "$" + TotalPrice;
+
                     priceList.RemoveAt(selectedIndex);
 
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     itemsToOrder.RemoveAt(selectedIndex);
 
-                    TotalPrice -= priceToRemove;
-
-                    totalLabel.Text = "$" + TotalPrice;
+                    
                 }
             }
         }
@@ -134,7 +136,7 @@ namespace TrevysIconicPizza
 
             cartListBox.Refresh();
 
-        } 
+        }
         public void AddDrinkToCart(Drink drink)
         {
             //cartListBox.Refresh();
@@ -147,15 +149,12 @@ namespace TrevysIconicPizza
 
             TotalPrice += price;
 
-
             totalLabel.Text = "$" + TotalPrice;
-            TotalPrice += drink.Price;
-            //totalLabel.Text = "$" + TotalPrice.ToString();
             itemsToOrder.Add(drink);
 
             cartListBox.Refresh();
-
         }
+
 
         public void RemovePizzaFromCart(Pizza pizza)
         {
