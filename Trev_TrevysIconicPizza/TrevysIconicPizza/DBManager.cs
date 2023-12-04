@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace TrevysIconicPizza
 {
@@ -160,8 +161,38 @@ namespace TrevysIconicPizza
             }
         }
 
+        // call it when the order is being placed
+        public void UpdateCustomPizzaPrice(int newPrice, string size)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
 
+                // Construct the SQL UPDATE statement to update price for a specific size of custom pizza in all orders
+                string sql = $@"UPDATE Order
+                        SET price = @NewPrice
+                        WHERE edibleItem_ID IN (
+                            SELECT edibleItem_ID 
+                            FROM EdibleItem 
+                            WHERE name = 'Custom Pizza' AND size = @Size
+                        )";
 
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    // Add parameters to the query
+                    command.Parameters.AddWithValue("@NewPrice", newPrice);
+                    command.Parameters.AddWithValue("@Size", size);
+
+                    // Execute the query
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
     }
+
+
+
+
 }
+
