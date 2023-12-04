@@ -81,13 +81,11 @@ namespace TrevysIconicPizza
             if (cartListBox.Items.Count == 0)
             {
                 emptyLabel.Show();
-                editButton.Enabled = false;
                 removeButton.Enabled = false;
                 result = true;
             } else
             {
                 emptyLabel.Hide();
-                editButton.Enabled = true;
                 removeButton.Enabled = true;
             }
             return result;
@@ -180,6 +178,8 @@ namespace TrevysIconicPizza
             this.Hide(); // Hide the form when the close button is clicked
             
         }
+
+
 
         // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
