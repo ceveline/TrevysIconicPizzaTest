@@ -79,7 +79,15 @@ namespace TrevysIconicPizza
             {
                 orderListBox.Items.Add(e);
             }
+
+            
         }
+
+        public void UpdateTotalPrice(decimal price)
+        {
+            totalTextBox.Text = price.ToString();
+        }
+        
     }
 
 

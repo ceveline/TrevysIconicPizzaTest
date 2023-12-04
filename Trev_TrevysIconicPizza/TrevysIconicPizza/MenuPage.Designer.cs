@@ -120,6 +120,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.pizzaButton);
+            this.Location = new System.Drawing.Point(500, 500);
+            this.MaximumSize = new System.Drawing.Size(642, 404);
             this.Name = "MenuPage";
             this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

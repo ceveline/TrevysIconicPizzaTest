@@ -64,10 +64,15 @@ namespace TrevysIconicPizza
             {
                 this.Show();
                 cartLogo.Enabled = true; // Re-enable the cartLogo when the cartPage is closed
+                drinkButton.Enabled = true;
+                pizzaButton.Enabled = true;
             };
 
             this.Hide();
             cartPageInstance.Show();
+            drinkButton.Enabled = false;
+            pizzaButton.Enabled = false;
+
 
         }
 

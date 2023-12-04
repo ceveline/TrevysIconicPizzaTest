@@ -88,7 +88,7 @@
             this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
             this.cartLogo.Location = new System.Drawing.Point(1136, 14);
-            this.cartLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cartLogo.Margin = new System.Windows.Forms.Padding(4);
             this.cartLogo.Name = "cartLogo";
             this.cartLogo.Size = new System.Drawing.Size(32, 30);
             this.cartLogo.TabIndex = 6;
@@ -326,9 +326,9 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(567, 43);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(531, 233);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -368,7 +368,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(11, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(229, 202);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,9 +383,9 @@
             this.VegetarianGroupBox.Controls.Add(this.label1);
             this.VegetarianGroupBox.Controls.Add(this.pictureBox1);
             this.VegetarianGroupBox.Location = new System.Drawing.Point(17, 43);
-            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VegetarianGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.VegetarianGroupBox.Name = "VegetarianGroupBox";
-            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VegetarianGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.VegetarianGroupBox.Size = new System.Drawing.Size(531, 233);
             this.VegetarianGroupBox.TabIndex = 2;
             this.VegetarianGroupBox.TabStop = false;
@@ -425,7 +425,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(11, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(229, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -440,7 +440,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1259, 1003);
             this.Controls.Add(this.drinkPanel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1277, 1050);
             this.Name = "DrinkPage";
             this.Text = "DrinkPage";
             this.drinkPanel.ResumeLayout(false);
