@@ -165,7 +165,6 @@ namespace TrevysIconicPizza
             {
                 connection.Open();
 
-<<<<<<< HEAD
                 string createTableQuery = @"CREATE TABLE IF NOT EXISTS [Customer] (
                 customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
                 firstName VARCHAR(50) NOT NULL,
@@ -178,20 +177,7 @@ namespace TrevysIconicPizza
                 category_ID CHAR,
                 FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID)
                 )";
-
-=======
-                string createTableQuery = @"CREATE TABLE IF NOT EXISTS Customer (
-                                   customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                                   firstName VARCHAR(50) NOT NULL,
-                                   lastName VARCHAR(50),
-                                   username VARCHAR(50),
-                                   password VARCHAR(50),
-                                   cardNumber VARCHAR(20),
-                                   CVV VARCHAR(3),
-                                   cardExpirationDate DATE,
-                                   category_ID CHAR,
-                                   FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID))";
->>>>>>> 010742fd0bd3c7fe02ceb231097edf1e17ceee24
+                
 
                 using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
                 {
