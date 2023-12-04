@@ -41,7 +41,7 @@ namespace TrevysIconicPizza
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = "SELECT COUNT(*) FROM [Customers] WHERE username = @username AND password = @password";
+                    command.CommandText = "SELECT COUNT(*) FROM Customer WHERE username = @username AND password = @password";
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
 

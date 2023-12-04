@@ -8,7 +8,6 @@ namespace TrevysIconicPizza
 {
     internal interface User
     {
-         string User_ID { get; set; }
          string Username { get; set; }
          string Password { get; set; }
     }

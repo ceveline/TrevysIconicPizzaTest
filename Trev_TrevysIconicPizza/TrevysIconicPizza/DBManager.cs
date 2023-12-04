@@ -165,17 +165,17 @@ namespace TrevysIconicPizza
             {
                 connection.Open();
 
-                string createTableQuery = @"CREATE TABLE IF NOT EXIST [Customer] (
-                      customer_ID, INTEGER PRIMARY KEY AUTOINCREMENT,
-                      firstName VARCHAR(50) NOT NULL,
-                      lastName VARCHAR(50),
-                      username VARCHAR(50),
-                      password VARCHAR(50),
-                      cardNumber VARCHAR(20),
-                      CVV VARCHAR(3),
-                      cardExpirationDate VARCHAR(15),
-                      cartegory_ID CHAR,
-                      FOREIGN KEY (category_ID) REFERENCES  CustomerCategory(category_ID)";
+                string createTableQuery = @"CREATE TABLE IF NOT EXISTS Customer (
+                                   customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                   firstName VARCHAR(50) NOT NULL,
+                                   lastName VARCHAR(50),
+                                   username VARCHAR(50),
+                                   password VARCHAR(50),
+                                   cardNumber VARCHAR(20),
+                                   CVV VARCHAR(3),
+                                   cardExpirationDate DATE,
+                                   category_ID CHAR,
+                                   FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID))";
 
                 using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
                 {
@@ -183,12 +183,13 @@ namespace TrevysIconicPizza
                 }
             }
         }
+
         public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
-                string sql = @"INSERT INTO [Customer] (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
+                string sql = @"INSERT INTO Customer (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
                        VALUES (@firstName, @username, @password, @cardNumber, @cvv, @card, @cardExpirationDate, @category_ID)";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
