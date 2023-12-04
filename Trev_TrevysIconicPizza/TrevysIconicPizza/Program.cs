@@ -38,6 +38,12 @@ namespace TrevysIconicPizza
             // Create OrderItem table
             dbManager.CreateOrderItemTable();
 
+            // Create Customer Table
+            dbManager.CreateCustomerTable();
+
+            // Create CustomerCategory table 
+            dbManager.CreateCustomerCategoryTable();
+
         }
 
         static void InsertInitialItems(DBManager dbManager)

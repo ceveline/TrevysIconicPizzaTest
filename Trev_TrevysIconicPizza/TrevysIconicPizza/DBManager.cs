@@ -159,9 +159,85 @@ namespace TrevysIconicPizza
                 }
             }
         }
+        public void CreateCustomerTable()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
 
+                string createTableQuery = @"CREATE TABLE IF NOT EXIST [Customer] (
+                      customer_ID, INTEGER PRIMARY KEY AUTOINCREMENT,
+                      firstName VARCHAR(50) NOT NULL,
+                      lastName VARCHAR(50),
+                      username VARCHAR(50),
+                      password VARCHAR(50),
+                      cardNumber VARCHAR(20),
+                      CVV VARCHAR(3),
+                      cardExpirationDate VARCHAR(15),
+                      cartegory_ID CHAR,
+                      FOREIGN KEY (category_ID) REFERENCES  CustomerCategory(category_ID)";
 
+                using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
+                {
+                    createTableCommand.ExecuteNonQuery();
+                }
+            }
+        }
+        public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+                string sql = @"INSERT INTO [Customer] (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
+                       VALUES (@firstName, @username, @password, @cardNumber, @cvv, @card, @cardExpirationDate, @category_ID)";
 
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@firstName", firstName);
+                    command.Parameters.AddWithValue("@lastName", lastName);
+                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@cardNumber", cardNumber);
+                    command.Parameters.AddWithValue("@cvv", cvv);
+                    command.Parameters.AddWithValue("@cardExpirationDate", cardExpirationDate);
+                    command.Parameters.AddWithValue("@category", category_ID);
 
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public void CreateCustomerCategoryTable()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                string createTableQuery = @"CREATE TABLE IF NOT EXIST [CustomerCategory] (
+                                  category_ID PRIMARY KEY INT,
+                                  description VARCHAR(50)";
+
+                using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
+                {
+                    createTableCommand.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public void insertIntoCustomerCategoryTable(string description)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+                string sql = @"INSERT INTO [CustomerCategory] (description) 
+                       VALUES (@description)";
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@description", description);
+
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
     }
 }
