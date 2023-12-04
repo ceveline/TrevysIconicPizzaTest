@@ -87,7 +87,7 @@
             this.pizzaPanel.Controls.Add(this.byoPanel);
             this.pizzaPanel.Controls.Add(this.groupBox1);
             this.pizzaPanel.Location = new System.Drawing.Point(15, 18);
-            this.pizzaPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.pizzaPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pizzaPanel.MaximumSize = new System.Drawing.Size(915, 837);
             this.pizzaPanel.Name = "pizzaPanel";
             this.pizzaPanel.Size = new System.Drawing.Size(915, 821);
@@ -119,9 +119,9 @@
             this.byoPanel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.byoPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
             this.byoPanel.Location = new System.Drawing.Point(40, 484);
-            this.byoPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.byoPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.byoPanel.Name = "byoPanel";
-            this.byoPanel.Padding = new System.Windows.Forms.Padding(2);
+            this.byoPanel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.byoPanel.Size = new System.Drawing.Size(836, 311);
             this.byoPanel.TabIndex = 5;
             this.byoPanel.TabStop = false;
@@ -137,7 +137,7 @@
             "Medium",
             "Large"});
             this.customComboBox.Location = new System.Drawing.Point(13, 70);
-            this.customComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.customComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customComboBox.Name = "customComboBox";
             this.customComboBox.Size = new System.Drawing.Size(98, 24);
             this.customComboBox.TabIndex = 16;
@@ -162,7 +162,7 @@
             this.selectedListBox.FormattingEnabled = true;
             this.selectedListBox.ItemHeight = 16;
             this.selectedListBox.Location = new System.Drawing.Point(428, 67);
-            this.selectedListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.selectedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.selectedListBox.Name = "selectedListBox";
             this.selectedListBox.Size = new System.Drawing.Size(212, 180);
             this.selectedListBox.TabIndex = 10;
@@ -171,7 +171,7 @@
             // 
             this.customAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
             this.customAddToCartButton.Location = new System.Drawing.Point(658, 235);
-            this.customAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.customAddToCartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customAddToCartButton.Name = "customAddToCartButton";
             this.customAddToCartButton.Size = new System.Drawing.Size(97, 28);
             this.customAddToCartButton.TabIndex = 5;
@@ -189,7 +189,7 @@
             "Tomato",
             "Pesto"});
             this.sauceListBox.Location = new System.Drawing.Point(13, 145);
-            this.sauceListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.sauceListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sauceListBox.Name = "sauceListBox";
             this.sauceListBox.Size = new System.Drawing.Size(150, 36);
             this.sauceListBox.TabIndex = 7;
@@ -205,7 +205,7 @@
             "Thick",
             "Thin"});
             this.crustListBox.Location = new System.Drawing.Point(13, 242);
-            this.crustListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.crustListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.crustListBox.Name = "crustListBox";
             this.crustListBox.Size = new System.Drawing.Size(150, 36);
             this.crustListBox.TabIndex = 6;
@@ -264,7 +264,7 @@
             "Red Peppers",
             "Tomatoes"});
             this.toppingsCheckedListBox.Location = new System.Drawing.Point(190, 70);
-            this.toppingsCheckedListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.toppingsCheckedListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toppingsCheckedListBox.Name = "toppingsCheckedListBox";
             this.toppingsCheckedListBox.Size = new System.Drawing.Size(150, 156);
             this.toppingsCheckedListBox.Sorted = true;
@@ -281,9 +281,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
             this.groupBox1.Location = new System.Drawing.Point(40, 28);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Size = new System.Drawing.Size(836, 451);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -298,9 +298,9 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.pictureBox4);
             this.groupBox3.Location = new System.Drawing.Point(425, 245);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Size = new System.Drawing.Size(398, 189);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -315,23 +315,23 @@
             "Medium",
             "Large"});
             this.margComboBox.Location = new System.Drawing.Point(199, 111);
-            this.margComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.margComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.margComboBox.Name = "margComboBox";
             this.margComboBox.Size = new System.Drawing.Size(98, 24);
             this.margComboBox.TabIndex = 17;
             this.margComboBox.Text = "Select Size";
+            this.margComboBox.Click += new System.EventHandler(this.margAddToCartButton4_Click);
             // 
             // margAddToCartButton
             // 
             this.margAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
             this.margAddToCartButton.Location = new System.Drawing.Point(199, 149);
-            this.margAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.margAddToCartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.margAddToCartButton.Name = "margAddToCartButton";
             this.margAddToCartButton.Size = new System.Drawing.Size(97, 28);
             this.margAddToCartButton.TabIndex = 4;
             this.margAddToCartButton.Text = "Add to Cart";
             this.margAddToCartButton.UseVisualStyleBackColor = true;
-            this.margAddToCartButton.Click += new System.EventHandler(this.margAddToCartButton4_Click);
             // 
             // label8
             // 
@@ -358,7 +358,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(172, 164);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -374,9 +374,9 @@
             this.originalGroupBox.Controls.Add(this.label4);
             this.originalGroupBox.Controls.Add(this.pictureBox2);
             this.originalGroupBox.Location = new System.Drawing.Point(425, 35);
-            this.originalGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.originalGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.originalGroupBox.Name = "originalGroupBox";
-            this.originalGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.originalGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.originalGroupBox.Size = new System.Drawing.Size(398, 189);
             this.originalGroupBox.TabIndex = 1;
             this.originalGroupBox.TabStop = false;
@@ -391,7 +391,7 @@
             "Medium",
             "Large"});
             this.oriComboBox.Location = new System.Drawing.Point(199, 116);
-            this.oriComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.oriComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.oriComboBox.Name = "oriComboBox";
             this.oriComboBox.Size = new System.Drawing.Size(98, 24);
             this.oriComboBox.TabIndex = 16;
@@ -401,7 +401,7 @@
             // 
             this.oriAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
             this.oriAddToCartButton.Location = new System.Drawing.Point(199, 150);
-            this.oriAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.oriAddToCartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.oriAddToCartButton.Name = "oriAddToCartButton";
             this.oriAddToCartButton.Size = new System.Drawing.Size(97, 28);
             this.oriAddToCartButton.TabIndex = 3;
@@ -434,7 +434,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(8, 15);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(172, 164);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -450,9 +450,9 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Location = new System.Drawing.Point(13, 245);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Size = new System.Drawing.Size(398, 189);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -467,7 +467,7 @@
             "Medium",
             "Large"});
             this.pepComboBox.Location = new System.Drawing.Point(196, 111);
-            this.pepComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pepComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pepComboBox.Name = "pepComboBox";
             this.pepComboBox.Size = new System.Drawing.Size(98, 24);
             this.pepComboBox.TabIndex = 17;
@@ -477,7 +477,7 @@
             // 
             this.pepperoniAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
             this.pepperoniAddToCartButton.Location = new System.Drawing.Point(196, 149);
-            this.pepperoniAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.pepperoniAddToCartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pepperoniAddToCartButton.Name = "pepperoniAddToCartButton";
             this.pepperoniAddToCartButton.Size = new System.Drawing.Size(97, 28);
             this.pepperoniAddToCartButton.TabIndex = 3;
@@ -510,7 +510,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(172, 164);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -541,7 +541,7 @@
             "Medium",
             "Large"});
             this.vegComboBox.Location = new System.Drawing.Point(196, 116);
-            this.vegComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.vegComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.vegComboBox.Name = "vegComboBox";
             this.vegComboBox.Size = new System.Drawing.Size(98, 24);
             this.vegComboBox.TabIndex = 15;
@@ -551,7 +551,7 @@
             // 
             this.vegAddToCartButton.Font = new System.Drawing.Font("Arial", 11F);
             this.vegAddToCartButton.Location = new System.Drawing.Point(196, 150);
-            this.vegAddToCartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.vegAddToCartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.vegAddToCartButton.Name = "vegAddToCartButton";
             this.vegAddToCartButton.Size = new System.Drawing.Size(97, 28);
             this.vegAddToCartButton.TabIndex = 3;
