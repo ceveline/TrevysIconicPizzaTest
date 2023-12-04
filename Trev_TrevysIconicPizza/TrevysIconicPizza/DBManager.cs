@@ -173,7 +173,7 @@ namespace TrevysIconicPizza
                                    password VARCHAR(50),
                                    cardNumber VARCHAR(20),
                                    CVV VARCHAR(3),
-                                   cardExpirationDate DATE,
+                                   cardExpirationDate VARCHAR(50),
                                    category_ID CHAR,
                                    FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID))";
 
