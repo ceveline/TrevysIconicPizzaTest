@@ -201,6 +201,8 @@ namespace TrevysIconicPizza
                 {
                     Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text, expirationDateTimePicker.Value);
                     MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DBManager dB = new DBManager();
+                    dB.InsertIntoCustomerTable(person.FirstName, person.LastName, person.Username, person.Password, person.Card, person.CVV, person.CardExpireDate.ToLongDateString(), 'c');  
                     this.Close();
                 }
             }
