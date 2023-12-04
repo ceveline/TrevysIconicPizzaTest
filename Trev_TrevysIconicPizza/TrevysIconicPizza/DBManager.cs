@@ -165,6 +165,7 @@ namespace TrevysIconicPizza
             {
                 connection.Open();
 
+<<<<<<< HEAD
                 string createTableQuery = @"CREATE TABLE IF NOT EXISTS [Customer] (
                 customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
                 firstName VARCHAR(50) NOT NULL,
@@ -178,6 +179,19 @@ namespace TrevysIconicPizza
                 FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID)
                 )";
 
+=======
+                string createTableQuery = @"CREATE TABLE IF NOT EXISTS Customer (
+                                   customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                   firstName VARCHAR(50) NOT NULL,
+                                   lastName VARCHAR(50),
+                                   username VARCHAR(50),
+                                   password VARCHAR(50),
+                                   cardNumber VARCHAR(20),
+                                   CVV VARCHAR(3),
+                                   cardExpirationDate DATE,
+                                   category_ID CHAR,
+                                   FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID))";
+>>>>>>> 010742fd0bd3c7fe02ceb231097edf1e17ceee24
 
                 using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
                 {
@@ -185,12 +199,13 @@ namespace TrevysIconicPizza
                 }
             }
         }
+
         public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
-                string sql = @"INSERT INTO [Customer] (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
+                string sql = @"INSERT INTO Customer (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
                        VALUES (@firstName, @username, @password, @cardNumber, @cvv, @card, @cardExpirationDate, @category_ID)";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))

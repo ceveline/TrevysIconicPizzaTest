@@ -44,6 +44,10 @@ namespace TrevysIconicPizza
             // Create CustomerCategory table 
             dbManager.CreateCustomerCategoryTable();
 
+<<<<<<< HEAD
+=======
+            Application.Run(new LandingPage());
+>>>>>>> 010742fd0bd3c7fe02ceb231097edf1e17ceee24
 
         }
 
