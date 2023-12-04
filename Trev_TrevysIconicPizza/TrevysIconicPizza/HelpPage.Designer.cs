@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpPage));
             this.helpTabControl = new System.Windows.Forms.TabControl();
             this.accountTabPage = new System.Windows.Forms.TabPage();
+            this.accountManagementHelpLabel = new System.Windows.Forms.Label();
+            this.accountCreationHelpLabel = new System.Windows.Forms.Label();
+            this.accountCreationLabel = new System.Windows.Forms.Label();
             this.accountManagementLabel = new System.Windows.Forms.Label();
             this.orderTabPage = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.orderingDrinkLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.orderingPizzaLabel = new System.Windows.Forms.Label();
             this.cartTabPage = new System.Windows.Forms.TabPage();
             this.checkoutTabPage = new System.Windows.Forms.TabPage();
             this.helpLabel = new System.Windows.Forms.Label();
-            this.accountCreationLabel = new System.Windows.Forms.Label();
-            this.accountCreationHelpLabel = new System.Windows.Forms.Label();
-            this.accountManagementHelpLabel = new System.Windows.Forms.Label();
-            this.orderingPizzaLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.orderingDrinkLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.helpTabControl.SuspendLayout();
             this.accountTabPage.SuspendLayout();
             this.orderTabPage.SuspendLayout();
@@ -74,6 +74,39 @@
             this.accountTabPage.TabIndex = 0;
             this.accountTabPage.Text = "Account";
             // 
+            // accountManagementHelpLabel
+            // 
+            this.accountManagementHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
+            this.accountManagementHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.accountManagementHelpLabel.Location = new System.Drawing.Point(25, 154);
+            this.accountManagementHelpLabel.Name = "accountManagementHelpLabel";
+            this.accountManagementHelpLabel.Size = new System.Drawing.Size(740, 98);
+            this.accountManagementHelpLabel.TabIndex = 3;
+            this.accountManagementHelpLabel.Text = resources.GetString("accountManagementHelpLabel.Text");
+            // 
+            // accountCreationHelpLabel
+            // 
+            this.accountCreationHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
+            this.accountCreationHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.accountCreationHelpLabel.Location = new System.Drawing.Point(24, 60);
+            this.accountCreationHelpLabel.Name = "accountCreationHelpLabel";
+            this.accountCreationHelpLabel.Size = new System.Drawing.Size(724, 41);
+            this.accountCreationHelpLabel.TabIndex = 2;
+            this.accountCreationHelpLabel.Text = "Creating an account is easy, all you have to do is click on the \"Create Account\" " +
+    "button in the landing page and fill in the required information in the textboxes" +
+    ".\r\n\r\n";
+            // 
+            // accountCreationLabel
+            // 
+            this.accountCreationLabel.AutoSize = true;
+            this.accountCreationLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
+            this.accountCreationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.accountCreationLabel.Location = new System.Drawing.Point(22, 25);
+            this.accountCreationLabel.Name = "accountCreationLabel";
+            this.accountCreationLabel.Size = new System.Drawing.Size(196, 26);
+            this.accountCreationLabel.TabIndex = 1;
+            this.accountCreationLabel.Text = "Account Creation:";
+            // 
             // accountManagementLabel
             // 
             this.accountManagementLabel.AutoSize = true;
@@ -98,6 +131,49 @@
             this.orderTabPage.Size = new System.Drawing.Size(768, 343);
             this.orderTabPage.TabIndex = 1;
             this.orderTabPage.Text = "Ordering";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.label4.Location = new System.Drawing.Point(29, 216);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // orderingDrinkLabel
+            // 
+            this.orderingDrinkLabel.AutoSize = true;
+            this.orderingDrinkLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
+            this.orderingDrinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.orderingDrinkLabel.Location = new System.Drawing.Point(29, 181);
+            this.orderingDrinkLabel.Name = "orderingDrinkLabel";
+            this.orderingDrinkLabel.Size = new System.Drawing.Size(173, 26);
+            this.orderingDrinkLabel.TabIndex = 2;
+            this.orderingDrinkLabel.Text = "Ordering Drinks";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Arial", 11F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.label2.Location = new System.Drawing.Point(29, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(733, 103);
+            this.label2.TabIndex = 1;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // orderingPizzaLabel
+            // 
+            this.orderingPizzaLabel.AutoSize = true;
+            this.orderingPizzaLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
+            this.orderingPizzaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.orderingPizzaLabel.Location = new System.Drawing.Point(23, 23);
+            this.orderingPizzaLabel.Name = "orderingPizzaLabel";
+            this.orderingPizzaLabel.Size = new System.Drawing.Size(179, 26);
+            this.orderingPizzaLabel.TabIndex = 0;
+            this.orderingPizzaLabel.Text = "Ordering  Pizzas";
             // 
             // cartTabPage
             // 
@@ -130,83 +206,6 @@
             this.helpLabel.TabIndex = 1;
             this.helpLabel.Text = "Trevy\'s Iconic Pizza Help";
             this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // accountCreationLabel
-            // 
-            this.accountCreationLabel.AutoSize = true;
-            this.accountCreationLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.accountCreationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountCreationLabel.Location = new System.Drawing.Point(22, 25);
-            this.accountCreationLabel.Name = "accountCreationLabel";
-            this.accountCreationLabel.Size = new System.Drawing.Size(196, 26);
-            this.accountCreationLabel.TabIndex = 1;
-            this.accountCreationLabel.Text = "Account Creation:";
-            // 
-            // accountCreationHelpLabel
-            // 
-            this.accountCreationHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
-            this.accountCreationHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountCreationHelpLabel.Location = new System.Drawing.Point(24, 60);
-            this.accountCreationHelpLabel.Name = "accountCreationHelpLabel";
-            this.accountCreationHelpLabel.Size = new System.Drawing.Size(724, 41);
-            this.accountCreationHelpLabel.TabIndex = 2;
-            this.accountCreationHelpLabel.Text = "Creating an account is easy, all you have to do is click on the \"Create Account\" " +
-    "button in the landing page and fill in the required information in the textboxes" +
-    ".\r\n\r\n";
-            // 
-            // accountManagementHelpLabel
-            // 
-            this.accountManagementHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
-            this.accountManagementHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.accountManagementHelpLabel.Location = new System.Drawing.Point(25, 154);
-            this.accountManagementHelpLabel.Name = "accountManagementHelpLabel";
-            this.accountManagementHelpLabel.Size = new System.Drawing.Size(740, 98);
-            this.accountManagementHelpLabel.TabIndex = 3;
-            this.accountManagementHelpLabel.Text = resources.GetString("accountManagementHelpLabel.Text");
-            // 
-            // orderingPizzaLabel
-            // 
-            this.orderingPizzaLabel.AutoSize = true;
-            this.orderingPizzaLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.orderingPizzaLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.orderingPizzaLabel.Location = new System.Drawing.Point(23, 23);
-            this.orderingPizzaLabel.Name = "orderingPizzaLabel";
-            this.orderingPizzaLabel.Size = new System.Drawing.Size(179, 26);
-            this.orderingPizzaLabel.TabIndex = 0;
-            this.orderingPizzaLabel.Text = "Ordering  Pizzas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 11F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.label2.Location = new System.Drawing.Point(29, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
-            // orderingDrinkLabel
-            // 
-            this.orderingDrinkLabel.AutoSize = true;
-            this.orderingDrinkLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.orderingDrinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.orderingDrinkLabel.Location = new System.Drawing.Point(23, 109);
-            this.orderingDrinkLabel.Name = "orderingDrinkLabel";
-            this.orderingDrinkLabel.Size = new System.Drawing.Size(173, 26);
-            this.orderingDrinkLabel.TabIndex = 2;
-            this.orderingDrinkLabel.Text = "Ordering Drinks";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.label4.Location = new System.Drawing.Point(29, 168);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
             // 
             // HelpPage
             // 
