@@ -58,43 +58,52 @@ namespace TrevysIconicPizza
             string username = UserNameTextBox.Text;
             string password = PasswordTextBox.Text;
 
+            // Perform authentication logic (check username and password against the database)
+            bool isAuthenticated = AuthenticateUser(username, password);
+
+            if (isAuthenticated)
+            {
+                // If authentication is successful, populate CurrentClient
+                CurrentClient.Instance.PopulateFromDatabase(username, password);
+
+                // Now you can access CurrentClient properties
+                string firstName = CurrentClient.Instance.FirstName;
+                string lastName = CurrentClient.Instance.LastName;
+
+
+                // Navigate to the MenuPage
+                MenuPage menuPageForm = new MenuPage();
+                menuPageForm.Show();
+
+                // Close the current login form or hide it
+                this.Close();
+            }
+            else
+            {
+                // Handle unsuccessful authentication (show error message, etc.)
+                MessageBox.Show("Invalid username or password");
+            }
+        }
+        private bool AuthenticateUser(string username, string password)
+        {
+            // Perform authentication logic here, e.g., check credentials against the database
+            // Return true if authentication is successful, false otherwise
+            // You need to implement this method based on your database structure and authentication requirements
+            // Example: check credentials against the database
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
 
-                using (SQLiteCommand command = new SQLiteCommand(connection))
+                string query = "SELECT COUNT(*) FROM Customer WHERE username = @Username AND password = @Password";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.CommandText = "SELECT * FROM Customer WHERE username = @username AND password = @password";
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
 
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            // Login successful
-                            MessageBox.Show("Login successful!");
+                    int count = Convert.ToInt32(command.ExecuteScalar());
 
-                            // Populate CurrentClient properties from the database
-                            CurrentClient.Instance.FirstName = reader["firstName"].ToString();
-                            CurrentClient.Instance.LastName = reader["lastName"].ToString();
-                            CurrentClient.Instance.Username = reader["username"].ToString();
-                            CurrentClient.Instance.Password = reader["password"].ToString();
-                            CurrentClient.Instance.CardNumber = reader["cardNumber"].ToString();
-                            CurrentClient.Instance.CVV = reader["CVV"].ToString();
-                            CurrentClient.Instance.CardExpireDate = Convert.ToDateTime(reader["cardExpirationDate"]);
-                            //CurrentClient.Instance.category_ID = char.Parse(reader["category_ID"].ToString());
-
-                            // Open the menu page or perform other actions
-                            MenuPage menuPage = new MenuPage();
-                            menuPage.Show();
-                        }
-                        else
-                        {
-                            // Invalid username or password
-                            MessageBox.Show("Invalid username or password.");
-                        }
-                    }
+                    return count > 0; // If count is greater than 0, authentication is successful
                 }
             }
         }

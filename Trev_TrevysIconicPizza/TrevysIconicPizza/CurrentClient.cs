@@ -27,7 +27,7 @@ namespace TrevysIconicPizza
                 return _instance;
             }
         }
-
+        public int Customer_ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
@@ -56,6 +56,7 @@ namespace TrevysIconicPizza
                         if (reader.Read())
                         {
                             // Populate CurrentClient properties from the database
+                            Customer_ID = Convert.ToInt32(reader["customer_ID"]);
                             FirstName = reader["firstName"].ToString();
                             LastName = reader["lastName"].ToString();
                             Username = reader["username"].ToString();

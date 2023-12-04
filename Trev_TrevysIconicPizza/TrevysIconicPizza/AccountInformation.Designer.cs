@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.accountInfoPanel = new System.Windows.Forms.Panel();
+            this.expirationDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.expireDateLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.cvvTextBox = new System.Windows.Forms.TextBox();
             this.cvvLabel = new System.Windows.Forms.Label();
@@ -50,8 +52,6 @@
             this.accountInfoLabel = new System.Windows.Forms.Label();
             this.doneButton = new System.Windows.Forms.Button();
             this.editAccountButton = new System.Windows.Forms.Button();
-            this.expirationDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.expireDateLabel = new System.Windows.Forms.Label();
             this.accountInfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,34 @@
             this.accountInfoPanel.Size = new System.Drawing.Size(537, 494);
             this.accountInfoPanel.TabIndex = 1;
             // 
+            // expirationDateTimePicker
+            // 
+            this.expirationDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDateTimePicker.CustomFormat = "";
+            this.expirationDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expirationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.expirationDateTimePicker.Location = new System.Drawing.Point(177, 357);
+            this.expirationDateTimePicker.Name = "expirationDateTimePicker";
+            this.expirationDateTimePicker.ShowUpDown = true;
+            this.expirationDateTimePicker.Size = new System.Drawing.Size(187, 26);
+            this.expirationDateTimePicker.TabIndex = 30;
+            this.expirationDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
+            this.expirationDateTimePicker.Visible = false;
+            // 
+            // expireDateLabel
+            // 
+            this.expireDateLabel.AutoSize = true;
+            this.expireDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.expireDateLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.expireDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.expireDateLabel.Location = new System.Drawing.Point(41, 364);
+            this.expireDateLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
+            this.expireDateLabel.Name = "expireDateLabel";
+            this.expireDateLabel.Size = new System.Drawing.Size(105, 16);
+            this.expireDateLabel.TabIndex = 29;
+            this.expireDateLabel.Text = "Expiration Date";
+            this.expireDateLabel.Visible = false;
+            // 
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
@@ -98,7 +126,6 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Visible = false;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // cvvTextBox
             // 
@@ -342,32 +369,6 @@
             this.editAccountButton.Text = "Edit Account";
             this.editAccountButton.UseVisualStyleBackColor = false;
             this.editAccountButton.Click += new System.EventHandler(this.editAccountButton_Click);
-            // 
-            // expirationDateTimePicker
-            // 
-            this.expirationDateTimePicker.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expirationDateTimePicker.CustomFormat = "";
-            this.expirationDateTimePicker.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expirationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.expirationDateTimePicker.Location = new System.Drawing.Point(177, 357);
-            this.expirationDateTimePicker.Name = "expirationDateTimePicker";
-            this.expirationDateTimePicker.ShowUpDown = true;
-            this.expirationDateTimePicker.Size = new System.Drawing.Size(187, 26);
-            this.expirationDateTimePicker.TabIndex = 30;
-            this.expirationDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
-            // 
-            // expireDateLabel
-            // 
-            this.expireDateLabel.AutoSize = true;
-            this.expireDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.expireDateLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expireDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.expireDateLabel.Location = new System.Drawing.Point(41, 364);
-            this.expireDateLabel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 20);
-            this.expireDateLabel.Name = "expireDateLabel";
-            this.expireDateLabel.Size = new System.Drawing.Size(105, 16);
-            this.expireDateLabel.TabIndex = 29;
-            this.expireDateLabel.Text = "Expiration Date";
             // 
             // AccountInformation
             // 
