@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.helpTabControl = new System.Windows.Forms.TabControl();
+            this.accountTabPage = new System.Windows.Forms.TabPage();
+            this.orderTabPage = new System.Windows.Forms.TabPage();
             this.helpLabel = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.helpTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // helpTabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 69);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 369);
-            this.tabControl1.TabIndex = 0;
+            this.helpTabControl.Controls.Add(this.accountTabPage);
+            this.helpTabControl.Controls.Add(this.orderTabPage);
+            this.helpTabControl.Location = new System.Drawing.Point(12, 69);
+            this.helpTabControl.Name = "helpTabControl";
+            this.helpTabControl.SelectedIndex = 0;
+            this.helpTabControl.Size = new System.Drawing.Size(776, 369);
+            this.helpTabControl.TabIndex = 0;
             // 
-            // tabPage1
+            // accountTabPage
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(768, 343);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.accountTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.accountTabPage.Location = new System.Drawing.Point(4, 22);
+            this.accountTabPage.Name = "accountTabPage";
+            this.accountTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.accountTabPage.Size = new System.Drawing.Size(768, 343);
+            this.accountTabPage.TabIndex = 0;
+            this.accountTabPage.Text = "Account";
             // 
-            // tabPage2
+            // orderTabPage
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(768, 343);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.orderTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
+            this.orderTabPage.Location = new System.Drawing.Point(4, 22);
+            this.orderTabPage.Name = "orderTabPage";
+            this.orderTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.orderTabPage.Size = new System.Drawing.Size(768, 343);
+            this.orderTabPage.TabIndex = 1;
+            this.orderTabPage.Text = "Ordering";
             // 
             // helpLabel
             // 
@@ -84,19 +84,19 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.helpLabel);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.helpTabControl);
             this.Name = "HelpPage";
             this.Text = "HelpPage";
-            this.tabControl1.ResumeLayout(false);
+            this.helpTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl helpTabControl;
+        private System.Windows.Forms.TabPage accountTabPage;
+        private System.Windows.Forms.TabPage orderTabPage;
         private System.Windows.Forms.Label helpLabel;
     }
 }
