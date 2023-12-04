@@ -60,7 +60,7 @@ namespace TrevysIconicPizza
             if (IsValidUser(username, password))
             {
                 MessageBox.Show("Login successful!");
-                // Add code to open your main application form or perform other actions upon successful login.
+                
             }
             else
             {
