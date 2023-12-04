@@ -207,6 +207,41 @@ namespace TrevysIconicPizza
 
             }
         }
+        public void UpdateCustomer(int customerId, string newFirstName, string newLastName, string newUsername, string newPassword, string newCardNumber, string newCVV, DateTime newCardExpirationDate)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    // Construct the UPDATE SQL command
+                    command.CommandText = @"UPDATE Customer 
+                                   SET firstName = @FirstName, 
+                                       lastName = @LastName,
+                                       username = @Username,
+                                       password = @Password,
+                                       cardNumber = @CardNumber,
+                                       CVV = @CVV,
+                                       cardExpirationDate = @CardExpirationDate
+                                   WHERE customer_ID = @CustomerID";
+
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@FirstName", newFirstName);
+                    command.Parameters.AddWithValue("@LastName", newLastName);
+                    command.Parameters.AddWithValue("@Username", newUsername);
+                    command.Parameters.AddWithValue("@Password", newPassword);
+                    command.Parameters.AddWithValue("@CardNumber", newCardNumber);
+                    command.Parameters.AddWithValue("@CVV", newCVV);
+                    command.Parameters.AddWithValue("@CardExpirationDate", newCardExpirationDate);
+                    command.Parameters.AddWithValue("@CustomerID", customerId);
+
+                    // Execute the UPDATE command
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public void CreateCustomerCategoryTable()
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))

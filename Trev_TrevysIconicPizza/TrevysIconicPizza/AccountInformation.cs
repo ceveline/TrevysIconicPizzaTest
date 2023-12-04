@@ -242,7 +242,9 @@ namespace TrevysIconicPizza
                 DialogResult result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
-                    //Update database here
+                    DBManager dB = new DBManager();
+                    //dB.UpdateCustomer()
+
                     MessageBox.Show(firstNameTextBox.Text + ", you just updated your account", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     hideEdit();
                 }
