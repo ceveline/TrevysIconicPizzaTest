@@ -189,13 +189,14 @@ namespace TrevysIconicPizza
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
-                string sql = @"INSERT INTO Customer (firstName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
+                string sql = @"INSERT INTO Customer (firstName, lastName, username, password, cardNumber, CVV, card, cardExpirationDate, category_ID) 
                        VALUES (@firstName, @username, @password, @cardNumber, @cvv, @card, @cardExpirationDate, @category_ID)";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@firstName", firstName);
                     command.Parameters.AddWithValue("@lastName", lastName);
+                    command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
                     command.Parameters.AddWithValue("@cardNumber", cardNumber);
                     command.Parameters.AddWithValue("@cvv", cvv);
