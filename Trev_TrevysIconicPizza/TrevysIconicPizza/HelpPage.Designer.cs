@@ -31,9 +31,9 @@
             this.helpTabControl = new System.Windows.Forms.TabControl();
             this.accountTabPage = new System.Windows.Forms.TabPage();
             this.orderTabPage = new System.Windows.Forms.TabPage();
-            this.helpLabel = new System.Windows.Forms.Label();
             this.cartTabPage = new System.Windows.Forms.TabPage();
             this.checkoutTabPage = new System.Windows.Forms.TabPage();
+            this.helpLabel = new System.Windows.Forms.Label();
             this.helpTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,18 +69,6 @@
             this.orderTabPage.TabIndex = 1;
             this.orderTabPage.Text = "Ordering";
             // 
-            // helpLabel
-            // 
-            this.helpLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.helpLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
-            this.helpLabel.ForeColor = System.Drawing.Color.Cornsilk;
-            this.helpLabel.Location = new System.Drawing.Point(237, 21);
-            this.helpLabel.Name = "helpLabel";
-            this.helpLabel.Size = new System.Drawing.Size(314, 45);
-            this.helpLabel.TabIndex = 1;
-            this.helpLabel.Text = "Trevy\'s Iconic Pizza Help";
-            this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // cartTabPage
             // 
             this.cartTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
@@ -101,11 +89,24 @@
             this.checkoutTabPage.TabIndex = 3;
             this.checkoutTabPage.Text = "Checkout";
             // 
+            // helpLabel
+            // 
+            this.helpLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.helpLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
+            this.helpLabel.ForeColor = System.Drawing.Color.Cornsilk;
+            this.helpLabel.Location = new System.Drawing.Point(237, 21);
+            this.helpLabel.Name = "helpLabel";
+            this.helpLabel.Size = new System.Drawing.Size(314, 45);
+            this.helpLabel.TabIndex = 1;
+            this.helpLabel.Text = "Trevy\'s Iconic Pizza Help";
+            this.helpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // HelpPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
+            this.BackgroundImage = global::TrevysIconicPizza.Properties.Resources.Pizza;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.helpLabel);
             this.Controls.Add(this.helpTabControl);
