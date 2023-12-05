@@ -45,18 +45,9 @@ namespace TrevysIconicPizza
 
             // Create CustomerCategory table 
             dbManager.CreateCustomerCategoryTable();
-            dbManager.InsertIntoCustomerTable("Trevor", "Obodoechina", "trevObo96", "bopBOP86", "432110001234", "123", DateTime.Today.AddYears(3).ToString(), '1');
 
-            /*
-             *   public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
-                string sql = @"INSERT INTO Customer (firstName, lastName, username, password, cardNumber, CVV, cardExpirationDate, category_ID) 
-                       VALUES (@firstName, @lastName, @username,  @password, @cardNumber, @cvv, @cardExpirationDate, @category_ID)";
 
-             */
+
         }
 
         static void InsertInitialItems(DBManager dbManager)

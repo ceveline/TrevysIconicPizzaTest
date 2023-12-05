@@ -302,5 +302,16 @@ namespace TrevysIconicPizza
 
             expirationDateTimePicker.MaxDate = DateTime.Today.AddYears(10);
         }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to Log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                client.Clear();
+                MessageBox.Show("You have logged out");
+            }
+        }
     }
 }

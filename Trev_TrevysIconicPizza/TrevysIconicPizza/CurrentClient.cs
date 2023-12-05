@@ -68,5 +68,15 @@ namespace TrevysIconicPizza
                 }
             }
         }
+        public void Clear()
+        {
+            // Reset or set properties to default values
+            FirstName = string.Empty;
+            LastName = string.Empty;
+            Username = string.Empty;
+            Password = string.Empty;
+            CardNumber = string.Empty;
+            CardExpireDate = DateTime.MinValue;
+        }
     }
 }
