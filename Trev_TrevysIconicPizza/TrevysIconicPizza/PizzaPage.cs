@@ -148,7 +148,6 @@ namespace TrevysIconicPizza
 
         private void margAddToCartButton4_Click(object sender, EventArgs e)
         {
-            
             string size = margComboBox.Text;
 
             if (size != "Select Size")
@@ -162,10 +161,9 @@ namespace TrevysIconicPizza
             {
                 MessageBox.Show("Please select a proper size!");
             }
-            
         }
 
-        
+
         private void cartLogo_Click(object sender, EventArgs e)
         {
             // Handle the FormClosed event

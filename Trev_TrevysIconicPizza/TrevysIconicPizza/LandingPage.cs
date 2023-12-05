@@ -26,14 +26,16 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             loginPage.FormClosed += (s, args) =>
             {
-                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
+                continueAsGuestButton.Enabled = true;
                 loginButton.Enabled = true;
+                createAccountButton.Enabled = true;
             };
 
-            this.Hide();
             loginPage.Show();
+            continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;
+            createAccountButton.Enabled = false;
 
         }
 
@@ -45,50 +47,38 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             createAccountPage.FormClosed += (s, args) =>
             {
-                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
+                continueAsGuestButton.Enabled = true;
+                loginButton.Enabled = true;
                 createAccountButton.Enabled = true;
             };
 
-            this.Hide();
             createAccountPage.Show();
+            continueAsGuestButton.Enabled = false;
+            loginButton.Enabled = false;
             createAccountButton.Enabled = false;
         }
 
         private void continueAsGuestButton_Click(object sender, EventArgs e)
         {
-
-            // Create an instance of the MenuPage form
             MenuPage menuPage = new MenuPage();
-
-            // Handle the FormClosed event of the MenuPage form
+            // Handle the FormClosed event
             menuPage.FormClosed += (s, args) =>
             {
-                // Show the LandingPage form when MenuPage is closed
-                this.Show();
+                // Re-enable the loginButton when the LoginPage is closed
                 continueAsGuestButton.Enabled = true;
+                loginButton.Enabled = true;
+                createAccountButton.Enabled = true;
+                //this.Hide();
             };
 
-            // Hide the LandingPage form
-            this.Hide();
-
-            // Show the MenuPage
             menuPage.Show();
             continueAsGuestButton.Enabled = false;
-
-            //MenuPage menuPage = new MenuPage();
-            //// Handle the FormClosed event
-            //this.Close();
-            //menuPage.FormClosed += (s, args) =>
-            //{
-            //    // Re-enable the loginButton when the LoginPage is closed
-            //    continueAsGuestButton.Enabled = true;
-
-            //};
+            loginButton.Enabled = false;
+            createAccountButton.Enabled = false;
 
 
-            //menuPage.Show();
-            //continueAsGuestButton.Enabled = false;
+        }
         }
 
         private void landingPageTimer_Tick(object sender, EventArgs e)
@@ -97,4 +87,4 @@ namespace TrevysIconicPizza
             landingPageTimerLabel.Text = "Time: "+DateTime.Now.ToString("HH:mm:ss");
         }
     }
-}
+

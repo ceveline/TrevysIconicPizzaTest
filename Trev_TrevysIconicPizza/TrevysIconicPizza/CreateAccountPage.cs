@@ -200,8 +200,12 @@ namespace TrevysIconicPizza
                 if (result == DialogResult.OK)
                 {
                     Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text, expirationDateTimePicker.Value);
+                    MenuPage menuPage = new MenuPage();
+                    menuPage.Show();
                     MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    DBManager dB = new DBManager();
+                    dB.InsertIntoCustomerTable(person.FirstName, person.LastName, person.Username, person.Password, person.Card, person.CVV, person.CardExpireDate.ToLongDateString(), 'c');  
+                    
                 }
             }
         }

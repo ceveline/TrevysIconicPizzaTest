@@ -250,7 +250,6 @@
             this.deliveryDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.deliveryDateTimePicker.Location = new System.Drawing.Point(14, 368);
             this.deliveryDateTimePicker.Name = "deliveryDateTimePicker";
-            this.deliveryDateTimePicker.ShowUpDown = true;
             this.deliveryDateTimePicker.Size = new System.Drawing.Size(238, 26);
             this.deliveryDateTimePicker.TabIndex = 7;
             this.deliveryDateTimePicker.Value = new System.DateTime(2023, 11, 21, 12, 17, 29, 0);
@@ -330,7 +329,6 @@
             this.orderListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.orderListBox.Size = new System.Drawing.Size(310, 274);
             this.orderListBox.TabIndex = 0;
-//            this.orderListBox.SelectedIndexChanged += new System.EventHandler(this.orderListBox_SelectedIndexChanged);
             // 
             // pickUpTimer
             // 
@@ -345,6 +343,7 @@
             this.ClientSize = new System.Drawing.Size(855, 507);
             this.Controls.Add(this.orderGroupBox);
             this.Controls.Add(this.paymentGroupBox);
+            this.MaximumSize = new System.Drawing.Size(871, 546);
             this.Name = "CheckoutPage";
             this.Text = "Checkout Page";
             this.Load += new System.EventHandler(this.CheckoutPage_Load);

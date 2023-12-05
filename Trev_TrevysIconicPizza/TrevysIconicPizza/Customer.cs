@@ -7,7 +7,6 @@ namespace TrevysIconicPizza
 {
     internal class Customer : User
     {
-        private string user_ID;
         private string username;
         private string firstName;
         private string lastName;
@@ -25,16 +24,9 @@ namespace TrevysIconicPizza
             LastName = lastName;
             Password = password;
             Card = card;
-            User_ID = Generate_ID();
             CardExpireDate = expiration;
         }
-        //Method generates ID that starts with C for client
-        public string Generate_ID()
-        {
-            string id = $"C{idCustomerCounter:D4}";
-            idCustomerCounter++;
-            return id;
-        }
+
 
         public string Username
         {
@@ -89,17 +81,6 @@ namespace TrevysIconicPizza
             set
             {
                 card = value;
-            }
-        }
-        public string User_ID
-        {
-            get 
-            { 
-                return user_ID;
-            }
-            set 
-            {
-                user_ID = value; 
             }
         }
         public string CVV

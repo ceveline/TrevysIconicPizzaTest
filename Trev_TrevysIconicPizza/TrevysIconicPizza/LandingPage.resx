@@ -121,7 +121,7 @@
   <data name="logoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
-        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAAHdElNRQfnCxERLwhZw/lpAACh
+        MAAA6mAAADqYAAAXcJy6UTwAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAAHdElNRQfnCxERLwhZw/lpAACh
         +0lEQVR4Xu29B1hU57Y+vu+95/x/596TnCTnpAkMSO8dQQFBERQVe++9xt57b2DF3nvvvfdujL3ExEQT
         Y2J36Pas/3rXno3DOCIoGkxmPc96Bmb27Nn72+v9Vv3Wp1jIQhaykIUsZCELWchCFrKQhSxkIQtZyEIW
         spCFLGQhC1nIQhaykIUsZCELWchCFrKQhSxkIQtZyEIWspCFLGQhC1nIQhaykIUsZCELWchCFrKQhSxk
@@ -816,7 +816,4 @@
         kIXeCSnK/w/kbdOJ5/vWcwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="landingPageTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

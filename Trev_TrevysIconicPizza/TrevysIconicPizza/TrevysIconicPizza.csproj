@@ -90,6 +90,7 @@
     <Compile Include="CreateAccountPage.Designer.cs">
       <DependentUpon>CreateAccountPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentClient.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomMilkshake.cs" />
     <Compile Include="CustomPizza.cs" />
@@ -128,7 +129,6 @@
       <DependentUpon>MenuPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs" />
-    <Compile Include="OrderDBManager.cs" />
     <Compile Include="OriginalPizza.cs" />
     <Compile Include="PepperoniPizza.cs" />
     <Compile Include="Pizza.cs" />

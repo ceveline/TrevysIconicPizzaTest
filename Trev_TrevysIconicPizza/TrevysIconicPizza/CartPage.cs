@@ -58,15 +58,17 @@ namespace TrevysIconicPizza
 
                     decimal priceToRemove = priceList[selectedIndex];
 
+                    TotalPrice -= priceToRemove;
+
+                    totalLabel.Text = "$" + TotalPrice;
+
                     priceList.RemoveAt(selectedIndex);
 
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     itemsToOrder.RemoveAt(selectedIndex);
 
-                    TotalPrice -= priceToRemove;
-
-                    totalLabel.Text = "$" + TotalPrice;
+                    
                 }
             }
         }
@@ -81,13 +83,11 @@ namespace TrevysIconicPizza
             if (cartListBox.Items.Count == 0)
             {
                 emptyLabel.Show();
-                editButton.Enabled = false;
                 removeButton.Enabled = false;
                 result = true;
             } else
             {
                 emptyLabel.Hide();
-                editButton.Enabled = true;
                 removeButton.Enabled = true;
             }
             return result;
@@ -109,6 +109,10 @@ namespace TrevysIconicPizza
             checkOutButton.Enabled = false;
 
             checkoutPage.UpdateCheckoutItems(itemsToOrder);
+
+
+            // Pass the total price to the checkout page
+            checkoutPage.UpdateTotalPrice(TotalPrice);
 
 
 
@@ -136,7 +140,7 @@ namespace TrevysIconicPizza
 
             cartListBox.Refresh();
 
-        } 
+        }
         public void AddDrinkToCart(Drink drink)
         {
             //cartListBox.Refresh();
@@ -149,15 +153,12 @@ namespace TrevysIconicPizza
 
             TotalPrice += price;
 
-
             totalLabel.Text = "$" + TotalPrice;
-            TotalPrice += drink.Price;
-            //totalLabel.Text = "$" + TotalPrice.ToString();
             itemsToOrder.Add(drink);
 
             cartListBox.Refresh();
-
         }
+
 
         public void RemovePizzaFromCart(Pizza pizza)
         {
@@ -170,16 +171,23 @@ namespace TrevysIconicPizza
             cartListBox.Refresh();
         }
 
-        private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
 
-        private void closePictureBox_Click(object sender, EventArgs e)
+            private void closePictureBox_Click(object sender, EventArgs e)
         {
             this.Hide(); // Hide the form when the close button is clicked
             
         }
+
+        private void CartPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true; // Cancel the form closing event
+                this.Hide(); // Hide the form instead of closing it
+            }
+        }
+
+
 
         // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }
