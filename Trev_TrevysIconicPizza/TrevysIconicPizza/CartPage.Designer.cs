@@ -153,7 +153,7 @@
             this.closePictureBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closePictureBox.BackgroundImage")));
             this.closePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closePictureBox.Location = new System.Drawing.Point(535, 3);
-            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closePictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.closePictureBox.Name = "closePictureBox";
             this.closePictureBox.Size = new System.Drawing.Size(18, 20);
             this.closePictureBox.TabIndex = 9;
@@ -167,6 +167,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(560, 393);
+            this.ControlBox = false;
             this.Controls.Add(this.closePictureBox);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.cartPanel);
