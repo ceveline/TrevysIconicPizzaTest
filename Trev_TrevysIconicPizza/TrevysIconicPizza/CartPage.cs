@@ -171,15 +171,20 @@ namespace TrevysIconicPizza
             cartListBox.Refresh();
         }
 
-        private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
-        }
 
-        private void closePictureBox_Click(object sender, EventArgs e)
+            private void closePictureBox_Click(object sender, EventArgs e)
         {
             this.Hide(); // Hide the form when the close button is clicked
             
+        }
+
+        private void CartPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true; // Cancel the form closing event
+                this.Hide(); // Hide the form instead of closing it
+            }
         }
 
 

@@ -76,6 +76,9 @@ namespace TrevysIconicPizza
             continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;
             createAccountButton.Enabled = false;
+
+
+        }
         }
     }
-}
+
