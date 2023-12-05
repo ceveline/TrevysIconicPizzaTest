@@ -36,9 +36,9 @@
             this.accountCreationLabel = new System.Windows.Forms.Label();
             this.accountManagementLabel = new System.Windows.Forms.Label();
             this.orderTabPage = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
+            this.orderingDrinkHelpLabel = new System.Windows.Forms.Label();
             this.orderingDrinkLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.orderingPizzaHelpLabel = new System.Windows.Forms.Label();
             this.orderingPizzaLabel = new System.Windows.Forms.Label();
             this.cartTabPage = new System.Windows.Forms.TabPage();
             this.checkoutTabPage = new System.Windows.Forms.TabPage();
@@ -121,9 +121,9 @@
             // orderTabPage
             // 
             this.orderTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
-            this.orderTabPage.Controls.Add(this.label4);
+            this.orderTabPage.Controls.Add(this.orderingDrinkHelpLabel);
             this.orderTabPage.Controls.Add(this.orderingDrinkLabel);
-            this.orderTabPage.Controls.Add(this.label2);
+            this.orderTabPage.Controls.Add(this.orderingPizzaHelpLabel);
             this.orderTabPage.Controls.Add(this.orderingPizzaLabel);
             this.orderTabPage.Location = new System.Drawing.Point(4, 22);
             this.orderTabPage.Name = "orderTabPage";
@@ -132,37 +132,36 @@
             this.orderTabPage.TabIndex = 1;
             this.orderTabPage.Text = "Ordering";
             // 
-            // label4
+            // orderingDrinkHelpLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.label4.Location = new System.Drawing.Point(29, 216);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.orderingDrinkHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
+            this.orderingDrinkHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.orderingDrinkHelpLabel.Location = new System.Drawing.Point(25, 206);
+            this.orderingDrinkHelpLabel.Name = "orderingDrinkHelpLabel";
+            this.orderingDrinkHelpLabel.Size = new System.Drawing.Size(729, 100);
+            this.orderingDrinkHelpLabel.TabIndex = 3;
+            this.orderingDrinkHelpLabel.Text = resources.GetString("orderingDrinkHelpLabel.Text");
             // 
             // orderingDrinkLabel
             // 
             this.orderingDrinkLabel.AutoSize = true;
             this.orderingDrinkLabel.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
             this.orderingDrinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.orderingDrinkLabel.Location = new System.Drawing.Point(29, 181);
+            this.orderingDrinkLabel.Location = new System.Drawing.Point(23, 165);
             this.orderingDrinkLabel.Name = "orderingDrinkLabel";
             this.orderingDrinkLabel.Size = new System.Drawing.Size(173, 26);
             this.orderingDrinkLabel.TabIndex = 2;
             this.orderingDrinkLabel.Text = "Ordering Drinks";
             // 
-            // label2
+            // orderingPizzaHelpLabel
             // 
-            this.label2.Font = new System.Drawing.Font("Arial", 11F);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
-            this.label2.Location = new System.Drawing.Point(29, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(733, 103);
-            this.label2.TabIndex = 1;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.orderingPizzaHelpLabel.Font = new System.Drawing.Font("Arial", 11F);
+            this.orderingPizzaHelpLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(65)))), ((int)(((byte)(11)))));
+            this.orderingPizzaHelpLabel.Location = new System.Drawing.Point(25, 62);
+            this.orderingPizzaHelpLabel.Name = "orderingPizzaHelpLabel";
+            this.orderingPizzaHelpLabel.Size = new System.Drawing.Size(733, 103);
+            this.orderingPizzaHelpLabel.TabIndex = 1;
+            this.orderingPizzaHelpLabel.Text = resources.GetString("orderingPizzaHelpLabel.Text");
             // 
             // orderingPizzaLabel
             // 
@@ -239,9 +238,9 @@
         private System.Windows.Forms.Label accountCreationLabel;
         private System.Windows.Forms.Label accountCreationHelpLabel;
         private System.Windows.Forms.Label accountManagementHelpLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label orderingDrinkHelpLabel;
         private System.Windows.Forms.Label orderingDrinkLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label orderingPizzaHelpLabel;
         private System.Windows.Forms.Label orderingPizzaLabel;
     }
 }
