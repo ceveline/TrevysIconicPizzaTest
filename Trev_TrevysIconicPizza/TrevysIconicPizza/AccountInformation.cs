@@ -15,6 +15,7 @@ namespace TrevysIconicPizza
         // Saves any error message 
         List<string> invalidResult = new List<string>();
         CurrentClient client;
+        LandingPage page = new LandingPage();
         public AccountInformation()
         {
             InitializeComponent();
@@ -210,7 +211,15 @@ namespace TrevysIconicPizza
 
         private void editAccountButton_Click(object sender, EventArgs e)
         {
-            showEdit();
+            if (page.IsGuest)
+            {
+                showEdit();
+            }
+            else
+            {
+                MessageBox.Show("You are not logged in.");
+            }
+            
         }
 
         private void doneButton_Click(object sender, EventArgs e)

@@ -12,6 +12,8 @@ namespace TrevysIconicPizza
 {
     public partial class LandingPage : Form
     {
+        private bool isGuest = false;
+        public bool IsGuest { get; set; }
         public LandingPage()
         {
             InitializeComponent();
@@ -76,7 +78,7 @@ namespace TrevysIconicPizza
             continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;
             createAccountButton.Enabled = false;
-
+            IsGuest = true;
 
         }
     }
