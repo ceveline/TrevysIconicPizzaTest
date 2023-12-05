@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TrevysIconicPizza
 {
     public partial class CheckoutPage : Form
-    {
+    {           
+            //Saves any error message 
+            List<string> invalidResult = new List<string>();
         public CheckoutPage()
         {
             InitializeComponent();
@@ -38,6 +41,7 @@ namespace TrevysIconicPizza
             pickUpTimer_Tick(this, EventArgs.Empty);
            
         }
+
 
         private void pickUpTimer_Tick(object sender, EventArgs e)
         {
@@ -87,7 +91,8 @@ namespace TrevysIconicPizza
         {
             totalTextBox.Text = price.ToString();
         }
-        
+
+
     }
 
 

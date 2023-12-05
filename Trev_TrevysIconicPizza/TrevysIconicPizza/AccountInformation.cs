@@ -305,13 +305,22 @@ namespace TrevysIconicPizza
 
         private void logOutButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to Log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.OK)
+            if (client != null)
             {
-                client.Clear();
-                MessageBox.Show("You have logged out");
+                DialogResult result = MessageBox.Show("Are you sure you want to Log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.OK)
+                {
+                    client.Clear();
+                    MessageBox.Show("You have logged out");
+                }
+            }
+            else
+            {
+                // Handle the case where client is not initialized
+                MessageBox.Show("You are not logged in.");
             }
         }
+
     }
 }

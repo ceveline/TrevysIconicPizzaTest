@@ -20,12 +20,12 @@ namespace TrevysIconicPizza
     {
         private static CartPage _instance;
         private decimal totalPrice;
-        private decimal TotalPrice { get; set; }
+        private static decimal TotalPrice { get; set; }
 
         private EdibleItem edibleItem = new EdibleItem();
         private List<decimal> priceList = new List<decimal>();
         private List<EdibleItem> itemsToOrder = new List<EdibleItem>();
-        
+
         public CartPage()
         {
             InitializeComponent();

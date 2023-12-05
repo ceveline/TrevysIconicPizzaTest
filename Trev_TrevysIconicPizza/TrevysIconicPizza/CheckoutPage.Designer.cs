@@ -79,9 +79,9 @@
             this.paymentGroupBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.paymentGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.paymentGroupBox.Location = new System.Drawing.Point(46, 28);
-            this.paymentGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paymentGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.paymentGroupBox.Name = "paymentGroupBox";
-            this.paymentGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paymentGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.paymentGroupBox.Size = new System.Drawing.Size(343, 433);
             this.paymentGroupBox.TabIndex = 5;
             this.paymentGroupBox.TabStop = false;
@@ -266,9 +266,9 @@
             this.orderGroupBox.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.orderGroupBox.Location = new System.Drawing.Point(446, 28);
-            this.orderGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.orderGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.orderGroupBox.Name = "orderGroupBox";
-            this.orderGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.orderGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.orderGroupBox.Size = new System.Drawing.Size(343, 433);
             this.orderGroupBox.TabIndex = 6;
             this.orderGroupBox.TabStop = false;

@@ -71,12 +71,15 @@ namespace TrevysIconicPizza
         public void Clear()
         {
             // Reset or set properties to default values
+            Customer_ID = 0;
             FirstName = string.Empty;
             LastName = string.Empty;
             Username = string.Empty;
             Password = string.Empty;
             CardNumber = string.Empty;
             CardExpireDate = DateTime.MinValue;
+            category_ID = '\0'; // Assuming the default value for char is '\0'
         }
+
     }
 }
