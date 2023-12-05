@@ -19,6 +19,7 @@ namespace TrevysIconicPizza
         public AccountInformation()
         {
             InitializeComponent();
+            client = CurrentClient.Instance;
             fillInfo();
         }
 
@@ -320,8 +321,9 @@ namespace TrevysIconicPizza
 
                 if (result == DialogResult.OK)
                 {
-                    client.Clear();
                     MessageBox.Show("You have logged out");
+                    client.Clear();
+                    this.Close();
                 }
             }
             else
@@ -330,6 +332,7 @@ namespace TrevysIconicPizza
                 MessageBox.Show("You are not logged in.");
             }
         }
+
 
     }
 }
