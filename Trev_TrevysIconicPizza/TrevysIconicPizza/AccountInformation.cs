@@ -19,7 +19,15 @@ namespace TrevysIconicPizza
         public AccountInformation()
         {
             InitializeComponent();
+            SetMyCustomFormat();
+            client = CurrentClient.Instance;
             fillInfo();
+        }
+        public void SetMyCustomFormat()
+        {
+            // Set the Format type and the CustomFormat string.
+            expirationDateTimePicker.Format = DateTimePickerFormat.Custom;
+            expirationDateTimePicker.CustomFormat = "MM/yyyy";
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -211,7 +219,7 @@ namespace TrevysIconicPizza
 
         private void editAccountButton_Click(object sender, EventArgs e)
         {
-            if (!page.IsGuest)
+            if (usernameTextBox.Text != "")
             {
                 showEdit();
             }
@@ -323,9 +331,11 @@ namespace TrevysIconicPizza
 
                 if (result == DialogResult.OK)
                 {
-                    client.Clear();
                     MessageBox.Show("You have logged out");
                     Application.Restart();
+
+                    client.Clear();
+                    this.Close();
                 }
             }
             else 
@@ -335,6 +345,7 @@ namespace TrevysIconicPizza
                 Application.Restart();
             }
         }
+
 
     }
 }
