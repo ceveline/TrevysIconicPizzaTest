@@ -14,12 +14,13 @@ namespace TrevysIconicPizza
 
     public partial class LoginPage : Form
     {
+        // database string
+        private const String ConnectionString = "Data Source=trevysIconicPizza.db;Version=3";
         public LoginPage()
         {
             InitializeComponent();
         }
-        // database string
-        private const String ConnectionString = "Data Source=trevysIconicPizza.db;Version=3";
+        
         private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (ShowPasswordCheckBox.Checked)
@@ -52,23 +53,62 @@ namespace TrevysIconicPizza
             }
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private bool AuthenticateUser(string username, string password)
         {
-            string username = UserNameTextBox.Text;
-            string password = PasswordTextBox.Text;
-
-            MenuPage m = new MenuPage();
-
-            if (IsValidUser(username, password))
+            // Perform authentication logic here, e.g., check credentials against the database
+            // Return true if authentication is successful, false otherwise
+            // You need to implement this method based on your database structure and authentication requirements
+            // Example: check credentials against the database
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
-                MessageBox.Show("Login successful!");
-                // Add code to open your main application form or perform other actions upon successful login.
-                
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.");
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM Customer WHERE username = @Username AND password = @Password";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    return count > 0; // If count is greater than 0, authentication is successful
+                }
             }
         }
-    }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+                string username = UserNameTextBox.Text;
+                string password = PasswordTextBox.Text;
+
+                // Perform authentication logic (check username and password against the database)
+                bool isAuthenticated = AuthenticateUser(username, password);
+
+                if (isAuthenticated)
+                {
+                    // If authentication is successful, populate CurrentClient
+                    CurrentClient.Instance.PopulateFromDatabase(username, password);
+
+                    // Now you can access CurrentClient properties
+                    string firstName = CurrentClient.Instance.FirstName;
+                    string lastName = CurrentClient.Instance.LastName;
+
+                    // Navigate to the MenuPage
+                    MenuPage menuPageForm = new MenuPage();
+                    menuPageForm.Show();
+
+                    // Close the current login form or hide it
+                    this.Close();
+                }
+                else
+                {
+                    // Handle unsuccessful authentication (show error message, etc.)
+                    MessageBox.Show("Invalid username or password");
+                }
+            }
+        }
+
+       
+
 }

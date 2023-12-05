@@ -12,7 +12,7 @@ namespace TrevysIconicPizza
 {
     public partial class LandingPage : Form
     {
-        private bool isGuest = false;
+        private bool isGuest = true;
         public bool IsGuest { get; set; }
         public LandingPage()
         {

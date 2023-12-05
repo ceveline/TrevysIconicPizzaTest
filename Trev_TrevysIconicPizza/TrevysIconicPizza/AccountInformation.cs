@@ -211,7 +211,7 @@ namespace TrevysIconicPizza
 
         private void editAccountButton_Click(object sender, EventArgs e)
         {
-            if (page.IsGuest)
+            if (!page.IsGuest)
             {
                 showEdit();
             }
