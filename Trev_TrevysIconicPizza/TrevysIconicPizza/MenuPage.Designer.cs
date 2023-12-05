@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPage));
             this.pizzaButton = new System.Windows.Forms.Button();
             this.drinkButton = new System.Windows.Forms.Button();
@@ -35,6 +36,8 @@
             this.accountLogo = new System.Windows.Forms.PictureBox();
             this.questionLogo = new System.Windows.Forms.PictureBox();
             this.cartLogo = new System.Windows.Forms.PictureBox();
+            this.menuPageTimerLabel = new System.Windows.Forms.Label();
+            this.menuPageTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.questionLogo)).BeginInit();
@@ -109,12 +112,29 @@
             this.cartLogo.TabStop = false;
             this.cartLogo.Click += new System.EventHandler(this.cartLogo_Click);
             // 
+            // menuPageTimerLabel
+            // 
+            this.menuPageTimerLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
+            this.menuPageTimerLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPageTimerLabel.ForeColor = System.Drawing.Color.Cornsilk;
+            this.menuPageTimerLabel.Location = new System.Drawing.Point(421, 13);
+            this.menuPageTimerLabel.Name = "menuPageTimerLabel";
+            this.menuPageTimerLabel.Size = new System.Drawing.Size(112, 23);
+            this.menuPageTimerLabel.TabIndex = 6;
+            this.menuPageTimerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // menuPageTimer
+            // 
+            this.menuPageTimer.Interval = 1000;
+            this.menuPageTimer.Tick += new System.EventHandler(this.menuPageTimer_Tick);
+            // 
             // MenuPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(626, 365);
+            this.Controls.Add(this.menuPageTimerLabel);
             this.Controls.Add(this.cartLogo);
             this.Controls.Add(this.questionLogo);
             this.Controls.Add(this.accountLogo);
@@ -139,5 +159,7 @@
         private System.Windows.Forms.PictureBox accountLogo;
         private System.Windows.Forms.PictureBox questionLogo;
         private System.Windows.Forms.PictureBox cartLogo;
+        private System.Windows.Forms.Label menuPageTimerLabel;
+        private System.Windows.Forms.Timer menuPageTimer;
     }
 }

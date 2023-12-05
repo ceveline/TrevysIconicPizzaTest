@@ -71,8 +71,8 @@ namespace TrevysIconicPizza
             }
         }
 
-      
 
+      
         public void UpdateCheckoutItems(List<EdibleItem> items)
         {
             foreach (EdibleItem e in items)

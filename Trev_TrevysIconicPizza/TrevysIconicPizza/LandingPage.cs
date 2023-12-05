@@ -15,7 +15,7 @@ namespace TrevysIconicPizza
         public LandingPage()
         {
             InitializeComponent();
-            
+            landingPageTimer.Start();
         }
 
         public void loginButton_Click(object sender, EventArgs e)
@@ -89,6 +89,12 @@ namespace TrevysIconicPizza
 
             //menuPage.Show();
             //continueAsGuestButton.Enabled = false;
+        }
+
+        private void landingPageTimer_Tick(object sender, EventArgs e)
+        {
+            // Update the label text with the current time
+            landingPageTimerLabel.Text = "Time: "+DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

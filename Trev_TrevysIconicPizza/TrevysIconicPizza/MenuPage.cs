@@ -17,6 +17,7 @@ namespace TrevysIconicPizza
         {
             InitializeComponent();
             cartPageInstance = CartPage.GetInstance();
+            menuPageTimer.Start();
         }
 
         private void pizzaButton_Click(object sender, EventArgs e)
@@ -101,6 +102,11 @@ namespace TrevysIconicPizza
 
              helpPage.Show();
             questionLogo.Enabled = false;
+        }
+
+        private void menuPageTimer_Tick(object sender, EventArgs e)
+        {
+            menuPageTimerLabel.Text = "Time: " + DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
