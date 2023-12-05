@@ -217,6 +217,9 @@ namespace TrevysIconicPizza
             }
             else
             {
+                firstNameTextBox.Text = "";
+                lastNameTextBox.Text = "";
+                usernameTextBox.Text = "";
                 MessageBox.Show("You are not logged in.");
             }
             
@@ -322,12 +325,14 @@ namespace TrevysIconicPizza
                 {
                     client.Clear();
                     MessageBox.Show("You have logged out");
+                    Application.Restart();
                 }
             }
-            else
+            else 
             {
                 // Handle the case where client is not initialized
-                MessageBox.Show("You are not logged in.");
+                MessageBox.Show("You are not logged in. Going back to Landing Page.");
+                Application.Restart();
             }
         }
 

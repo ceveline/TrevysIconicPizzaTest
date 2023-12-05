@@ -184,7 +184,7 @@ namespace TrevysIconicPizza
             }
         }
 
-        public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
+        public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, int category_ID)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {

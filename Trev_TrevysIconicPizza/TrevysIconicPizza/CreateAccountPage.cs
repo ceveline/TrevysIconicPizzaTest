@@ -167,9 +167,51 @@ namespace TrevysIconicPizza
         }
         private void createAcountButton_Click(object sender, EventArgs e)
         {
+            //// Clear the list of invalid results after displaying them
+            //invalidResult.Clear();
+
+            //string text = "";
+
+            //verifyCard();
+            //verifyUsername();
+            //verifyFirstName();
+            //verifyLastName();
+            //verifyPassword();
+
+            //// If invalidResult is not empty then add all strings to text variable so all errors can be displayed at once
+            //if (invalidResult.Count != 0)
+            //{
+            //    foreach (var result in invalidResult)
+            //    {
+            //        text += result;
+            //    }
+
+            //    MessageBox.Show(text, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            //    // Clear text after loop
+            //    text = "";
+
+            //}
+
+            //// If all return true create new Customer object and close the form
+            //if(verifyCard() == true && verifyUsername() == true && verifyFirstName() == true && verifyLastName() == true && verifyPassword() == true) 
+            //{
+            //    DialogResult  result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
+            //    if (result == DialogResult.OK)
+            //    {
+            //        Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text, expirationDateTimePicker.Value);
+            //        MenuPage menuPage = new MenuPage();
+            //        menuPage.Show();
+            //        MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //        DBManager dB = new DBManager();
+            //        dB.InsertIntoCustomerTable(person.FirstName, person.LastName, person.Username, person.Password, person.Card, person.CVV, person.CardExpireDate.ToLongDateString(), 'c');  
+
+            //    }
+            //}
+
             // Clear the list of invalid results after displaying them
             invalidResult.Clear();
-            
+
             string text = "";
 
             verifyCard();
@@ -187,25 +229,34 @@ namespace TrevysIconicPizza
                 }
 
                 MessageBox.Show(text, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
                 // Clear text after loop
                 text = "";
-
             }
-            
+
             // If all return true create new Customer object and close the form
-            if(verifyCard() == true && verifyUsername() == true && verifyFirstName() == true && verifyLastName() == true && verifyPassword() == true) 
+            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword())
             {
-                DialogResult  result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
+                DialogResult result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
                 if (result == DialogResult.OK)
                 {
                     Customer person = new Customer(firstNameTextBox.Text, lastNameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, usernameTextBox.Text, expirationDateTimePicker.Value);
-                    MenuPage menuPage = new MenuPage();
-                    menuPage.Show();
-                    MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account", "Validation Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DBManager dB = new DBManager();
-                    dB.InsertIntoCustomerTable(person.FirstName, person.LastName, person.Username, person.Password, person.Card, person.CVV, person.CardExpireDate.ToLongDateString(), 'c');  
-                    
+                    //MenuPage menuPage = new MenuPage();
+                    //menuPage.Show();
+
+                    try
+                    {
+                        DBManager dB = new DBManager();
+                        //dB.InsertIntoCustomerTable(person.FirstName, person.LastName, person.Username, person.Password, person.Card, person.CVV, person.CardExpireDate.ToLongDateString(), 'c');
+                        dB.InsertIntoCustomerTable(firstNameTextBox.Text, lastNameTextBox.Text, usernameTextBox.Text, passwordTextBox.Text, cardTextBox.Text, "321", expirationDateTimePicker.Value.ToString(), 2);
+                        MessageBox.Show("Welcome " + firstNameTextBox.Text + ", you just created an account. Please login with your account.", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Application.Restart();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Handle the exception as needed
+                    }
                 }
             }
         }
