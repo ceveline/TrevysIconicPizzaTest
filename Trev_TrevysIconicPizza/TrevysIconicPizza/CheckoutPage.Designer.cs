@@ -330,7 +330,7 @@
             this.orderListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.orderListBox.Size = new System.Drawing.Size(310, 274);
             this.orderListBox.TabIndex = 0;
-            this.orderListBox.SelectedIndexChanged += new System.EventHandler(this.orderListBox_SelectedIndexChanged);
+//            this.orderListBox.SelectedIndexChanged += new System.EventHandler(this.orderListBox_SelectedIndexChanged);
             // 
             // pickUpTimer
             // 

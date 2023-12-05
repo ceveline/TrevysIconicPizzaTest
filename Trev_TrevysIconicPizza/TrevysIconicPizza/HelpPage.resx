@@ -117,9 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="accountManagementHelpLabel.Text" xml:space="preserve">
-    <value>To manage your account, you can log in by pressing on the "Login" button on the landing page and fill
-ing in the required inforamtion. Once logged in, you will be brought to the menu where where a profile icon is displayed on the top left corner of the form. Pressing this icon will bring you to the account information page where you can easily update your personal inormation.</value>
+  <data name="checkingOutHelpLabel.Text" xml:space="preserve">
+    <value>In the checkout page, if you are a guest you must enter your payment information in the textboxes. In the checkout page you are able to choose which service option you prefer(delivery or pickup). If you decide on delivery, you can choose a time for your food to get delivered up until the next day. If you decide on pickup, an estimate time of when your order will be ready is given.
+
+ </value>
+  </data>
+  <data name="editingCartHelpLabel.Text" xml:space="preserve">
+    <value>On several pages of the app, there is a cart icon that allows you to access your cart. Once on the cart page, you are able to remove items using the "Remove" button or proceed to checkout by pressing the "Checkout" button.</value>
   </data>
   <data name="orderingDrinkHelpLabel.Text" xml:space="preserve">
     <value>On the menu page, there is a "Drink" button that will bring you to the drink  page where you can choose from a variety of drinks such as milkshakes and soft drinks. To order a milkshake, you have to press the "Add To Cart" button. If you would like to add toppings or flavors, you can simply select the ones you like from the list box and press the "Add To Cart" button. If you would like a soft drink, you can select which soft drink you would like in the list box and add it to your cart.
@@ -129,5 +133,9 @@ ing in the required inforamtion. Once logged in, you will be brought to the menu
   <data name="orderingPizzaHelpLabel.Text" xml:space="preserve">
     <value>After signing up or continuing as a guest, you will be brought to the menu page where pressing the "Pizza" button will allow you to browse the entire pizza menu. You will be able to order a variety of pizzas and even customize your own pizza. To order a pizza from our menu, you must first select a size(small, medium or large) and then press the "Add To Cart" button.
 </value>
+  </data>
+  <data name="accountManagementHelpLabel.Text" xml:space="preserve">
+    <value>To manage your account, you can log in by pressing on the "Login" button on the landing page and fill
+ing in the required inforamtion. Once logged in, you will be brought to the menu where where a profile icon is displayed on the top left corner of the form. Pressing this icon will bring you to the account information page where you can easily update your personal inormation.</value>
   </data>
 </root>

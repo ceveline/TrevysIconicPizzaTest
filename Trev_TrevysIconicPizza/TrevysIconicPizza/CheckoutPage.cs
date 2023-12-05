@@ -71,10 +71,7 @@ namespace TrevysIconicPizza
             }
         }
 
-        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         public void UpdateCheckoutItems(List<EdibleItem> items)
         {
