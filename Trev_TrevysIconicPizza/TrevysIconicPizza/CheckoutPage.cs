@@ -71,10 +71,7 @@ namespace TrevysIconicPizza
             }
         }
 
-        private void orderListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         public void UpdateCheckoutItems(List<EdibleItem> items)
         {
@@ -82,7 +79,15 @@ namespace TrevysIconicPizza
             {
                 orderListBox.Items.Add(e);
             }
+
+            
         }
+
+        public void UpdateTotalPrice(decimal price)
+        {
+            totalTextBox.Text = price.ToString();
+        }
+        
     }
 
 

@@ -26,12 +26,10 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             loginPage.FormClosed += (s, args) =>
             {
-                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
                 loginButton.Enabled = true;
             };
 
-            this.Hide();
             loginPage.Show();
             loginButton.Enabled = false;
 
@@ -45,50 +43,27 @@ namespace TrevysIconicPizza
             // Handle the FormClosed event
             createAccountPage.FormClosed += (s, args) =>
             {
-                this.Show();
                 // Re-enable the loginButton when the LoginPage is closed
                 createAccountButton.Enabled = true;
             };
 
-            this.Hide();
             createAccountPage.Show();
             createAccountButton.Enabled = false;
         }
 
         private void continueAsGuestButton_Click(object sender, EventArgs e)
         {
-
-            // Create an instance of the MenuPage form
             MenuPage menuPage = new MenuPage();
-
-            // Handle the FormClosed event of the MenuPage form
+            // Handle the FormClosed event
             menuPage.FormClosed += (s, args) =>
             {
-                // Show the LandingPage form when MenuPage is closed
-                this.Show();
+                // Re-enable the loginButton when the LoginPage is closed
                 continueAsGuestButton.Enabled = true;
+                //this.Hide();
             };
 
-            // Hide the LandingPage form
-            this.Hide();
-
-            // Show the MenuPage
             menuPage.Show();
             continueAsGuestButton.Enabled = false;
-
-            //MenuPage menuPage = new MenuPage();
-            //// Handle the FormClosed event
-            //this.Close();
-            //menuPage.FormClosed += (s, args) =>
-            //{
-            //    // Re-enable the loginButton when the LoginPage is closed
-            //    continueAsGuestButton.Enabled = true;
-
-            //};
-
-
-            //menuPage.Show();
-            //continueAsGuestButton.Enabled = false;
         }
     }
 }

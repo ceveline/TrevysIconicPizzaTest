@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using static System.Data.Entity.Infrastructure.Design.Executor;
 
 namespace TrevysIconicPizza
 {
@@ -160,39 +159,122 @@ namespace TrevysIconicPizza
                 }
             }
         }
-
-        // call it when the order is being placed
-        public void UpdateCustomPizzaPrice(int newPrice, string size)
+        public void CreateCustomerTable()
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
                 connection.Open();
 
-                // Construct the SQL UPDATE statement to update price for a specific size of custom pizza in all orders
-                string sql = $@"UPDATE Order
-                        SET price = @NewPrice
-                        WHERE edibleItem_ID IN (
-                            SELECT edibleItem_ID 
-                            FROM EdibleItem 
-                            WHERE name = 'Custom Pizza' AND size = @Size
-                        )";
+                string createTableQuery = @"CREATE TABLE IF NOT EXISTS Customer (
+                                   customer_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                   firstName VARCHAR(50) NOT NULL,
+                                   lastName VARCHAR(50),
+                                   username VARCHAR(50),
+                                   password VARCHAR(50),
+                                   cardNumber VARCHAR(20),
+                                   CVV VARCHAR(3),
+                                   cardExpirationDate VARCHAR(50),
+                                   category_ID CHAR,
+                                   FOREIGN KEY (category_ID) REFERENCES CustomerCategory(category_ID))";
+
+                using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
+                {
+                    createTableCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void InsertIntoCustomerTable(string firstName, string lastName, string username, string password, string cardNumber, string cvv, string cardExpirationDate, char category_ID)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+                string sql = @"INSERT INTO Customer (firstName, lastName, username, password, cardNumber, CVV, cardExpirationDate, category_ID) 
+                       VALUES (@firstName, @lastName, @username, @password, @cardNumber, @cvv, @cardExpirationDate, @category_ID)";
 
                 using (SQLiteCommand command = new SQLiteCommand(sql, connection))
                 {
-                    // Add parameters to the query
-                    command.Parameters.AddWithValue("@NewPrice", newPrice);
-                    command.Parameters.AddWithValue("@Size", size);
+                    command.Parameters.AddWithValue("@firstName", firstName);
+                    command.Parameters.AddWithValue("@lastName", lastName);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@cardNumber", cardNumber);
+                    command.Parameters.AddWithValue("@cvv", cvv);
+                    command.Parameters.AddWithValue("@cardExpirationDate", cardExpirationDate);
+                    command.Parameters.AddWithValue("@category_ID", category_ID);
 
-                    // Execute the query
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public void UpdateCustomer(int customerId, string newFirstName, string newLastName, string newUsername, string newPassword, string newCardNumber, string newCVV, DateTime newCardExpirationDate)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    // Construct the UPDATE SQL command
+                    command.CommandText = @"UPDATE Customer 
+                                   SET firstName = @FirstName, 
+                                       lastName = @LastName,
+                                       username = @Username,
+                                       password = @Password,
+                                       cardNumber = @CardNumber,
+                                       CVV = @CVV,
+                                       cardExpirationDate = @CardExpirationDate
+                                   WHERE customer_ID = @CustomerID";
+
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@FirstName", newFirstName);
+                    command.Parameters.AddWithValue("@LastName", newLastName);
+                    command.Parameters.AddWithValue("@Username", newUsername);
+                    command.Parameters.AddWithValue("@Password", newPassword);
+                    command.Parameters.AddWithValue("@CardNumber", newCardNumber);
+                    command.Parameters.AddWithValue("@CVV", newCVV);
+                    command.Parameters.AddWithValue("@CardExpirationDate", newCardExpirationDate);
+                    command.Parameters.AddWithValue("@CustomerID", customerId);
+
+                    // Execute the UPDATE command
                     command.ExecuteNonQuery();
                 }
             }
         }
 
+        public void CreateCustomerCategoryTable()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                string createTableQuery = @"CREATE TABLE IF NOT EXIST [CustomerCategory] (
+                                  category_ID PRIMARY KEY INT,
+                                  description VARCHAR(50)";
+
+                using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
+                {
+                    createTableCommand.ExecuteNonQuery();
+                }
+
+            }
+        }
+        public void insertIntoCustomerCategoryTable(string description)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+                string sql = @"INSERT INTO [CustomerCategory] (description) 
+                       VALUES (@description)";
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@description", description);
+
+                    command.ExecuteNonQuery();
+                }
+
+            }
+        }
     }
-
-
-
-
 }
-

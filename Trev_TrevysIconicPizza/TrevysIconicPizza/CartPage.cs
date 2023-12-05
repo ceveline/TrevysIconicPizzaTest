@@ -58,15 +58,17 @@ namespace TrevysIconicPizza
 
                     decimal priceToRemove = priceList[selectedIndex];
 
+                    TotalPrice -= priceToRemove;
+
+                    totalLabel.Text = "$" + TotalPrice;
+
                     priceList.RemoveAt(selectedIndex);
 
                     edibleItem.EdibleItems.RemoveAt(selectedIndex);
 
                     itemsToOrder.RemoveAt(selectedIndex);
 
-                    TotalPrice -= priceToRemove;
-
-                    totalLabel.Text = "$" + TotalPrice;
+                    
                 }
             }
         }
@@ -81,13 +83,11 @@ namespace TrevysIconicPizza
             if (cartListBox.Items.Count == 0)
             {
                 emptyLabel.Show();
-                editButton.Enabled = false;
                 removeButton.Enabled = false;
                 result = true;
             } else
             {
                 emptyLabel.Hide();
-                editButton.Enabled = true;
                 removeButton.Enabled = true;
             }
             return result;
@@ -136,7 +136,7 @@ namespace TrevysIconicPizza
 
             cartListBox.Refresh();
 
-        } 
+        }
         public void AddDrinkToCart(Drink drink)
         {
             //cartListBox.Refresh();
@@ -149,15 +149,12 @@ namespace TrevysIconicPizza
 
             TotalPrice += price;
 
-
             totalLabel.Text = "$" + TotalPrice;
-            TotalPrice += drink.Price;
-            //totalLabel.Text = "$" + TotalPrice.ToString();
             itemsToOrder.Add(drink);
 
             cartListBox.Refresh();
-
         }
+
 
         public void RemovePizzaFromCart(Pizza pizza)
         {
@@ -180,6 +177,8 @@ namespace TrevysIconicPizza
             this.Hide(); // Hide the form when the close button is clicked
             
         }
+
+
 
         // every time the rmeove button is clicked, the price is gonna be reduced, taken out of the list
     }

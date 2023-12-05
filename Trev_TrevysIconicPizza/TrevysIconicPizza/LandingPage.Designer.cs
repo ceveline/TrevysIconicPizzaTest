@@ -105,6 +105,8 @@
             this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.logoPictureBox);
+            this.Location = new System.Drawing.Point(500, 500);
+            this.MaximumSize = new System.Drawing.Size(579, 441);
             this.Name = "LandingPage";
             this.Text = "Trevy\'s Iconic Pizza";
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
