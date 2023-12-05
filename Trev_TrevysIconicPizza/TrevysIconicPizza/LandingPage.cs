@@ -27,11 +27,15 @@ namespace TrevysIconicPizza
             loginPage.FormClosed += (s, args) =>
             {
                 // Re-enable the loginButton when the LoginPage is closed
+                continueAsGuestButton.Enabled = true;
                 loginButton.Enabled = true;
+                createAccountButton.Enabled = true;
             };
 
             loginPage.Show();
+            continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;
+            createAccountButton.Enabled = false;
 
         }
 
@@ -44,10 +48,14 @@ namespace TrevysIconicPizza
             createAccountPage.FormClosed += (s, args) =>
             {
                 // Re-enable the loginButton when the LoginPage is closed
+                continueAsGuestButton.Enabled = true;
+                loginButton.Enabled = true;
                 createAccountButton.Enabled = true;
             };
 
             createAccountPage.Show();
+            continueAsGuestButton.Enabled = false;
+            loginButton.Enabled = false;
             createAccountButton.Enabled = false;
         }
 
@@ -59,11 +67,15 @@ namespace TrevysIconicPizza
             {
                 // Re-enable the loginButton when the LoginPage is closed
                 continueAsGuestButton.Enabled = true;
+                loginButton.Enabled = true;
+                createAccountButton.Enabled = true;
                 //this.Hide();
             };
 
             menuPage.Show();
             continueAsGuestButton.Enabled = false;
+            loginButton.Enabled = false;
+            createAccountButton.Enabled = false;
         }
     }
 }
