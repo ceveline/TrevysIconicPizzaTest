@@ -27,15 +27,13 @@ namespace TrevysIconicPizza
                 return _instance;
             }
         }
-        public int Customer_ID { get; set; }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string CardNumber { get; set; }
-        public string CVV { get; set; }
         public DateTime CardExpireDate { get; set; }
-        public char category_ID { get; set; }
         // Method to populate CurrentClient instance from the database
         public void PopulateFromDatabase(string username, string password)
         {
@@ -56,7 +54,6 @@ namespace TrevysIconicPizza
                         if (reader.Read())
                         {
                             // Populate CurrentClient properties from the database
-                            Customer_ID = Convert.ToInt32(reader["customer_ID"]);
                             FirstName = reader["firstName"].ToString();
                             LastName = reader["lastName"].ToString();
                             Username = reader["username"].ToString();
@@ -67,16 +64,6 @@ namespace TrevysIconicPizza
                     }
                 }
             }
-        }
-        public void Clear()
-        {
-            // Reset or set properties to default values
-            FirstName = string.Empty;
-            LastName = string.Empty;
-            Username = string.Empty;
-            Password = string.Empty;
-            CardNumber = string.Empty;
-            CardExpireDate = DateTime.MinValue;
         }
     }
 }

@@ -14,11 +14,9 @@ namespace TrevysIconicPizza
     {
         // Saves any error message 
         List<string> invalidResult = new List<string>();
-        CurrentClient client;
         public AccountInformation()
         {
             InitializeComponent();
-            fillInfo();
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -180,8 +178,6 @@ namespace TrevysIconicPizza
             cvvTextBox.Visible = true;
             doneButton.Visible = true;
             cancelButton.Visible = true;
-            expirationDateTimePicker.Visible = true;
-            expireDateLabel.Visible = true;
 
         }
         // Prevent user to edit fields 
@@ -203,8 +199,6 @@ namespace TrevysIconicPizza
             cvvTextBox.Visible = false;
             doneButton.Visible = false;
             cancelButton.Visible = false;
-            expirationDateTimePicker.Visible = false;
-            expireDateLabel.Visible = false;
 
         }
 
@@ -215,7 +209,7 @@ namespace TrevysIconicPizza
 
         private void doneButton_Click(object sender, EventArgs e)
         {
-
+           
             // Clear the list of invalid results after displaying them
             invalidResult.Clear();
 
@@ -243,37 +237,21 @@ namespace TrevysIconicPizza
             }
 
             // If all return true create new Customer object and close the form
-            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword())
+            if (verifyCard() == true && verifyUsername() == true && verifyFirstName() == true && verifyLastName() == true && verifyPassword() == true)
             {
                 DialogResult result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
-
                 if (result == DialogResult.OK)
                 {
                     DBManager dB = new DBManager();
+                    //dB.UpdateCustomer()
 
-                    // Gather the updated information from your text boxes or other controls
-                    string newFirstName = firstNameTextBox.Text;
-                    string newLastName = lastNameTextBox.Text;
-                    string newUsername = usernameTextBox.Text;
-                    string newPassword = passwordTextBox.Text;
-                    string newCardNumber = cardTextBox.Text;
-                    string newCVV = cvvTextBox.Text;
-                    DateTime newCardExpirationDate = expirationDateTimePicker.Value;
-
-                    // Assuming you have the customer_ID stored in your CurrentClient instance
-                    int customerID = CurrentClient.Instance.Customer_ID;
-
-
-                    // Call the UpdateCustomer method
-                    dB.UpdateCustomer(customerID, newFirstName, newLastName, newUsername, newPassword, newCardNumber, newCVV, newCardExpirationDate);
-
-                    MessageBox.Show(newFirstName + ", you just updated your account", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(firstNameTextBox.Text + ", you just updated your account", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     hideEdit();
                 }
             }
         }
-            // Allow user to cancel edit process
-            private void cancelButton_Click(object sender, EventArgs e)
+        // Allow user to cancel edit process
+        private void cancelButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to Cancel?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
@@ -283,35 +261,6 @@ namespace TrevysIconicPizza
             }
             
             
-        }
-        private void fillInfo()
-        {
-            firstNameTextBox.Text = CurrentClient.Instance.FirstName;
-            lastNameTextBox.Text = CurrentClient.Instance.LastName;
-            passwordTextBox.Text = CurrentClient.Instance.Password;
-            usernameTextBox.Text = CurrentClient.Instance.Username;
-            cardTextBox.Text = CurrentClient.Instance.CardNumber;
-            cvvTextBox.Text = CurrentClient.Instance.CVV;
-        }
-
-
-        private void AccountInformation_Load(object sender, EventArgs e)
-        {
-            // Setting min date to curent time
-            expirationDateTimePicker.MinDate = DateTime.Today;
-
-            expirationDateTimePicker.MaxDate = DateTime.Today.AddYears(10);
-        }
-
-        private void logOutButton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to Log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.OK)
-            {
-                client.Clear();
-                MessageBox.Show("You have logged out");
-            }
         }
     }
 }
