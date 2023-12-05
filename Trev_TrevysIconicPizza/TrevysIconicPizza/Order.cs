@@ -8,31 +8,31 @@ namespace TrevysIconicPizza
 {
     internal class Order
     {
-        private List<EdibleItem> orderList;
+        private Customer customer { get; set; }
+        private List<Pizza> pizzaList;
+        private List<Drink> drinkList;
 
-
-        public Order()
+        public List<Drink> GetDrinks()
         {
-            orderList = new List<EdibleItem>();
+            return new List<Drink>(drinkList);
         }
 
-        public void AddEdibleItem(EdibleItem edibleItem)
+        public List<Pizza> GetPizzas()
         {
-            orderList.Add(edibleItem);
+            return new List<Pizza>(pizzaList);
         }
 
-        public void RemoveEdibleItem(EdibleItem edibleItem)
+        public void AddDrink(Drink drink)
         {
-            orderList.Remove(edibleItem);
+            drinkList.Add(drink);
         }
 
-     
-
-        public List<EdibleItem> GetOrderList()
+        public void AddPizza(Pizza pizza)
         {
-            return orderList;
+            pizzaList.Add(pizza);
         }
     }
-
 }
+
+
 

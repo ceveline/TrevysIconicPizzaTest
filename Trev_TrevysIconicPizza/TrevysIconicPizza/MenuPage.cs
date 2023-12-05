@@ -17,6 +17,7 @@ namespace TrevysIconicPizza
         {
             InitializeComponent();
             cartPageInstance = CartPage.GetInstance();
+            menuPageTimer.Start();
         }
 
         private void pizzaButton_Click(object sender, EventArgs e)
@@ -90,6 +91,27 @@ namespace TrevysIconicPizza
 
             accountInformation.Show();
             accountLogo.Enabled = false;
+        }
+
+        private void questionLogo_Click(object sender, EventArgs e)
+        {
+            HelpPage helpPage = new HelpPage();
+
+            // Handle the FormClosed event
+            helpPage.FormClosed += (s, args) =>
+            {
+                // Re-enable the loginButton when the LoginPage is closed
+                questionLogo.Enabled = true;
+
+            };
+
+             helpPage.Show();
+            questionLogo.Enabled = false;
+        }
+
+        private void menuPageTimer_Tick(object sender, EventArgs e)
+        {
+            menuPageTimerLabel.Text = "Time: " + DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }
