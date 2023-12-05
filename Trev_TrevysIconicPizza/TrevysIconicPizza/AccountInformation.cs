@@ -19,6 +19,7 @@ namespace TrevysIconicPizza
         {
             InitializeComponent();
             fillInfo();
+            MessageBox.Show(client.Username);
         }
 
         private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -286,13 +287,22 @@ namespace TrevysIconicPizza
         }
         private void fillInfo()
         {
-            firstNameTextBox.Text = CurrentClient.Instance.FirstName;
-            lastNameTextBox.Text = CurrentClient.Instance.LastName;
-            passwordTextBox.Text = CurrentClient.Instance.Password;
-            usernameTextBox.Text = CurrentClient.Instance.Username;
-            cardTextBox.Text = CurrentClient.Instance.CardNumber;
-            cvvTextBox.Text = CurrentClient.Instance.CVV;
+            if (CurrentClient.Instance != null)
+            {
+                firstNameTextBox.Text = CurrentClient.Instance.FirstName;
+                lastNameTextBox.Text = CurrentClient.Instance.LastName;
+                passwordTextBox.Text = CurrentClient.Instance.Password;
+                usernameTextBox.Text = CurrentClient.Instance.Username;
+                cardTextBox.Text = CurrentClient.Instance.CardNumber;
+                cvvTextBox.Text = CurrentClient.Instance.CVV;
+            }
+            else
+            {
+                // Handle the case where CurrentClient.Instance is null
+                MessageBox.Show("You are not logged in");
+            }
         }
+
 
 
         private void AccountInformation_Load(object sender, EventArgs e)
