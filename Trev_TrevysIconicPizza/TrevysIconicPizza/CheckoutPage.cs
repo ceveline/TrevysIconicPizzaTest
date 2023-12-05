@@ -12,6 +12,7 @@ namespace TrevysIconicPizza
 {
     public partial class CheckoutPage : Form
     {
+        private decimal subtotal;
         public CheckoutPage()
         {
             InitializeComponent();
@@ -85,9 +86,19 @@ namespace TrevysIconicPizza
 
         public void UpdateTotalPrice(decimal price)
         {
-            totalTextBox.Text = price.ToString();
+            if (deliveryRadioButton.Checked)
+            {
+                subtotal = price + 5; // Store the subtotal + delivery fee
+                totalTextBox.Text = price.ToString();
+            }
+            else
+            {
+                subtotal = price; // Store the subtotal + delivery fee
+                totalTextBox.Text = price.ToString();
+            }
+            
         }
-        
+
     }
 
 

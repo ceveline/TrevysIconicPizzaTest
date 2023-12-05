@@ -111,6 +111,10 @@ namespace TrevysIconicPizza
             checkoutPage.UpdateCheckoutItems(itemsToOrder);
 
 
+            // Pass the total price to the checkout page
+            checkoutPage.UpdateTotalPrice(TotalPrice);
+
+
 
         }
 

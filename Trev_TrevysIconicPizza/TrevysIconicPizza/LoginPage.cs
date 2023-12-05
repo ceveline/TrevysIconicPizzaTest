@@ -57,9 +57,12 @@ namespace TrevysIconicPizza
             string username = UserNameTextBox.Text;
             string password = PasswordTextBox.Text;
 
+            MenuPage m = new MenuPage();
+
             if (IsValidUser(username, password))
             {
                 MessageBox.Show("Login successful!");
+                // Add code to open your main application form or perform other actions upon successful login.
                 
             }
             else
