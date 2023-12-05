@@ -96,6 +96,7 @@
             this.questionLogo.Size = new System.Drawing.Size(24, 24);
             this.questionLogo.TabIndex = 4;
             this.questionLogo.TabStop = false;
+            this.questionLogo.Click += new System.EventHandler(this.questionLogo_Click);
             // 
             // cartLogo
             // 

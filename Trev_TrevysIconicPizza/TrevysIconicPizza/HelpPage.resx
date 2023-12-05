@@ -117,7 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="accountHelpLabel2.Text" xml:space="preserve">
-    <value>Once you have created your account and logged in, you will be brought  to the menu page where a profile icon is displayed on the top left corner. After pressing this icon your account information will be displayed and you are given the option to edit your personal information and password.</value>
+  <data name="accountManagementHelpLabel.Text" xml:space="preserve">
+    <value>To manage your account, you can log in by pressing on the "Login" button on the landing page and fill
+ing in the required inforamtion. Once logged in, you will be brought to the menu where where a profile icon is displayed on the top left corner of the form. Pressing this icon will bring you to the account information page where you can easily update your personal inormation.</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>After signing up or continuing as a guest, you will be brought to the menu page where pressing the pizza button will allow you to browse the entire pizza menu. You will be able to order a variety of pizzas and even customize your own pizza. To order a pizza from our menu, you must first select a size(small, medium or large) and then press the "Add To Cart" button.
+</value>
   </data>
 </root>
