@@ -95,6 +95,18 @@ namespace TrevysIconicPizza
 
         private void checkOutButton_Click(object sender, EventArgs e)
         {
+            //// Create an instance of the CheckoutPage
+            //CheckoutPage checkoutPage = new CheckoutPage();
+
+            //// Close the current CartPage
+            //this.Close();
+
+            //// Show the CheckoutPage
+            //checkoutPage.Show();
+
+            //// Pass necessary information to the checkout page
+            //checkoutPage.UpdateCheckoutItems(itemsToOrder);
+            //checkoutPage.UpdateTotalPrice(TotalPrice);
             CheckoutPage checkoutPage = new CheckoutPage();
 
             // Handle the FormClosed event
@@ -175,16 +187,22 @@ namespace TrevysIconicPizza
             private void closePictureBox_Click(object sender, EventArgs e)
         {
             this.Hide(); // Hide the form when the close button is clicked
+
             
         }
 
         private void CartPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                e.Cancel = true; // Cancel the form closing event
-                this.Hide(); // Hide the form instead of closing it
-            }
+
+        }
+
+        private void CartPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //// Get the PizzaPage instance
+            //PizzaPage pizzaPage = new PizzaPage(_instance);
+
+            //// Show the PizzaPage
+            //pizzaPage.Show();
         }
 
 

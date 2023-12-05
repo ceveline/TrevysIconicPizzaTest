@@ -99,6 +99,27 @@ namespace TrevysIconicPizza
             
         }
 
+        private void checkoutButton_Click(object sender, EventArgs e)
+        {
+            //// MenuPage mp = new MenuPage();
+            // LandingPage landing = new LandingPage();
+            // MessageBox.Show("Thank you for the order!");
+            // this.Hide();
+            //// mp.Show();
+            ///
+            // Create an instance of the MenuPage
+            MenuPage menuPage = new MenuPage();
+
+            // Show a message to the user
+            MessageBox.Show("Thank you for the order!");
+
+            // Close the current CheckoutPage
+            this.Close();
+
+            // Show the MenuPage
+            Application.Restart();
+
+        }
     }
 
 

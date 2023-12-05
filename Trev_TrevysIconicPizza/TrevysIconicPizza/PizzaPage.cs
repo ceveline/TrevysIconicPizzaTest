@@ -165,6 +165,21 @@ namespace TrevysIconicPizza
 
         private void cartLogo_Click(object sender, EventArgs e)
         {
+            //// Hide the current PizzaPage
+            //this.Hide();
+
+            //// Create an instance of the CartPage
+            //CartPage cartPage = new CartPage();
+
+            //// Handle the FormClosed event of CartPage
+            //cartPage.FormClosed += (s, args) =>
+            //{
+            //    // Show the PizzaPage when the CartPage is closed
+            //    this.Show();
+            //};
+
+            //// Show the CartPage
+            //cartPage.Show();
             // Handle the FormClosed event
             cartPage.Hide(); // Hide the cartPage instead of closing it
             cartLogo.Enabled = false;
