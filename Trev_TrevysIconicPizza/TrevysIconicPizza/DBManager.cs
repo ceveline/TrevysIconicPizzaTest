@@ -280,26 +280,31 @@ namespace TrevysIconicPizza
         }
         public void CreatePaymentTable()
         {
-            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
-            {
-                connection.Open();
-
-                using (SQLiteCommand command = new SQLiteCommand(connection))
+            try {
+                using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
                 {
+                    connection.Open();
+
                     string createTableQuery = @"CREATE TABLE IF NOT EXISTS Payment (
-                                payment_ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                                order_ID INTEGER,
-                                amount DECIMAL,
-                                paymentType VARCHAR(40),
-                                FOREIGN KEY (order_ID) REFERENCES [Order](order_ID))";
+                            payment_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                            order_ID INTEGER,
+                            amount DECIMAL,
+                            paymentType VARCHAR(40),
+                            FOREIGN KEY (order_ID) REFERENCES [Order](order_ID))";
+
                     using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
                     {
                         createTableCommand.ExecuteNonQuery();
                     }
+
                 }
             }
-        }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error creating Payment table: {ex.Message}");
+            }
 
+        }
         public void InsertIntoPayment(int orderID, decimal amount, string paymentType )
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))

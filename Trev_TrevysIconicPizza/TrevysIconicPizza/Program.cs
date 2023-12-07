@@ -15,24 +15,30 @@ namespace TrevysIconicPizza
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        //User
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LandingPage());
 
             DBManager dbManager = new DBManager();
 
             // Create table(s) if they don't exist
             dbManager.CreateEdibleItemTableIfNotExists("EdibleItem");
 
-            // Insert the items into the EdibleItem table
-            // InsertInitialItems(dbManager);
-
-            // Create Order table
-            dbManager.CreateOrderTable();
+            // insert the items into EdibleItem table
+            InsertInitialItems(dbManager);
 
             // Create OrderStatus table
             dbManager.CreateOrderStatusTable();
+           
+            // Create Order table
+             dbManager.CreateOrderTable();
+
+            // Create Payment Table
+            dbManager.CreatePaymentTable();
+
 
             // Create OrderItem table
             dbManager.CreateOrderItemTable();
@@ -43,11 +49,11 @@ namespace TrevysIconicPizza
             // Create CustomerCategory table 
             dbManager.CreateCustomerCategoryTable();
 
-            // Create Payment Table
-            dbManager.CreatePaymentTable();
+           
 
-            // Only run the landing page once
+
             Application.Run(new LandingPage());
+
         }
 
 
