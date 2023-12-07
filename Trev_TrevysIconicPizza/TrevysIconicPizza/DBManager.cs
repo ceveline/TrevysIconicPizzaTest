@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace TrevysIconicPizza
 {
@@ -80,7 +81,7 @@ namespace TrevysIconicPizza
         }
 
 
-        public void InsertOrderToOrderTable(string customerId)
+        public void InsertOrderToOrderTable(int customerId)
         {
             using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
             {
@@ -93,6 +94,23 @@ namespace TrevysIconicPizza
                 }
             }
         }
+        public int GetLastInsertedOrderID()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                // Assuming the order_ID is an auto-incrementing primary key
+                string sql = "SELECT last_insert_rowid()";
+
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    int lastInsertedOrderID = Convert.ToInt32(command.ExecuteScalar());
+                    return lastInsertedOrderID;
+                }
+            }
+        }
+
 
         // orderStatus can be randomized 1-4 (1 = received, 2 = confirmed, 3 = ready, 4 = canceled)
         public void InsertOrderItemToOrderItemTable(int orderId, int orderStatusId, int edibleItemId, int quantity, decimal price)
@@ -258,6 +276,46 @@ namespace TrevysIconicPizza
                     createTableCommand.ExecuteNonQuery();
                 }
 
+            }
+        }
+        public void CreatePaymentTable()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string createTableQuery = @"CREATE TABLE IF NOT EXISTS Payment (
+                                payment_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                order_ID INTEGER,
+                                amount DECIMAL,
+                                paymentType VARCHAR(40),
+                                FOREIGN KEY (order_ID) REFERENCES [Order](order_ID))";
+                    using (SQLiteCommand createTableCommand = new SQLiteCommand(createTableQuery, connection))
+                    {
+                        createTableCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+
+        public void InsertIntoPayment(int orderID, decimal amount, string paymentType )
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
+            {
+                connection.Open();
+                string sql = @"INSERT INTO Payment(order_ID, amount, paymentType)
+                       VALUES (@order_ID, @amount, @paymentType)";
+
+                using (SQLiteCommand command = new SQLiteCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@order_ID", orderID);
+                    command.Parameters.AddWithValue("@amount", amount);
+                    command.Parameters.AddWithValue("@paymentType", paymentType);
+
+                    command.ExecuteNonQuery();
+                }
             }
         }
         public void insertIntoCustomerCategoryTable(string description)

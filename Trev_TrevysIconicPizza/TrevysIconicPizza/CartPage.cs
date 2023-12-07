@@ -20,7 +20,7 @@ namespace TrevysIconicPizza
     {
         private static CartPage _instance;
         private decimal totalPrice;
-        private static decimal TotalPrice { get; set; }
+        public static decimal TotalPrice { get; set; }
 
         private EdibleItem edibleItem = new EdibleItem();
         private List<decimal> priceList = new List<decimal>();
@@ -95,25 +95,14 @@ namespace TrevysIconicPizza
 
         private void checkOutButton_Click(object sender, EventArgs e)
         {
-            //// Create an instance of the CheckoutPage
-            //CheckoutPage checkoutPage = new CheckoutPage();
-
-            //// Close the current CartPage
-            //this.Close();
-
-            //// Show the CheckoutPage
-            //checkoutPage.Show();
-
-            //// Pass necessary information to the checkout page
-            //checkoutPage.UpdateCheckoutItems(itemsToOrder);
-            //checkoutPage.UpdateTotalPrice(TotalPrice);
+            // Create an instance of the CheckoutPage
             CheckoutPage checkoutPage = new CheckoutPage();
 
             // Handle the FormClosed event
             checkoutPage.FormClosed += (s, args) =>
             {
                 this.Show();
-                // Re-enable the loginButton when the LoginPage is closed
+                // Re-enable the checkOutButton when the CheckoutPage is closed
                 checkOutButton.Enabled = true;
             };
             this.Hide();
@@ -122,13 +111,10 @@ namespace TrevysIconicPizza
 
             checkoutPage.UpdateCheckoutItems(itemsToOrder);
 
-
             // Pass the total price to the checkout page
             checkoutPage.UpdateTotalPrice(TotalPrice);
-
-
-
         }
+
 
         public void AddPizzaToCart(Pizza pizza)
         {

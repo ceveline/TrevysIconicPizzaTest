@@ -23,7 +23,7 @@ namespace TrevysIconicPizza
 
             DBManager dbManager = new DBManager();
 
-            // create table(s) if they don't exist
+            // Create table(s) if they don't exist
             dbManager.CreateEdibleItemTableIfNotExists("EdibleItem");
 
             // insert the items into EdibleItem table
@@ -43,7 +43,11 @@ namespace TrevysIconicPizza
 
             // Create CustomerCategory table 
             dbManager.CreateCustomerCategoryTable();
+            
+            // Create Payment Table
+            dbManager.CreatePaymentTable(); 
 
+            
             Application.Run(new LandingPage());
 
         }
