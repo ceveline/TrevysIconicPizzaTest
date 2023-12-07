@@ -105,7 +105,6 @@ namespace TrevysIconicPizza
 
             UpdateStepLabel(progressPercentage);
 
-
             // Call the method to update the order status periodically
             UpdateOrderStatus(client.Order_ID, totalTime);
         }

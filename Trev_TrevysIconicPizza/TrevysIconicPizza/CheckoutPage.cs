@@ -99,19 +99,23 @@ namespace TrevysIconicPizza
         {
             currentPrice = price; // Update the current price
 
-            if (!totalPriceUpdated && deliveryRadioButton.Checked)
+            if (!totalPriceUpdated && deliveryRadioButton.Checked && subtotal != 0)
             {
                 subtotal = currentPrice + 5;
                 totalTextBox.Text = subtotal.ToString();
                 totalPriceUpdated = true;
                 totalPriceUpdated_pickup = false;
             }
-            else if (!totalPriceUpdated_pickup && pickupRadioButton.Checked)
+            else if (!totalPriceUpdated_pickup && pickupRadioButton.Checked && subtotal != 0)
             {
                 subtotal = subtotal - 5;
                 totalTextBox.Text = subtotal.ToString();
                 totalPriceUpdated = false;
                 totalPriceUpdated_pickup = true;
+            }
+            else
+            {
+                totalTextBox.Text = subtotal.ToString();
             }
         }
 
