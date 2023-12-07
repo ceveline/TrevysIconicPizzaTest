@@ -117,8 +117,6 @@ namespace TrevysIconicPizza
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
-
             // Call the method to update the total price based on the user's selection
             UpdateTotalPrice(currentPrice);
         }
@@ -141,17 +139,22 @@ namespace TrevysIconicPizza
 
             if (cardRadioButton.Checked)
             {
+                client.SetOrderID(order_ID);
                 db.InsertIntoPayment(order_ID, subtotal, "Card");
             }
             else
             {
+                client.SetOrderID(order_ID);
                 db.InsertIntoPayment(order_ID, subtotal, "Cash");
             }
             // Close the current CheckoutPage
             this.Close();
 
+            FoodStatus status1 = new FoodStatus();
+            status1.Show();
+
             // Show the MenuPage
-            Application.Restart();
+            //Application.Restart();
 
         }
 

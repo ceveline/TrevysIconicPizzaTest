@@ -45,18 +45,16 @@ namespace TrevysIconicPizza
             // 
             // UserNameTextBox
             // 
-            this.UserNameTextBox.Location = new System.Drawing.Point(351, 177);
-            this.UserNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.UserNameTextBox.Location = new System.Drawing.Point(234, 115);
             this.UserNameTextBox.Name = "UserNameTextBox";
-            this.UserNameTextBox.Size = new System.Drawing.Size(268, 26);
+            this.UserNameTextBox.Size = new System.Drawing.Size(180, 20);
             this.UserNameTextBox.TabIndex = 0;
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(351, 291);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PasswordTextBox.Location = new System.Drawing.Point(234, 189);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(268, 26);
+            this.PasswordTextBox.Size = new System.Drawing.Size(180, 20);
             this.PasswordTextBox.TabIndex = 1;
             this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -65,10 +63,9 @@ namespace TrevysIconicPizza
             this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
             this.LoginButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.Cornsilk;
-            this.LoginButton.Location = new System.Drawing.Point(550, 360);
-            this.LoginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LoginButton.Location = new System.Drawing.Point(367, 234);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(218, 77);
+            this.LoginButton.Size = new System.Drawing.Size(145, 50);
             this.LoginButton.TabIndex = 2;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = false;
@@ -81,10 +78,9 @@ namespace TrevysIconicPizza
             this.WelcomeLabel.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeLabel.ForeColor = System.Drawing.Color.White;
             this.WelcomeLabel.Image = ((System.Drawing.Image)(resources.GetObject("WelcomeLabel.Image")));
-            this.WelcomeLabel.Location = new System.Drawing.Point(237, 58);
-            this.WelcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.WelcomeLabel.Location = new System.Drawing.Point(158, 38);
             this.WelcomeLabel.Name = "WelcomeLabel";
-            this.WelcomeLabel.Size = new System.Drawing.Size(384, 54);
+            this.WelcomeLabel.Size = new System.Drawing.Size(256, 35);
             this.WelcomeLabel.TabIndex = 3;
             this.WelcomeLabel.Text = "Welcome Back!";
             this.WelcomeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,10 +90,9 @@ namespace TrevysIconicPizza
             this.UserNameLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.UserNameLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.UserNameLabel.Location = new System.Drawing.Point(153, 178);
-            this.UserNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserNameLabel.Location = new System.Drawing.Point(102, 116);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(110, 29);
+            this.UserNameLabel.Size = new System.Drawing.Size(73, 19);
             this.UserNameLabel.TabIndex = 4;
             this.UserNameLabel.Text = "Username";
             // 
@@ -106,10 +101,9 @@ namespace TrevysIconicPizza
             this.PasswordLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.PasswordLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.PasswordLabel.Location = new System.Drawing.Point(153, 292);
-            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PasswordLabel.Location = new System.Drawing.Point(102, 190);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(110, 29);
+            this.PasswordLabel.Size = new System.Drawing.Size(73, 19);
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password";
             // 
@@ -119,10 +113,9 @@ namespace TrevysIconicPizza
             this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(202)))), ((int)(((byte)(68)))));
             this.ShowPasswordCheckBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(90)))), ((int)(((byte)(37)))));
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(630, 294);
-            this.ShowPasswordCheckBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(420, 191);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(162, 23);
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(116, 18);
             this.ShowPasswordCheckBox.TabIndex = 6;
             this.ShowPasswordCheckBox.Text = "Show Password";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
@@ -131,10 +124,9 @@ namespace TrevysIconicPizza
             // copyrightLabel
             // 
             this.copyrightLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.copyrightLabel.Location = new System.Drawing.Point(322, 569);
-            this.copyrightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.copyrightLabel.Location = new System.Drawing.Point(215, 370);
             this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(242, 35);
+            this.copyrightLabel.Size = new System.Drawing.Size(161, 23);
             this.copyrightLabel.TabIndex = 7;
             this.copyrightLabel.Text = "© 2023 Trevy\'s Iconic Pizza";
             this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,18 +138,19 @@ namespace TrevysIconicPizza
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginPanel.Controls.Add(this.LoginButton);
-            this.loginPanel.Location = new System.Drawing.Point(34, 28);
+            this.loginPanel.Location = new System.Drawing.Point(23, 18);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(779, 539);
+            this.loginPanel.Size = new System.Drawing.Size(520, 351);
             this.loginPanel.TabIndex = 8;
             // 
             // LoginPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(836, 592);
+            this.ClientSize = new System.Drawing.Size(557, 385);
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.ShowPasswordCheckBox);
             this.Controls.Add(this.PasswordLabel);
@@ -167,8 +160,7 @@ namespace TrevysIconicPizza
             this.Controls.Add(this.UserNameTextBox);
             this.Controls.Add(this.loginPanel);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(858, 648);
+            this.MaximumSize = new System.Drawing.Size(577, 435);
             this.Name = "LoginPage";
             this.Text = "LoginPage";
             this.loginPanel.ResumeLayout(false);

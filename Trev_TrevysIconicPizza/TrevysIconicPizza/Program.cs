@@ -19,15 +19,14 @@ namespace TrevysIconicPizza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LandingPage());
 
             DBManager dbManager = new DBManager();
 
             // Create table(s) if they don't exist
             dbManager.CreateEdibleItemTableIfNotExists("EdibleItem");
 
-            // insert the items into EdibleItem table
-            //InsertInitialItems(dbManager);
+            // Insert the items into the EdibleItem table
+            // InsertInitialItems(dbManager);
 
             // Create Order table
             dbManager.CreateOrderTable();
@@ -43,14 +42,14 @@ namespace TrevysIconicPizza
 
             // Create CustomerCategory table 
             dbManager.CreateCustomerCategoryTable();
-            
+
             // Create Payment Table
-            dbManager.CreatePaymentTable(); 
+            dbManager.CreatePaymentTable();
 
-            
+            // Only run the landing page once
             Application.Run(new LandingPage());
-
         }
+
 
         static void InsertInitialItems(DBManager dbManager)
         {
