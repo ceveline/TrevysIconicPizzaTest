@@ -19,14 +19,17 @@ namespace TrevysIconicPizza
         public FoodStatus()
         {
             InitializeComponent();
-
             client = CurrentClient.Instance;
-            timer = new Timer();
-            timer.Interval = 1000; // Set the interval in milliseconds (adjust as needed)
-            timer.Tick += Timer_Tick_Tick;
-            timer.Start();
+            StartOrderStatusTimer();
+            
 
-
+            if (client != null)
+            {
+                timer = new Timer();
+                timer.Interval = 1000; // Set the interval in milliseconds (adjust as needed)
+                timer.Tick += Timer_Tick_Tick;
+                timer.Start();
+            }
         }
 
         private string GetOrderStatusDescription(int orderId)
@@ -109,7 +112,7 @@ namespace TrevysIconicPizza
         private void StartOrderStatusTimer()
         {
             orderStartTime = DateTime.Now; // Set orderStartTime when the timer starts
-            Timer_Tick.Start(); // Start the timer
+            timer.Start(); // Start the timer
         }
         private void UpdateStepLabel(int progressPercentage)
         {
