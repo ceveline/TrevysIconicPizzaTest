@@ -263,7 +263,7 @@ namespace TrevysIconicPizza
             }
 
             // If all return true create new Customer object and close the form
-            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword())
+            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword() && verifyCVV())
             {
                 DialogResult result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
 
