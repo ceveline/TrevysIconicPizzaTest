@@ -12,23 +12,23 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace TrevysIconicPizza
 {
     public partial class FoodStatus : Form
-    { 
+    {
         CurrentClient client;
         private DateTime orderStartTime;
         private Timer timer;
         public FoodStatus()
         {
             InitializeComponent();
-           
+
             client = CurrentClient.Instance;
             timer = new Timer();
             timer.Interval = 1000; // Set the interval in milliseconds (adjust as needed)
             timer.Tick += Timer_Tick_Tick;
             timer.Start();
 
-            
+
         }
-        
+
         private string GetOrderStatusDescription(int orderId)
         {
 
@@ -77,6 +77,9 @@ namespace TrevysIconicPizza
             TimeSpan rushHourEnd = TimeSpan.Parse("19:00");
             TimeSpan now = DateTime.Now.TimeOfDay;
 
+            TimeSpan elasped = DateTime.Now - orderStartTime;
+            int elapsedTime = (int)elasped.TotalMinutes;
+
             int totalTime;
 
             if (now > rushHourStart && now < rushHourEnd)
@@ -88,14 +91,17 @@ namespace TrevysIconicPizza
                 totalTime = 2;
             }
 
-            // Calculate the elapsed time
-            int elapsedTime = (int)(DateTime.Now - orderStartTime).TotalMinutes;
-
             // Calculate the percentage completion
             int progressPercentage = (int)((double)elapsedTime / totalTime * 100);
 
+            // Clamp the progress percentage to be within the valid range (0 to 100)
+            progressPercentage = Math.Max(0, Math.Min(100, progressPercentage));
+
             // Update the progress bar value
             statusProgressBar.Value = progressPercentage;
+
+            UpdateStepLabel(progressPercentage);
+
 
             // Call the method to update the order status periodically
             UpdateOrderStatus(client.Order_ID, totalTime);
@@ -105,7 +111,30 @@ namespace TrevysIconicPizza
             orderStartTime = DateTime.Now; // Set orderStartTime when the timer starts
             Timer_Tick.Start(); // Start the timer
         }
+        private void UpdateStepLabel(int progressPercentage)
+        {
+            // Determine the order status based on the progress percentage
+            if (progressPercentage >= 0 && progressPercentage < 25)
+            {
+                stepLabel.Text = "Order Received";
+            }
+            else if (progressPercentage >= 25 && progressPercentage < 50)
+            {
+                stepLabel.Text = "In the Oven";
+            }
+            else if (progressPercentage >= 50 && progressPercentage < 75)
+            {
+                stepLabel.Text = "Out for Delivery";
+            }
+            else if (progressPercentage >= 75 && progressPercentage <= 100)
+            {
+                stepLabel.Text = "Delivered";
+            }
+            else
+            {
+                stepLabel.Text = "Unknown Status";
+            }
 
-
+        }
     }
 }
