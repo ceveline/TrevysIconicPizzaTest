@@ -193,7 +193,7 @@ namespace TrevysIconicPizza
             bool result = true;
             if (cardNumberTextBox.Text.Length == 0)
             {
-                return true;
+                return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(cardNumberTextBox.Text, @"^(?! )[\d ]{13,19}$"))
             {
@@ -214,7 +214,7 @@ namespace TrevysIconicPizza
             bool result = true;
             if (CVVTextBox.Text.Length == 0)
             {
-                return true;
+                return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(CVVTextBox.Text, @"\d+"))
             {
@@ -236,7 +236,7 @@ namespace TrevysIconicPizza
             bool result = true;
             if (phoneTextBox.Text.Length == 0)
             {
-                return true;
+                return false;
             }
             if (!System.Text.RegularExpressions.Regex.IsMatch(phoneTextBox.Text, @"^\d{10}$ "))
             {
