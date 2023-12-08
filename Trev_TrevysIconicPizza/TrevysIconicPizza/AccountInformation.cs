@@ -225,6 +225,9 @@ namespace TrevysIconicPizza
             }
             else
             {
+                firstNameTextBox.Text = "";
+                lastNameTextBox.Text = "";
+                usernameTextBox.Text = "";
                 MessageBox.Show("You are not logged in.");
             }
             
@@ -260,7 +263,7 @@ namespace TrevysIconicPizza
             }
 
             // If all return true create new Customer object and close the form
-            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword())
+            if (verifyCard() && verifyUsername() && verifyFirstName() && verifyLastName() && verifyPassword() && verifyCVV())
             {
                 DialogResult result = MessageBox.Show("Are you sure all information is correct?", "Verification", MessageBoxButtons.OKCancel);
 
@@ -324,19 +327,26 @@ namespace TrevysIconicPizza
         {
             if (client != null)
             {
-                DialogResult result = MessageBox.Show("Are you sure you want to Log out?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 if (result == DialogResult.OK)
                 {
-                    MessageBox.Show("You have logged out");
+                    MessageBox.Show("You have exited the application");
+                    Application.Restart();
+
                     client.Clear();
                     this.Close();
                 }
             }
-            else
+            else 
             {
-                // Handle the case where client is not initialized
-                MessageBox.Show("You are not logged in.");
+                if (page.IsGuest)
+                {
+                    // Handle the case where client is not initialized
+                    MessageBox.Show("You are not logged in. Going back to Landing Page.");
+                    Application.Restart();
+                }
+                
             }
         }
 

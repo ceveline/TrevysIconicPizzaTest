@@ -81,6 +81,7 @@ namespace TrevysIconicPizza
         {
                 string username = UserNameTextBox.Text;
                 string password = PasswordTextBox.Text;
+                //LandingPage landing = new LandingPage();
 
                 // Perform authentication logic (check username and password against the database)
                 bool isAuthenticated = AuthenticateUser(username, password);
@@ -93,13 +94,15 @@ namespace TrevysIconicPizza
                     // Now you can access CurrentClient properties
                     string firstName = CurrentClient.Instance.FirstName;
                     string lastName = CurrentClient.Instance.LastName;
+                    //landing.Close();
+                    this.Close();   
 
-                    // Navigate to the MenuPage
+                // Navigate to the MenuPage
                     MenuPage menuPageForm = new MenuPage();
                     menuPageForm.Show();
 
                     // Close the current login form or hide it
-                    this.Close();
+                    
                 }
                 else
                 {

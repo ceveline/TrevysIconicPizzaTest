@@ -12,13 +12,22 @@ namespace TrevysIconicPizza
 {
     public partial class CheckoutPage : Form
     {
+        private bool totalPriceUpdated = false; // Flag to track whether total price is updated
+        private bool totalPriceUpdated_pickup = false;
         private decimal subtotal;
+        private decimal currentPrice;
+        CurrentClient client;
+
         public CheckoutPage()
         {
             InitializeComponent();
+            // Initialize the CartPage instance
+            currentPrice = CartPage.TotalPrice;
+
             // Display date and time
             deliveryDateTimePicker.Format = DateTimePickerFormat.Custom;
             deliveryDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            client = CurrentClient.Instance;
             
         }
 
@@ -65,11 +74,13 @@ namespace TrevysIconicPizza
             }
             else
             {
+    
                 deliveryDateTimePicker.Visible = true;
                 delivTimeLabel.Visible = true;
                 pickUpTimeLabel.Visible = false;
                 estimatedPrepTime.Visible = false;
             }
+            
         }
 
 
@@ -86,18 +97,34 @@ namespace TrevysIconicPizza
 
         public void UpdateTotalPrice(decimal price)
         {
-            if (deliveryRadioButton.Checked)
+            currentPrice = price; // Update the current price
+
+            if (!totalPriceUpdated && deliveryRadioButton.Checked && subtotal != 0)
             {
-                subtotal = price + 5; // Store the subtotal + delivery fee
-                totalTextBox.Text = price.ToString();
+                subtotal = currentPrice + 5;
+                totalTextBox.Text = subtotal.ToString();
+                totalPriceUpdated = true;
+                totalPriceUpdated_pickup = false;
+            }
+            else if (!totalPriceUpdated_pickup && pickupRadioButton.Checked && subtotal != 0)
+            {
+                subtotal = subtotal - 5;
+                totalTextBox.Text = subtotal.ToString();
+                totalPriceUpdated = false;
+                totalPriceUpdated_pickup = true;
             }
             else
             {
-                subtotal = price; // Store the subtotal + delivery fee
-                totalTextBox.Text = price.ToString();
+                totalTextBox.Text = subtotal.ToString();
             }
-            
         }
+
+        private void RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            // Call the method to update the total price based on the user's selection
+            UpdateTotalPrice(currentPrice);
+        }
+
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
@@ -107,14 +134,35 @@ namespace TrevysIconicPizza
 
             // Show a message to the user
             MessageBox.Show("Thank you for the order!");
+            DBManager db = new DBManager();
+            
+            db.InsertOrderToOrderTable(client.Customer_ID);
+            
+            // Get order_ID for the payment Insert
+            int order_ID = db.GetLastInsertedOrderID();
 
+            if (cardRadioButton.Checked)
+            {
+                client.SetOrderID(order_ID);
+                db.InsertIntoPayment(order_ID, subtotal, "Card");
+            }
+            else
+            {
+                client.SetOrderID(order_ID);
+                db.InsertIntoPayment(order_ID, subtotal, "Cash");
+            }
             // Close the current CheckoutPage
             this.Close();
 
+            FoodStatus status1 = new FoodStatus();
+            status1.Show();
+
             // Show the MenuPage
-            Application.Restart();
+            //Application.Restart();
 
         }
+
+        
     }
 
 

@@ -32,8 +32,9 @@ namespace TrevysIconicPizza
                 continueAsGuestButton.Enabled = true;
                 loginButton.Enabled = true;
                 createAccountButton.Enabled = true;
-            };
 
+            };
+            this.Hide();
             loginPage.Show();
             continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;
@@ -53,8 +54,9 @@ namespace TrevysIconicPizza
                 continueAsGuestButton.Enabled = true;
                 loginButton.Enabled = true;
                 createAccountButton.Enabled = true;
+                this.Show();
             };
-
+            this.Hide();
             createAccountPage.Show();
             continueAsGuestButton.Enabled = false;
             loginButton.Enabled = false;

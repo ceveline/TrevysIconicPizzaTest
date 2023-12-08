@@ -47,6 +47,8 @@
             this.pickUpTimeLabel = new System.Windows.Forms.Label();
             this.deliveryDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
+            this.cashRadioButton = new System.Windows.Forms.RadioButton();
+            this.cardRadioButton = new System.Windows.Forms.RadioButton();
             this.cartLogo = new System.Windows.Forms.PictureBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
@@ -168,7 +170,7 @@
             this.pickupRadioButton.TabStop = true;
             this.pickupRadioButton.Text = "Pickup";
             this.pickupRadioButton.UseVisualStyleBackColor = true;
-            this.pickupRadioButton.CheckedChanged += new System.EventHandler(this.pickupRadioButton_CheckedChanged);
+            this.pickupRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // CVVTextBox
             // 
@@ -192,6 +194,7 @@
             this.deliveryRadioButton.TabStop = true;
             this.deliveryRadioButton.Text = "Delivery";
             this.deliveryRadioButton.UseVisualStyleBackColor = true;
+            this.deliveryRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // CVVLabel
             // 
@@ -257,6 +260,8 @@
             // orderGroupBox
             // 
             this.orderGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
+            this.orderGroupBox.Controls.Add(this.cashRadioButton);
+            this.orderGroupBox.Controls.Add(this.cardRadioButton);
             this.orderGroupBox.Controls.Add(this.cartLogo);
             this.orderGroupBox.Controls.Add(this.checkoutButton);
             this.orderGroupBox.Controls.Add(this.totalLabel);
@@ -273,6 +278,32 @@
             this.orderGroupBox.TabIndex = 6;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Your Order";
+            // 
+            // cashRadioButton
+            // 
+            this.cashRadioButton.AutoSize = true;
+            this.cashRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.cashRadioButton.Location = new System.Drawing.Point(83, 336);
+            this.cashRadioButton.Name = "cashRadioButton";
+            this.cashRadioButton.Size = new System.Drawing.Size(64, 24);
+            this.cashRadioButton.TabIndex = 9;
+            this.cashRadioButton.TabStop = true;
+            this.cashRadioButton.Text = "Cash";
+            this.cashRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // cardRadioButton
+            // 
+            this.cardRadioButton.AutoSize = true;
+            this.cardRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.cardRadioButton.Location = new System.Drawing.Point(16, 336);
+            this.cardRadioButton.Name = "cardRadioButton";
+            this.cardRadioButton.Size = new System.Drawing.Size(61, 24);
+            this.cardRadioButton.TabIndex = 8;
+            this.cardRadioButton.TabStop = true;
+            this.cardRadioButton.Text = "Card";
+            this.cardRadioButton.UseVisualStyleBackColor = true;
             // 
             // cartLogo
             // 
@@ -382,5 +413,7 @@
         private System.Windows.Forms.Label pickUpTimeLabel;
         private System.Windows.Forms.Label estimatedPrepTime;
         private System.Windows.Forms.Timer pickUpTimer;
+        private System.Windows.Forms.RadioButton cashRadioButton;
+        private System.Windows.Forms.RadioButton cardRadioButton;
     }
 }

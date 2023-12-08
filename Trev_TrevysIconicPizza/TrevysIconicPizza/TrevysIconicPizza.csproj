@@ -103,6 +103,12 @@
     </Compile>
     <Compile Include="EdibleItem.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="FoodStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodStatus.Designer.cs">
+      <DependentUpon>FoodStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DrinkPage.resx">
       <DependentUpon>DrinkPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodStatus.resx">
+      <DependentUpon>FoodStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpPage.resx">
       <DependentUpon>HelpPage.cs</DependentUpon>

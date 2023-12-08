@@ -27,6 +27,7 @@ namespace TrevysIconicPizza
                 return _instance;
             }
         }
+        public int Order_ID { get; set; }
         public int Customer_ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -79,6 +80,10 @@ namespace TrevysIconicPizza
             CardNumber = string.Empty;
             CardExpireDate = DateTime.MinValue;
             category_ID = '\0'; // Assuming the default value for char is '\0'
+        }
+        public void SetOrderID(int orderID)
+        {
+            Order_ID = orderID;
         }
 
     }
