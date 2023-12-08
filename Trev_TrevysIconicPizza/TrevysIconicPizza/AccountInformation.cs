@@ -246,6 +246,7 @@ namespace TrevysIconicPizza
             verifyFirstName();
             verifyLastName();
             verifyPassword();
+            verifyCVV();
 
             // If invalidResult is not empty then add all strings to text variable so all errors can be displayed at once
             if (invalidResult.Count != 0)

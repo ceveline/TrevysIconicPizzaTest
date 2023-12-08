@@ -17,13 +17,13 @@ namespace TrevysIconicPizza
         private decimal subtotal;
         private decimal currentPrice;
         CurrentClient client;
-
+        List<string> invalidResult = new List<string>();
         public CheckoutPage()
         {
             InitializeComponent();
             // Initialize the CartPage instance
             currentPrice = CartPage.TotalPrice;
-
+            //loadCusInfo();
             // Display date and time
             deliveryDateTimePicker.Format = DateTimePickerFormat.Custom;
             deliveryDateTimePicker.CustomFormat = "MM/dd/yyyy hh:mm tt";
@@ -42,12 +42,10 @@ namespace TrevysIconicPizza
 
         }
 
-        private void pickupRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            pickUpTimer.Start();
-            pickUpTimer_Tick(this, EventArgs.Empty);
-           
-        }
+        //private void loadCusInfo()
+        //{
+        //    CVVTextBox.Text = client.CVV.ToString();
+        //}
 
         private void pickUpTimer_Tick(object sender, EventArgs e)
         {
@@ -99,21 +97,21 @@ namespace TrevysIconicPizza
         {
             currentPrice = price; // Update the current price
 
-            if (!totalPriceUpdated && deliveryRadioButton.Checked && currentPrice > 0)
+            if (!totalPriceUpdated && deliveryRadioButton.Checked )
             {
                 subtotal = currentPrice + 5;
                 totalTextBox.Text = subtotal.ToString();
                 totalPriceUpdated = true;
                 totalPriceUpdated_pickup = false;
             }
-            else if (!totalPriceUpdated_pickup && pickupRadioButton.Checked && currentPrice >0)
+            else if (!totalPriceUpdated_pickup && pickupRadioButton.Checked )
             {
                 subtotal = subtotal - 5;
                 totalTextBox.Text = subtotal.ToString();
                 totalPriceUpdated = false;
                 totalPriceUpdated_pickup = true;
             }
-            else 
+            else if (currentPrice == 0)
             {
                 totalTextBox.Text = currentPrice.ToString();
             }
@@ -123,45 +121,132 @@ namespace TrevysIconicPizza
         {
             // Call the method to update the total price based on the user's selection
             UpdateTotalPrice(currentPrice);
+            pickUpTimer.Start();
+            pickUpTimer_Tick(this, EventArgs.Empty);
         }
 
 
         private void checkoutButton_Click(object sender, EventArgs e)
         {
-            
-            // Create an instance of the MenuPage
-            MenuPage menuPage = new MenuPage();
 
-            // Show a message to the user
-            MessageBox.Show("Thank you for the order!");
-            DBManager db = new DBManager();
-            
-            db.InsertOrderToOrderTable(client.Customer_ID);
-            
-            // Get order_ID for the payment Insert
-            int order_ID = db.GetLastInsertedOrderID();
+            invalidResult.Clear();
 
-            if (cardRadioButton.Checked)
+            string text = "";
+
+            verifyCard();
+            verifyPhone();
+            verifyCVV();
+
+            // If invalidResult is not empty then add all strings to text variable so all errors can be displayed at once
+            if (invalidResult.Count != 0)
             {
-                client.SetOrderID(order_ID);
-                db.InsertIntoPayment(order_ID, subtotal, "Card");
+                foreach (var result in invalidResult)
+                {
+                    text += result;
+                }
+
+                MessageBox.Show(text, "Validation Errors", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Clear text after loop
+                text = "";
+
             }
             else
             {
-                client.SetOrderID(order_ID);
-                db.InsertIntoPayment(order_ID, subtotal, "Cash");
+
+                // Create an instance of the MenuPage
+                MenuPage menuPage = new MenuPage();
+
+                // Show a message to the user
+                MessageBox.Show("Thank you for the order!");
+                DBManager db = new DBManager();
+
+                db.InsertOrderToOrderTable(client.Customer_ID);
+
+                // Get order_ID for the payment Insert
+                int order_ID = db.GetLastInsertedOrderID();
+
+                if (cardRadioButton.Checked)
+                {
+                    client.SetOrderID(order_ID);
+                    db.InsertIntoPayment(order_ID, subtotal, "Card");
+                }
+                else
+                {
+                    client.SetOrderID(order_ID);
+                    db.InsertIntoPayment(order_ID, subtotal, "Cash");
+                }
+                // Close the current CheckoutPage
+                this.Close();
+
+                FoodStatus status1 = new FoodStatus();
+                status1.Show();
+
+                // Show the MenuPage
+                //Application.Restart();
+
             }
-            // Close the current CheckoutPage
-            this.Close();
-
-            FoodStatus status1 = new FoodStatus();
-            status1.Show();
-
-            // Show the MenuPage
-            //Application.Restart();
-
         }
 
+        private bool verifyCard()
+        {
+            bool result = true;
+            if (cardNumberTextBox.Text.Length == 0)
+            {
+                return true;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(cardNumberTextBox.Text, @"^(?! )[\d ]{13,19}$"))
+            {
+                invalidResult.Add("Invalid Card input.\n");
+                cardNumberTextBox.Clear();
+                result = false;
+            }
+            // If result is true that means something was entered. We then need to check the CVV and return the result.
+            if (result == true)
+            {
+                result = verifyCVV();
+            }
+
+            return result;
+        }
+        private bool verifyCVV()
+        {
+            bool result = true;
+            if (CVVTextBox.Text.Length == 0)
+            {
+                return true;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(CVVTextBox.Text, @"\d+"))
+            {
+                invalidResult.Add("Invalid CVV input.\n");
+                CVVTextBox.Clear();
+                result = false;
+            }
+            if (CVVTextBox.Text.Length > 0 && CVVTextBox.Text.Length < 3)
+            {
+                invalidResult.Add("CVV length is three.\n");
+                CVVTextBox.Clear();
+                result = false;
+            }
+            return result;
+        }
+
+        private bool verifyPhone()
+        {
+            bool result = true;
+            if (phoneTextBox.Text.Length == 0)
+            {
+                return true;
+            }
+            if (!System.Text.RegularExpressions.Regex.IsMatch(phoneTextBox.Text, @"^\d{10}$ "))
+            {
+                invalidResult.Add("Invalid phone number input.\n");
+               phoneTextBox.Clear();
+                result = false;
+            }
+            
+            return result;
+        }
         
     }
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckoutPage));
             this.paymentGroupBox = new System.Windows.Forms.GroupBox();
             this.delivTimeLabel = new System.Windows.Forms.Label();
             this.cardNumberLabel = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.cashRadioButton = new System.Windows.Forms.RadioButton();
             this.cardRadioButton = new System.Windows.Forms.RadioButton();
-            this.cartLogo = new System.Windows.Forms.PictureBox();
             this.checkoutButton = new System.Windows.Forms.Button();
             this.totalLabel = new System.Windows.Forms.Label();
             this.totalTextBox = new System.Windows.Forms.TextBox();
@@ -57,7 +55,6 @@
             this.pickUpTimer = new System.Windows.Forms.Timer(this.components);
             this.paymentGroupBox.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // paymentGroupBox
@@ -176,8 +173,9 @@
             // 
             this.CVVTextBox.BackColor = System.Drawing.Color.White;
             this.CVVTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CVVTextBox.ForeColor = System.Drawing.Color.White;
+            this.CVVTextBox.ForeColor = System.Drawing.Color.Black;
             this.CVVTextBox.Location = new System.Drawing.Point(14, 136);
+            this.CVVTextBox.MaxLength = 3;
             this.CVVTextBox.Name = "CVVTextBox";
             this.CVVTextBox.Size = new System.Drawing.Size(74, 20);
             this.CVVTextBox.TabIndex = 5;
@@ -262,7 +260,6 @@
             this.orderGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.orderGroupBox.Controls.Add(this.cashRadioButton);
             this.orderGroupBox.Controls.Add(this.cardRadioButton);
-            this.orderGroupBox.Controls.Add(this.cartLogo);
             this.orderGroupBox.Controls.Add(this.checkoutButton);
             this.orderGroupBox.Controls.Add(this.totalLabel);
             this.orderGroupBox.Controls.Add(this.totalTextBox);
@@ -304,16 +301,6 @@
             this.cardRadioButton.TabStop = true;
             this.cardRadioButton.Text = "Card";
             this.cardRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // cartLogo
-            // 
-            this.cartLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cartLogo.Image = ((System.Drawing.Image)(resources.GetObject("cartLogo.Image")));
-            this.cartLogo.Location = new System.Drawing.Point(302, 26);
-            this.cartLogo.Name = "cartLogo";
-            this.cartLogo.Size = new System.Drawing.Size(24, 24);
-            this.cartLogo.TabIndex = 7;
-            this.cartLogo.TabStop = false;
             // 
             // checkoutButton
             // 
@@ -383,7 +370,6 @@
             this.paymentGroupBox.PerformLayout();
             this.orderGroupBox.ResumeLayout(false);
             this.orderGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cartLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,7 +391,6 @@
         private System.Windows.Forms.Label CVVLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.GroupBox orderGroupBox;
-        private System.Windows.Forms.PictureBox cartLogo;
         private System.Windows.Forms.Button checkoutButton;
         private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.TextBox totalTextBox;
