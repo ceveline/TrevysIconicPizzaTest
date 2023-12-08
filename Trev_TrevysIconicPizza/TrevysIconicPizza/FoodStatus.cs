@@ -41,14 +41,22 @@ namespace TrevysIconicPizza
         }
         private void UpdateOrderStatus(int orderId, int time)
         {
-            // Fetch order status description from the database
-            string orderStatusDescription = GetOrderStatusDescription(orderId);
+            if (client != null)
+            {
+                // Fetch order status description from the database
+                string orderStatusDescription = GetOrderStatusDescription(orderId);
 
-            // Update the label with the fetched order status description
-            stepLabel.Text = orderStatusDescription;
+                // Update the label with the fetched order status description
+                stepLabel.Text = orderStatusDescription;
 
-            // Update the progress bar based on the order status
-            UpdateProgressBar(orderStatusDescription);
+                // Update the progress bar based on the order status
+                UpdateProgressBar(orderStatusDescription);
+            }
+            else
+            {
+                // Handle the case when client is null, e.g., show an error message or log the issue
+                MessageBox.Show("Error: Client is null in UpdateOrderStatus");
+            }
         }
         private void UpdateProgressBar(string orderStatusDescription)
         {
