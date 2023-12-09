@@ -28,7 +28,7 @@ namespace TrevysIconicPizza
             dbManager.CreateEdibleItemTableIfNotExists("EdibleItem");
 
             // insert the items into EdibleItem table
-            InsertInitialItems(dbManager);
+            //InsertInitialItems(dbManager);
 
             // Create OrderStatus table
             dbManager.CreateOrderStatusTable();
